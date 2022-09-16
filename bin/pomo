@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+arg1=$1
+# msg="It is `date +%H:%M`. Time for a break."
+
+if [[ "x$arg1" = "x" ]] then
+	min=30
+else
+	min=$arg1
+fi
+
+sec=$((min * 60))
+
+echo "Timer set for $min minutes."
+sleep $sec; noti -t "Po'modoro" -m "It is `date +%H:%M`. Time for a break."

@@ -1,0 +1,84 @@
+# CL bro
+alias today="date -I date"
+
+if [[ $OSTYPE == darwin* ]]
+then
+   
+   # macos
+   alias mql="quick-look"
+   alias tb="tab"
+   alias tv="vsplit-tab"
+   alias opn="ofd"
+   alias fnd="cdf"
+   alias poweroff="sudo shutdown -h now"
+   alias oa="open -a"
+   alias macupdate="sudo nvram manufacturing-enter-picker=false && softwareupdate -i -r"
+   alias linux-picker="sudo nvram manufacturing-enter-picker=true"
+   
+   ## Pico 8
+   alias pc8="cd ~/Library/Application\ Support/pico-8"
+   alias pico8="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/pico-8"
+fi
+
+# Brew
+alias br="brew"
+alias bri="brew install"
+alias brik="brew install --cask"
+alias brui="brew uninstall"
+alias bruik="brew uninstall --cask"
+alias brup="brew upgrade"
+alias brupk="brew upgrade --cask" 
+alias brallk="brew upgrade --cask --greedy"
+alias bro="brew outdated"
+alias brok="brew outdated --cask"
+
+# ## Aliases
+alias vomz="vim ~/.zshrc"                 # edit .zshrc
+alias apps="cd /Applications"
+alias ..="cd .."                          # go back up
+alias home="cd ~"                         # Go home 
+alias cl="clear"                          # clear the screen
+alias src="omz reload"               # reload zshrc
+alias pt="pwd"                            # echo current working path 
+alias zhe="chmod +x"                      # make script executable 
+alias %=""                                # ignore %
+alias tc="touch"                          # Create a file `tc new.txt`
+
+# vim
+alias v="vim"
+alias cll="cl && exit"
+
+# py
+alias py="python"
+alias pip="python -m pip"
+
+## Zsh
+alias zbin="cd ~/bin"
+
+## Git
+alias gmnf="git merge --no-ff"
+alias gpo="git push origin"
+alias gbm="git branch -m"
+alias gin="git init"
+alias gcll="git clone"
+alias grao="git remote add origin"
+
+# alacritty
+alias dtt="alacritty msg create-window --working-directory=\"`pwd`\""
+
+# vscodium
+alias cod="codium"
+alias co="code"                         # open in vs code (req shell command install)
+
+# NPM
+alias npr="npm run"
+alias nps="npm start"
+
+# ranger
+alias rn=". ranger"
+
+# Autojump
+alias aju="autojump"
+
+# Notes
+alias note="vim ~/notes/$(date "+%y-%m-%d").md"

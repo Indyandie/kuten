@@ -1,0 +1,112 @@
+{
+  "workbench.iconTheme": "ayu",
+  "editor.tokenColorCustomizations": {
+    "comments": "#e6c12b",
+    "[Gruvbox Minor Dark Hard]": {
+      // Customiize colors for a specific theme.
+    }
+  },
+  "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": false,
+  "editor.fontSize": 20,
+  "workbench.fontAliasing": "auto",
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.cursorBlinking": "smooth",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.sideBar.location": "right",
+  "editor.minimap.enabled": false,
+  "workbench.editor.showTabs": true,
+  // Selection Highlight Color
+  "editor.selectionHighlight": true,
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#19748f",
+    "editor.selectionHighlightBackground": "#851a2a",
+    "statusBar.background": "#000000",
+    "statusBar.noFolderBackground": "#000000",
+    "statusBar.debuggingBackground": "#000000",
+    "statusBar.foreground": "#FFFFFF",
+    "statusBar.debuggingForeground": "#FFFFFF"
+  },
+  "emojisense.markupCompletionsEnabled": false,
+  "emojisense.showOnColon": true,
+  "emojisense.languages": {
+    "json": true,
+    "markdown": true,
+    "html": true,
+    "javaScript": true,
+    "javascriptreact": true,
+    "react": true,
+    "vue": true,
+    "plaintext": true,
+    "scminput": true
+  },
+  "pico8.executablePath": "/Applications//pico-8/PICO-8.app/Contents/MacOS/pico8",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "workbench.editor.highlightModifiedTabs": true,
+  "[javascript]": {
+    // js settings 
+  },
+  "[javascriptreact]": {
+    // jsx settings
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "svelte.plugin.svelte.format.enable": false,
+  "grunt.autoDetect": "off",
+  "cSpell.enableFiletypes": [
+    "pico8"
+  ],
+  "pico8vscodeeditor.pico8fullpath": "Library/Application Support/pico-8",
+  "explorer.confirmDelete": false,
+  "standard.engine": "standard",
+  "standard.validate": [
+    "javascript",
+    "javascriptreact",
+    "html"
+  ],
+  "standard.options": {
+    "plugins": [
+      "html", "react"
+    ],
+    "rules": {
+      "jsx-quotes": "error"
+    }
+  },
+  "files.associations": {
+    "*.svelte": "html",
+  },
+  "editor.accessibilitySupport": "off",
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.colorTheme": "Dracula",
+  "editor.cursorStyle": "block",
+  "workbench.productIconTheme": "material-product-icons",
+  "window.zoomLevel": 1,
+  "editor.suggest.showStatusBar": true,
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#000000", "#FFFFFF"],
+  "vim.statusBarColors.insert": "#0E3F3C",
+  "vim.statusBarColors.replace": "#3F0E0E",
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "~/.vimrc",
+  "terminal.integrated.fontSize": 18,
+  "debug.console.fontSize": 18,
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "svelte.ask-to-enable-ts-plugin": false,
+  "editor.wordWrap": "on",
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  }
+}
