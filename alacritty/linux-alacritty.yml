@@ -33,8 +33,8 @@ window:
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-  #padding:
-  #  x: 0
+  padding:
+    x: 8
   #  y: 0
 
   # Spread additional padding evenly around the terminal content.
@@ -63,7 +63,7 @@ window:
   #startup_mode: Windowed
 
   # Window title
-  title: Ala
+  # title: Ala
 
   # Opacity
   opacity: 0.9
@@ -99,28 +99,22 @@ scrolling:
 # Font
 font:
   # Normal (roman) font face
-  size: 22
+  size: 16
   normal:
     family: Jetbrains Mono 
     style: Light 
-
-  # Bold font face
   bold:
     family: Jetbrains Mono 
     style: Bold
-
-  # Italic font face
   italic:
+    family: Jetbrains Mono 
+    style: Italic
+  bold_italic:
     family: Jetbrains Mono 
     style: ExtraBold 
 
-  # Bold italic font face
-  bold_italic:
-    family: Jetbrains Mono 
-    style: Bold Italic
-
   # Point size
-    size: 20.0
+    size: 18.0
 
     # Bright and dim foreground colors
     #
@@ -283,6 +277,8 @@ cursor:
   #   - _ Underline
   #   - | Beam
   style: Block
+  blinking: Always
+  blink_interval: 200
 
   # Vi mode cursor style
   #
@@ -420,6 +416,8 @@ mouse:
 #
 #       `showkey --scancodes`.
 #
+  #   )0x0b 11
+  #   (0x0a 10
 # Then exactly one of:
 #
 # - `chars`: Send a byte sequence to the running application
@@ -566,32 +564,32 @@ key_bindings:
   # Print all received window events.
   #print_events: false
 
-# Colors (Arcoiris)
+# Colors (niji)
 colors:
   bright:
-    black: '#777777'
-    blue: '#B3E8F3'
-    cyan: '#BCFFC7'
-    green: '#E3F6AA'
-    magenta: '#CBBAF9'
-    red: '#FFB9B9'
-    white: '#EFEFEF'
-    yellow: '#FFDDAA'
+    black: '#515151'
+    blue: '#8efff3'
+    cyan: '#bcffc7'
+    green: '#c1ffae'
+    magenta: '#ffa2ed'
+    red: '#ffb7b7'
+    white: '#ffffff'
+    yellow: '#fcffb8'
   cursor:
-    cursor: '#feffff'
-    text: '#000000'
+    cursor: '#ffc663'
+    text: '#141515'
   normal:
     black: '#333333'
-    blue: '#518BFC'
-    cyan: '#63FAD5'
-    green: '#12C258'
-    magenta: '#E37BD9'
-    red: '#DA2700'
-    white: '#BAB2B2'
-    yellow: '#FFC656'
+    blue: '#2ab9ff'
+    cyan: '#1ef9f5'
+    green: '#54ca74'
+    magenta: '#ff50da'
+    red: '#d23e08'
+    white: '#ddd0c4'
+    yellow: '#fff700'
   primary:
-    background: '#201F1E'
-    foreground: '#EEE4D9'
+    background: '#141515'
+    foreground: '#ffffff'
   selection:
-    background: '#606060'
-    text: '#ffffff'
+    background: '#515151'
+    text: '#ffc663'

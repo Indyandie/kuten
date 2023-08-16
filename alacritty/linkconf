@@ -1,0 +1,33 @@
+#!/usr/bin/env zsh
+
+konfdir="alacritty"
+confdir="$HOME/.config/$konfdir"
+conf="$confdir/alacritty.yml"
+konfmac="$konfdir/mac-alacritty.yml"
+konflinux="$konfdir/linux-alacritty.yml"
+
+function linkconf() {
+	if [[ $OSTYPE == darwin* ]] then
+		ln -s "$KUTEN/$konfmac" $conf
+	elif [[ $OSTYPE == linux* ]] then
+		ln -s "$KUTEN/$konflinux" $conf
+	fi
+}
+
+if [[ -d "$confdir" ]] then
+	echo "$confdir exist"
+
+	if [[ -f $conf || -h $conf ]] then
+		rm $conf
+		echo "remove $conf"
+		linkconf
+	else
+		echo "$conf doesn't exist..."
+		linkconf
+	fi
+
+else
+	echo "$confdir doesn't exist... create dir"
+	mkdir $confdir
+	linkconf
+fi
