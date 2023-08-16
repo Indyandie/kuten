@@ -2,7 +2,8 @@
 nnoremap <CR> :noh<CR><CR>
 
 " horizontal overflow
-set nowrap
+" set nowrap
+set wrap
 
 " CSV.vim settings
 filetype plugin on
@@ -25,6 +26,31 @@ syntax on
 " set clipboard^=unnamed
 "set clipboard=unnamedplus
 set clipboard^=unnamed,unnamedplus
+set guioptions+=a
+" This should be looped over
+noremap <Leader>P "+p
+noremap y "*y
+noremap yy "*yy
+noremap y$ "*y$
+noremap y0 "*y0
+noremap y% "*y%
+noremap yG "*yG
+noremap ygg "*ygg
+noremap d "*d
+noremap dd "*dd
+noremap d$ "*d$
+noremap d0 "*d0
+noremap d% "*d%
+noremap dG "*dG
+noremap dgg "*dgg
+noremap P "*P
+noremap p "*p
+
+augroup wayland_clipboard
+  au!
+  au TextYankPost * call system("wl-copy", @")
+augroup END
+
 
 " mouse
 set mouse=a
@@ -233,6 +259,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
 
 " ranger (can be used with nerdtree)
+" press leader ',' and then 'f'
 Plug 'francoiscabrol/ranger.vim'
 
 " Wrap it up
@@ -253,8 +280,10 @@ Plug 'preservim/nerdcommenter'
 
 Plug 'tpope/vim-commentary'
 
-" markdown
+" tabs
 Plug 'godlygeek/tabular'
+
+" markdown
 Plug 'preservim/vim-markdown'
 
 " js
@@ -277,6 +306,9 @@ Plug 'mattn/emmet-vim'
 
 " repeat non native commands
 Plug 'tpope/vim-repeat'
+
+" eww yuck
+Plug 'elkowar/yuck.vim'
 
 call plug#end()
 
@@ -311,11 +343,11 @@ let g:vim_markdown_conceal_code_blocks = 0
 set laststatus=2
 
 set statusline=
-set statusline+=%#NormalColor#%{(mode()=='n')?'\ \ ◆\ norm\ ':''}
-set statusline+=%#CommandColor#%{(mode()=='c')?'\ \ ◇\ cmd\ ':''}
-set statusline+=%#InsertColor#%{(mode()=='i')?'\ \ ◯\ in\ ':''}
-set statusline+=%#ReplaceColor#%{(mode()=='R')?'\ \ ◎\ rep\ ':''}
-set statusline+=%#VisualColor#%{(mode()=='v')?'\ \ ▼\ vis\ ':''}
+set statusline+=%#NormalColor#%{(mode()=='n')?'\ \ ●\ nor\ ':''}
+set statusline+=%#CommandColor#%{(mode()=='c')?'\ \ ○\ cmd\ ':''}
+set statusline+=%#InsertColor#%{(mode()=='i')?'\ \ ◉\ ins\ ':''}
+set statusline+=%#ReplaceColor#%{(mode()=='R')?'\ \ ⊙\ rep\ ':''}
+set statusline+=%#VisualColor#%{(mode()=='v')?'\ \ ◍\ vis\ ':''}
 set statusline+=%#Cursor#       " colour
 set statusline+=\ %n\           " buffer number
 set statusline+=%#Visual#       " colour
@@ -333,6 +365,6 @@ set statusline+=\ %Y\                   " file type
 set statusline+=%#CursorIM#     " colour
 set statusline+=\ %3l:%-2c\         " line + column
 set statusline+=%#Cursor#       " colour
-set statusline+=\ %3p%%\                " percentage
+set statusline+=\%3p%%\                " percentage
 
 
