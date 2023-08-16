@@ -19,13 +19,11 @@ if [[ $OSTYPE == darwin* ]] then
     sudo
     brew
     vi-mode
+    # nix-zsh-completions
   )
 
   # Autojump
   [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-  # node nvm
-  export NVM_COMPLETION=true
 
   # pyenv
   export PYENV_ROOT="$HOME/.pyenv"
@@ -33,6 +31,9 @@ if [[ $OSTYPE == darwin* ]] then
   eval "$(pyenv init --path)"
 
   # gpg
+  GPG_TTY=$(tty)
+  export GPG_TTY
+
   if [[ $GPG_SSH_CONF ]]; then
     unset SSH_AGENT_PID
     if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
@@ -60,13 +61,26 @@ elif [[ $OSTYPE == linux* ]] then
     zsh-syntax-highlighting
     deno
     sudo
-    brew
     vi-mode
-    ssh-agent
+    # ssh-agent
   )
 
   export LANG=en_US.UTF-8
 
+  # gpg-agent
+ 
+  unset SSH_AGENT_PID
+
+  if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+    export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+  fi
+  export GPG_TTY=$(tty)
+  gpg-connect-agent updatestartuptty /bye >/dev/null
+
+  # Hyprland
+  if [[ $XDG_CURRENT_DESKTOP = Hyprland ]]; then
+    # stuff to do
+  fi
 # linux-end  ------------------------------------------------------------------------------------------
 
 fi
@@ -100,6 +114,21 @@ mcd() {
   md -p $1 && cd $1
 }
 
+# rustc
+rustbin(){
+  rustc --out-dir bin "$1.rs" && "bin/$1"
+}
+
+# run in the backgroug
+bgpr(){
+  nohup $1 > "$HOME/.nohuplogs" &
+}
+
+# run in the backgroug
+bgnl(){
+  nohup $1 > /dev/null 2>&1 &
+}
+
 # vim shell env
 vim_prompt() {
   if [ ! -z $VIMRUNTIME ]; then
@@ -117,4 +146,7 @@ eval "$(starship init zsh)"
 export RANGER_LOAD_DEFAULT_RC=false
 
 # fnm
-eval "$(fnm env --use-on-cd)"
+# eval "$(fnm env --use-on-cd)"
+
+# prompt_nix_shell_setup
+export PATH="/usr/local/opt/llvm/bin:$PATH"
