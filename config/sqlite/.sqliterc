@@ -1,0 +1,6 @@
+.echo off
+.headers on
+.mode csv
+.separator ','
+.timer on
+.prompt "sql> " "---> "

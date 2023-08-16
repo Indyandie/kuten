@@ -1,0 +1,51 @@
+(include "./network.yuck")
+(include "./volume.yuck")
+(include "./date.yuck")
+(include "./battery.yuck")
+
+; main
+(defwindow menubar
+  :exclusive true
+  :monitor 0
+  :stacking "overlay"
+  :geometry (geometry
+    :x "0%"
+    :width "100%"
+    :height "0px"
+    :anchor "top center"
+    )
+  (eventbox
+    :onhover "eww update show-menubar=true"
+    :onhoverlost "eww update show-menubar=false"
+    (menubar_layout)
+    )
+  )
+
+(defvar show-menubar false)
+
+(defwidget menubar_layout []
+  (revealer
+    :transition "slidedown"
+    :reveal show-menubar
+    (box
+      :class "layout-box"
+      :hexpand true
+      :haligh "center"
+      (box
+        :class "chronic"
+        :halign "start"
+        (_date)
+        )
+      (box 
+        :halign "end"
+        :class "system"
+        :space-evenly false
+        :spacing 16
+        (_volume)
+        (_network)
+        (_battery)
+        )
+      )
+    )
+  )
+

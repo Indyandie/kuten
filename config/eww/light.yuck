@@ -1,0 +1,52 @@
+(defpoll light-info :interval "100ms"
+  ; "echo '`light`//1' | bc"
+  "echo \"`light`\/1\" | bc"
+  )
+
+(defvar light-stat-timer 2)
+
+(defpoll light-stat-ticker
+  :interval "1000ms"
+  :run-while true
+  "VOLSTATTIMER=`eww get light-stat-timer`; if [ $VOLSTATTIMER -gt 0 ]; then eww update light-stat-timer=`expr $VOLSTATTIMER - 1`; else eww update light-stat-timer=2 && eww close light-stat; fi;"
+  )
+
+(defwindow light-stat :exclusive true :monitor 0
+  :stacking "overlay"
+  :geometry (geometry
+  :x "0%"
+  :anchor "center center"
+              )
+  (box
+    :class "box"
+    :orientation "v"
+    :spacing 0
+    :space-evenly false
+    :height 0
+    :halign "center"
+    :valign "center"
+    :vexpand false
+    (label
+      :class "icon"
+      :height 40
+      :halign "center"
+      :xalign 0.5
+      :text "󰃠"
+      )
+    (label 
+      :visible false
+      :text "${light-stat-timer} ${light-stat-ticker}"
+      )
+    (scale
+      :orientation "h"
+      :valign "start"
+      :height 20
+      :timeout "0.1s"
+      ; :width 72
+      :value "${light-info}"
+      :draw-value false
+      )
+    )
+  )
+
+

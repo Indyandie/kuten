@@ -1,0 +1,50 @@
+#vimiumHintMarkerContainer > * {
+  transition: all 500ms ease-in-out;  
+}
+
+div > .vimiumHintMarker {
+/* linkhint boxes */
+   background: #333333 !important;
+   border: 1px solid #E3BE23 !important;
+   /* padding: 8px; */
+   padding: 0.7vh !important;
+   border-radius: 1vh;
+}
+
+div > .vimiumHintMarker span {
+/* linkhint text */
+   color: #FFFFFF !important;
+   font-weight: bold !important;
+   /* font-size: 18px; */
+   font-size: 1.9vh !important;
+}
+
+div > .vimiumHintMarker > .matchingCharacter {
+   color: #FFDE56 !important;
+}
+
+div > .vimiumActiveHintMarker span {
+   color: #FFDE56 !important;
+   font-size: 2.8vh !important;
+}
+
+/* Active */
+
+.vimiumReset.internalVimiumHintMarker.vimiumHintMarker.vimiumActiveHintMarker {
+   color: white !important;
+   background: #E3BE23 !important;
+}
+
+div > .vimiumActiveHintMarker span {
+   /* color: black !important; */
+   color: white !important;
+}
+
+div > .vimiumHintMarker > .matchingCharacter {
+   /* color: black !important; */
+   color: #E3BE23 !important;
+ }
+
+.vimiumReset.internalVimiumHintMarker.vimiumHintMarker.vimiumActiveHintMarker span {
+   color: black !important;
+}

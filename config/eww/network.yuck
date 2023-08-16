@@ -1,0 +1,30 @@
+(defpoll net
+  :interval "100s"
+  :initial `N/A`
+  `nmcli -t -f SIGNAL,ACTIVE device wifi \
+    | awk -F':' '{if($2=="yes")print$1}'`
+)
+
+(defwidget _network []
+  (box
+    :class "wifi"
+    :tooltip {
+        net == "" ? "unknown" :
+        net < 26 ? "poor signal" :
+        net < 51 ? "okay siganl" :
+        net < 76 ? "good signal" : 
+        "great signal"
+      }
+    (label 
+      :class "icon"
+      :text {
+        net == "" ? "󰤮 " :
+        net < 26 ? "󰤟 " :
+        net < 51 ? "󰤢 " :
+        net < 76 ? "󰤥 " : 
+        "󰤨"
+      }
+    )
+  )
+)
+

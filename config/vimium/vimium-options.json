@@ -1,0 +1,34 @@
+{
+  "settingsVersion": "1.67.6",
+<<<<<<< Updated upstream
+  "exclusionRules": [
+    {
+      "pattern": "https?://github.com/*",
+      "passKeys": "/"
+    }
+  ],
+=======
+  "exclusionRules": [],
+>>>>>>> Stashed changes
+  "filterLinkHints": true,
+  "waitForEnterForFilteredHints": true,
+  "hideHud": true,
+  "keyMappings": "map K previousTab\nmap J nextTab\nmap yt duplicateTab\nmap d removeTab\nmap u restoreTab\nmap f LinkHints.activateMode\nmap F LinkHints.activateModeToOpenInNewTab\nmap 0 firstTab\nmap $ lastTab",
+  "linkHintCharacters": "sadfjklewcmpgh",
+  "linkHintNumbers": "fdsaregtvb",
+  "newTabUrl": "about:newtab",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
+  "regexFindMode": false,
+  "ignoreKeyboardLayout": false,
+  "scrollStepSize": 120,
+  "smoothScroll": true,
+  "grabBackFocus": true,
+  "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\n\n# More examples.\n#\n# (Vimium supports search completion Wikipedia, as\n# above, and for these.)\n#\n# g: https://www.google.com/search?q=%s Google\n# l: https://www.google.com/search?q=%s&btnI I'm feeling lucky...\n# y: https://www.youtube.com/results?search_query=%s Youtube\n# gm: https://www.google.com/maps?q=%s Google maps\n# b: https://www.bing.com/search?q=%s Bing\n# d: https://duckduckgo.com/?q=%s DuckDuckGo\n# az: https://www.amazon.com/s/?field-keywords=%s Amazon\n# qw: https://www.qwant.com/?q=%s Qwant",
+  "searchUrl": "https://www.google.com/search?q=",
+<<<<<<< Updated upstream
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\n   background: #333333 !important;\n   border: 1px solid #E3BE23 !important;\n   /* padding: 8px; */\n   padding: 1vh !important;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\n   color: #FFFFFF !important;\n   font-weight: bold !important;\n   /* font-size: 18px; */\n   font-size: 2.6vh !important;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n   color: #FFDE56 !important;\n}\n\ndiv > .vimiumActiveHintMarker span {\n   color: #FFDE56 !important;\n}\n\n/* Active */\n\n.vimiumReset.internalVimiumHintMarker.vimiumHintMarker.vimiumActiveHintMarker {\n   color: white !important;\n   background: #E3BE23 !important;\n}\n\ndiv > .vimiumActiveHintMarker span {\n   /* color: black !important; */\n   color: white !important;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n   /* color: black !important; */\n   color: #E3BE23 !important;\n }\n\n.vimiumReset.internalVimiumHintMarker.vimiumHintMarker.vimiumActiveHintMarker span {\n   color: black !important;\n}"
+=======
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\n   background: #333333 !important;\n   border: 1px solid #E3BE23 !important;\n   /* padding: 8px; */\n   padding: 1vh !important;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\n   color: #FFFFFF !important;\n   font-weight: bold !important;\n   /* font-size: 18px; */\n   font-size: 2.6vh !important;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n   color: #FFDE56 !important;\n}\n\ndiv > .vimiumActiveHintMarker span {\n   color: #FFDE56 !important;\n}\n\n.vimiumReset.internalVimiumHintMarker.vimiumHintMarker.vimiumActiveHintMarker {\n   color: red !important;\n   background: #612406 !important\n}"
+>>>>>>> Stashed changes
+}

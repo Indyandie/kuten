@@ -1,0 +1,141 @@
+# Branched of darcula 
+# https://github.com/helix-editor/helix/blob/master/runtime/themes/darcula.toml 
+# Author : Nick Ogden <nick@nickogden.org>
+
+"ui.background" = { bg = "black-normal" }
+"ui.menu" = { fg = "white-light", bg = "black-dark" }
+"ui.menu.selected" = { fg = "white-light", bg = "blue-dark" }
+"ui.linenr" = { fg = "white-dark", bg = "black-normal" }
+"ui.linenr.selected" = { fg = "white-light", bg = "black-light", modifiers = ["bold"] }
+"ui.gutter" = { bg = "black-normal" }
+"ui.popup" = { fg = "white-normal", bg = "black-normal" }
+"ui.popup.info" = { fg = "yellow-dark", bg = "black-dark", modifiers = ["italic"] }
+"ui.window" = { bg = "black-light" }
+"ui.selection" = { bg = "black-light" }
+"ui.statusline" = { fg = "white-dark", bg = "black-dark", modifiers = ["regular"] }
+"ui.statusline.normal" = { fg = "white-light", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "cyan-dark", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "yellow-dark", modifiers = ["bold"] }
+"ui.help" = { fg = "yellow-light", bg = "black-dark" }
+"ui.cursor" = { bg = "yellow-dark", fg = "white-light" }
+"ui.cursor.insert" = { fg = "white-normal", modifiers = ["reversed"] }
+"ui.cursor.select" = { fg = "white-normal", modifiers = ["reversed"] }
+"ui.cursor.primary" = { bg = "white-normal", fg = "black-dark" }
+"ui.cursor.match" = { fg = "white-normal", bg = "orange-dark", modifiers = ["underlined"] }
+"ui.cursorline.primary" = { bg = "sel-bg" }
+"ui.cursorline.secondary" = { bg = "sel-bg" }
+"ui.text" = { fg = "white-normal" }
+"ui.text.focus" = "grey05"
+"ui.virtual.ruler" = { bg = "sel-bg" }
+"ui.virtual.indent-guide" = "sel-bg"
+"ui.virtual.whitespace" = "grey03"
+"ui.virtual.inlay-hint" = { fg = "grey03", modifiers = ["italic"] }
+"ui.bufferline" = { fg = "white-dark", bg = "black-dark" }
+"ui.bufferline.active" = { fg = "white-normal", bg = "black-light" }
+
+"operator" = "white-dark"
+"punctuation" = { fg = "white-dark" } #, modifiers = ["bold"] }
+"variable" = { fg = "magenta-dark", modifiers = ["bold"] }
+"variable.other" = { fg = "brown-normal", modifiers = ["bold"] }
+"variable.other.member" = { fg = "orange-dark", modifiers = ["bold", "italic"] }
+"constant" = { fg = "blue-normal", modifiers = ["bold"] }
+# "constant.builtin" = { fg = "white-normal", bg = "blue-dark", modifiers = ["italic", "bold"] }
+"constant.builtin" = { fg = "blue-normal", modifiers = ["italic", "bold"] }
+"constant.numeric" = { fg = "cyan-dark", modifiers = ["bold", "italic"] }
+"constant.character.escape" = { fg = "brown-light" }
+"attribute" = "yellow-normal"
+"type" = { fg = "orange-normal", modifiers = ["italic", "bold"], underline.style = "curl" } # structs, enum
+"type.builtin" = { fg = "blue-light", modifiers = ["italic"], underline.style = "curl" }
+"type.enum.variant" = { fg = "yellow-light", modifiers = ["italic"], underline.style = "curl" }
+"string"  = { fg = "green-dark", modifiers = ["normal"] } 
+"function" = { fg = "yellow-dark", modifiers = ["italic", "bold"] }
+"function.macro" = { fg = "purple-light", modifiers = ["italic", "bold"] }
+"constructor" = "cyan-normal"
+"special" = "green-light"
+"keyword" = { fg = "blue-dark", modifiers = ["italic"] }
+"comment" = { fg = "yellow-light", modifiers = ["dim", "italic"] }
+"label" = "yellow-light"
+"namespace" = { fg = "cyan-normal", modifiers = ["italic"] }
+
+# HTML
+"tag" = { fg = "blue-dark", modifiers = ["bold"]}
+
+"markup.heading.1" = { fg = "white-dark", modifiers = ["bold", "italic"], underline.style = "double_line" }
+"markup.heading.2" = { fg = "cyan-dark", modifiers = ["bold", "italic"], underline.style = "double_line" }
+"markup.heading.3" = { fg = "magenta-dark", modifiers = ["bold", "italic"], underline.style = "double_line" }
+"markup.heading.4" = { fg = "yellow-dark", modifiers = ["bold", "italic"], underline.style = "double_line" }
+"markup.heading.5" = { fg = "red-dark", modifiers = ["bold", "italic"], underline.style = "double_line" }
+"markup.heading.6" = { fg = "blue-dark", modifiers = ["bold", "italic"], underline.style = "double_line" }
+"markup.list" = "blue-light"
+"markup.list.unnumbered" = { fg = "green-light", modifiers = ["bold"] }
+"markup.list.numbered" = { fg = "green-dark", modifiers = ["bold"] }
+"markup.list.unchecked" = { fg = "green-light", modifiers = ["bold"] }
+"markup.list.checked" = { fg = "green-dark", modifiers = ["bold"] }
+"markup.bold" = { fg = "white-light", modifiers = ["bold"] }
+"markup.italic" = { fg = "white-light", modifiers = ["italic"] }
+"markup.strikethrough" = { fg = "white-dark", modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "blue-normal", modifiers = ["underlined"] }
+"markup.link.text" = "blue-light"
+"markup.quote" = "orange-light"
+"markup.raw" = "white-normal"
+"markup.raw.inline" = { fg = "green-light", bg = "black-dark" }
+"markup.raw.block" = {  bg = "black-dark" }
+
+
+"diff.plus" = "green-dark"
+"diff.delta" = "white-dark"
+"diff.minus" = "red-dark"
+
+"diagnostic.warning" = { underline = { color = "orange-normal", style = "curl"} }
+"diagnostic.error" = { underline = { color = "red-normal", style = "curl"} }
+"diagnostic.info" = { underline = { color = "grey05", style = "curl"} }
+"diagnostic.hint" = { underline = { color = "grey05", style = "curl"} }
+
+"info" = "grey05"
+"hint" = "grey05"
+"debug" = "grey05"
+"warning" = "orange-normal"
+"error" = "red-normal"
+
+[palette]
+bg-main = "#181818" # Default Background
+bg-light = "#282828" # Lighter Background (Used for status bars, line number and folding marks)
+sel-bg = "#383838" # Selection Background
+grey03 = "#585858" # Comments, Invisibles, Line Highlighting
+grey05 = "#d8d8d8" # Default Foreground, Caret, Delimiters, Operators
+
+# colors
+
+red-normal = "#D23E08"
+red-light = "#FFB7B7"
+red-dark = "#B66056"
+green-normal = "#54CA74"
+green-light = "#C1FFAE"
+green-dark = "#85B1A9"
+blue-normal = "#2AB9FF"
+blue-light = "#A1D9FF"
+blue-dark = "#6890D7"
+cyan-normal = "#1EF9F5"
+cyan-light = "#8EFFF3"
+cyan-dark = "#60BEBE"
+magenta-normal = "#FF50DA"
+magenta-light = "#FFA2ED"
+magenta-dark = "#CC83BD"
+yellow-normal = "#FFF700"
+yellow-light = "#FCFFB8"
+yellow-dark = "#DBBB43"
+black-normal = "#333333"
+black-light = "#515151"
+black-dark = "#141515"
+white-normal = "#DDD0C4"
+white-light = "#FFFFFF"
+white-dark = "#94959B"
+purple-normal = "#9E60EC"
+purple-light = "#A994FF"
+purple-dark = "#887AA3"
+orange-normal = "#E59605"
+orange-light = "#FFC663"
+orange-dark = "#AB7B4E"
+brown-normal = "#9D5918"
+brown-light = "#F9CFB9"
+brown-dark = "#837369"

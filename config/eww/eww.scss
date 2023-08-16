@@ -1,0 +1,181 @@
+$jetto: JetBrainsMonoNerdFontMono;
+$red: #e58b65;
+
+// * { all: unset; }
+
+.menubar {
+	all: unset;
+  font-family: $jetto; 
+	font-size: 18px;
+	color: #ffffff;
+
+	.layout-box {
+		padding: 2px 16px;
+		background: rgba(34, 34, 34, 0.75);
+	}
+	.chronic {
+		// background: yellow;
+	}
+	.void {
+		// background: orange;
+	}
+	.system {
+		// background: blue;
+	}
+}
+
+.battery, .wifi, .volume {
+	padding: 0;
+
+	.icon {
+		font-size: 32px;
+	}
+}
+
+.volume.button{
+	background: red;
+}
+
+.battery {
+	// background: red;
+}
+.bat-charging {
+	color: #e5ca65;
+}
+.bat-full {
+	color: #83e565;
+}
+.bat-low {
+	color: $red;
+}
+
+.wifi {
+	// color: lightblue;
+	// background-color: yellow;
+	font-family: $jetto; 
+}
+
+.workspaces {
+	transition-property: all;
+	font-family: $jetto; 
+	font-size: 24px;
+	.wsp-box {
+		// dumb hack to fill up the edges
+		padding: 16px 100px;
+		background: rgba(200, 200, 200, 0.2);
+	}
+	.fullscreen {
+		// background: rgba(0, 0, 0, 0.8);
+		background: #333;
+	}
+	.wsp-btn {
+		padding: 0 16px;
+		border-radius: 16px;
+		border: 0;
+		background: rgba(17, 17, 17, 0.3);
+		opacity: .6;
+		.icon{
+			font-size: 36px;
+		}
+		.name {
+			font-size: 16px;
+		}
+	}
+	.active-wsp {
+		color: #eee;
+		background: rgba(17, 17, 17, 0.2);
+		opacity: 1;
+	}
+}
+
+
+.volume {
+	padding: 0;
+
+	button {
+		.icon {
+			// background: red;
+		}
+	}
+
+	.mute {
+		.icon {
+			color: $red;
+		}
+	}
+
+	.value {
+		// background: red;
+		// margin: 0;
+	}
+
+	.button {
+		all: unset;
+		.icon {
+			font-family: $jetto; 
+		}
+	}
+}
+
+.volume slider {
+	border: 0;
+	background: white;
+	background: rgb(222, 222, 222);
+}
+
+.volume scale trough highlight {
+	background: rgba(131, 229, 101, 1);
+	border: 0;
+	border-radius: 10px;
+}
+
+.volume scale trough {
+	background: #4e4e4e;
+	border-radius: 50px;
+	min-height: 8px;
+	min-width: 72px;
+	// margin-right: 8px;
+	margin: 0;
+	padding: 0;
+}
+
+.vol-stat, .light-stat {
+	all: unset;
+	background: rgba(34, 34, 34, 0.75);
+	padding: 0;
+	.box {
+		padding: 24px;
+
+		.icon {
+			font-size: 96px;
+			// font-family: $jetto; 
+			// background: red;
+		}
+
+		scale {
+			padding: 0;
+			// background: blue;
+
+			slider {
+				border: 0;
+				background: rgba(0, 0, 0, 0);
+			}
+
+
+			trough highlight {
+				background: rgba(131, 229, 101, 1);
+				border: 0;
+				border-radius: 10px;
+			}
+
+			trough {
+				padding: 0;
+				background: #4e4e4e;
+				border-radius: 50px;
+				min-height: 12px;
+				min-width: 112px;
+			}
+
+		}
+	}
+}

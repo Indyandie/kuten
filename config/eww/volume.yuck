@@ -1,0 +1,114 @@
+(defpoll vol-info :interval "100ms"
+  "amixer -D pulse sget Master | grep Left: | sed -E 's/.*\\[(.*)%\\] \\[(.*)\\]/[\\1, \"\\2\"]/g'"
+  )
+
+(defvar show-volume-slider false)
+
+(defvar volume-backup 50)
+
+(defwidget _volume []
+  (eventbox 
+    :onhover "eww update show-volume-slider=true"
+    :onhoverlost "eww update show-volume-slider=false"
+    (box 
+      :orientation "h"
+      :halign "end"
+      :class "volume"
+      :space-evenly false
+      :hexpand false
+      :spacing 8
+      (revealer
+        :reveal show-volume-slider
+        :duration "100ms"
+        :transition "slideleft"
+        (box
+          :hexpander false
+          :spacing 8
+          :space-evenly false
+          (label
+            :class "value" 
+            :xalign 1
+            :text {vol-info[1] == "off" ? "muted" : "${vol-info[0]}%"})
+          (revealer
+            :reveal {vol-info[1] == "off" ? false : true}
+            :duration "50ms"
+            :transition "slideleft"
+            (scale
+              :orientation "h"
+              :timeout "0.5s"
+              :min 0
+              :max 101
+              :width 72
+              :value "${vol-info[0]}"
+              :draw-value false
+              :duration "1ms"
+              :onchange {vol-info[1] ==  "off" ? "amixer -D pulse set Master 1+ toggle && amixer -D pulse sset Master {}%" : "amixer -D pulse sset Master {}%"}
+              )
+            )
+          )
+        )
+      (button 
+        :class {vol-info[1] == "off" ? "button mute" : "button"}
+        :onclick "amixer -D pulse set Master 1+ toggle"
+        (label
+          :class "icon"
+          :text {
+          vol-info[1] == "off" ? "󰝟" :
+          vol-info[0] >  66 ? "󰕾" :
+          vol-info[0] >  33 ? "󰖀" :
+          vol-info[0] > 0 ? "󰕿" :
+          "󰸈"
+          })
+        )
+      )
+    )
+  )
+
+
+(defvar vol-stat-timer 1)
+
+(defpoll vol-stat-ticker
+  :interval "1000ms"
+  :run-while true
+  "VOLSTATTIMER=`eww get vol-stat-timer`; if [ $VOLSTATTIMER -gt 0 ]; then eww update vol-stat-timer=`expr $VOLSTATTIMER - 1`; else eww update vol-stat-timer=2 && eww close vol-stat; fi;"
+  )
+
+(defwindow vol-stat :exclusive true :monitor 0
+                    :stacking "overlay"
+                    :geometry (geometry
+                    :x "0%"
+                    :anchor "center center"
+                                )
+  (box
+    :class "box"
+    :orientation "v"
+    :spacing 0
+    :space-evenly false
+    :height 0
+    :halign "center"
+    :valign "center"
+    :vexpand false
+    (label
+      :class "icon"
+      :height 40
+      :halign "center"
+      :xalign 0.5
+      :text {
+      vol-info[1] == "off" ? "󰝟" : "󰕾"
+      })
+    (label 
+      :visible false
+      :text "${vol-stat-timer} ${vol-stat-ticker}"
+      )
+    (scale
+      :orientation "h"
+      :valign "start"
+      :height 20
+      :timeout "0.1s"
+      ; :width 72
+      :value "${vol-info[0]}"
+      :draw-value false
+      )
+    )
+  )
+
