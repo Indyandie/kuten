@@ -1,0 +1,47 @@
+#!/usr/bin/env zsh
+
+function linkconf() {
+	local conf=$1
+	local link=$2
+
+	ln -s "$link" $conf
+
+	# if [[ $OSTYPE == darwin* ]] then
+	# 	ln -s "$KUTEN/$konfdir/mac-alacritty.yml" $conf
+	# elif [[ $OSTYPE == linux* ]] then
+	# 	ln -s "$KUTEN/$konflinux" $conf
+	# 	ln -s "$KUTEN/$konfdir/linux-alacritty.yml" $conf
+	# fi
+}
+
+setconf() {
+	local confdir="$HOME$1"
+	local conf="$confdir$2"
+	local link="$KUTEN$3"
+
+	if [[ -d "$confdir" ]] then
+		echo "$confdir exist"
+
+		if [[ -f $conf || -h $conf ]] then
+			mv $conf "$conf-backup-`date -u +%Y-%m-%dT%H:%M:%S%Z`"
+			echo "backup $conf"
+			linkconf $conf $link
+		else
+			echo "$conf doesn't exist..."
+			linkconf $conf $link
+		fi
+	else
+		echo "$confdir doesn't exist... create dir"
+		mkdir $confdir
+		linkconf $conf $link
+	fi
+}
+
+# while read line
+exec < "$KUTEN/symlinks.csv"
+read header
+while IFS="," read link confdir conf
+do
+	# echo "conf: $confdir/$conf\nlink: $link"
+	setconf $confdir $conf $link 
+done
