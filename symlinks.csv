@@ -1,0 +1,11 @@
+link,confdir,conf
+/alacritty/linux-alacritty.yml,/.config/alacritty/,alacritty.yml
+/zsh/.zshrc,/,.zshrc
+/zsh/.alias,/,.alias
+/starship/jetpack.toml,/.config/,starship.toml
+/git/.gitconfig,/,.gitconfig
+/git/.gitignore,/,.gitignore
+/vim/.vimrc,/,.vimrc
+/helix/config.toml,/.config/helix/,config.toml
+/helix/language.toml,/.config/helix/,language.toml
+/helix/kurokula.toml,/.config/helix/,kurokula.toml
