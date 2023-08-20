@@ -1,0 +1,45 @@
+#!/usr/bin/env zsh
+
+nvchad="$HOME/.config/nvim"
+nvchcustom="$nvchad/lua/custom/"
+konfuch="$KUTEN/nvim/nvchad/"
+file=$1
+
+nvchadfilepath=$nvchcustom$file
+
+backup_files () {
+  local backupdir="$nvchcustom.backup"
+
+  if [[ ! -d "$backupdir" ]]; then
+    echo "creating backup directory ($backupdir)"
+    mkdir $backupdir
+  fi
+
+  echo "copying $nvchadfilepath to $backupdir/$date-backup-$file"
+  local date=`date -u +%Y-%m-%dT%H-%M-%SZ`
+  cp $nvchadfilepath $backupdir/$date-backup-$file
+}
+
+remove_file () {
+  # rm $nvchadfilepath
+  echo "rm $nvchadfilepath"
+  rm $nvchadfilepath
+}
+
+link_file () {
+  echo "ln -s $konfuch$file $nvchadfilepath" 
+  ln -s $konfuch$file $nvchadfilepath
+}
+
+if [ -d $nvchad ]; then
+  if [ -f "$nvchadfilepath" || -h "$nvchadfilepath" ]; then
+    echo "$nvchadfilepath exist!"
+    backup_files  
+    remove_file
+    link_file
+  else
+    echo "$nvchadfilepath doesn't exist!"
+    link_file
+  fi
+fi
+

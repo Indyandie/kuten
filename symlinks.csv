@@ -7,3 +7,11 @@ link,confdir,conf
 /helix/config.toml,/.config/helix/,config.toml
 /helix/language.toml,/.config/helix/,language.toml
 /helix/kurokula.toml,/.config/helix/,kurokula.toml
+/nvim/nvchad/chadrc.lua,/.config/nvim/lua/custom/,chadrc.lua
+/nvim/nvchad/init.lua,/.config/nvim/lua/custom/,init.lua
+/nvim/nvchad/highlights.lua,/.config/nvim/lua/custom/,highlights.lua
+/nvim/nvchad/mappings.lua,/.config/nvim/lua/custom/,mappings.lua
+/nvim/nvchad/plugins.lua,/.config/nvim/lua/custom/,plugins.lua
+/nvim/nvchad/lspconfig.lua,/.config/nvim/lua/custom/configs/,lspconfig.lua
+/nvim/nvchad/null-ls.lua,/.config/nvim/lua/custom/configs/,null-ls.lua
+/nvim/nvchad/overrides,/.config/nvim/lua/custom/configs/,overrides
