@@ -14,4 +14,4 @@ link,confdir,conf
 /nvim/nvchad/plugins.lua,/.config/nvim/lua/custom/,plugins.lua
 /nvim/nvchad/lspconfig.lua,/.config/nvim/lua/custom/configs/,lspconfig.lua
 /nvim/nvchad/null-ls.lua,/.config/nvim/lua/custom/configs/,null-ls.lua
-/nvim/nvchad/overrides,/.config/nvim/lua/custom/configs/,overrides
+/nvim/nvchad/overrides.lua,/.config/nvim/lua/custom/configs/,overrides.lua
