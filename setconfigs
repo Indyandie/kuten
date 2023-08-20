@@ -17,14 +17,20 @@ function linkconf() {
 setconf() {
 	local confdir="$HOME$1"
 	local conf="$confdir$2"
+	local backupdir="$confdir.backup"
+	local backup="$backupdir/$2-backup-`date -u +%Y-%m-%dT%H:%M:%S%Z`"
 	local link="$KUTEN$3"
 
 	if [[ -d "$confdir" ]] then
 		echo "$confdir exist"
 
 		if [[ -f $conf || -h $conf ]] then
-			mv $conf "$conf-backup-`date -u +%Y-%m-%dT%H:%M:%S%Z`"
-			echo "backup $conf"
+			if [[ ! -d "$backupdir" ]] then
+				echo "$backupdir"
+				mkdir "$backupdir"
+			fi
+			mv $conf $backup
+			echo "backup $conf\nto: $backup"
 			linkconf $conf $link
 		else
 			echo "$conf doesn't exist..."
