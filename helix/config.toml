@@ -2,7 +2,7 @@ theme = "kurokula"
 
 [keys.normal]
 "A-/" = "toggle_comments"
-"C-c" = ":clipboard-yank"
+"C-y" = ":clipboard-yank"
 "tab" = ":buffer-next"
 "S-tab" = ":buffer-previous"
 "{" = "rotate_selection_contents_backward"
