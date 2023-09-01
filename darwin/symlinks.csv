@@ -1,0 +1,3 @@
+link,confdir,conf
+/darwin/alacritty/alacritty.yml,/.config/alacritty/,alacritty.yml
+/darwin/amethyst/amethyst.yml,/.config/amethyst/,amethyst.yml
