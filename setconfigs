@@ -51,3 +51,7 @@ do
 	# echo "conf: $confdir/$conf\nlink: $link"
 	setconf $confdir $conf $link 
 done
+
+if [[ $OSTYPE == darwin* ]]; then
+	zsh darwin/setconfigs
+fi

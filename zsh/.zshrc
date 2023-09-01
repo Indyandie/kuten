@@ -146,7 +146,7 @@ eval "$(starship init zsh)"
 export RANGER_LOAD_DEFAULT_RC=false
 
 # fnm
-# eval "$(fnm env --use-on-cd)"
+eval "$(fnm env --use-on-cd)"
 
 # prompt_nix_shell_setup
 export PATH="/usr/local/opt/llvm/bin:$PATH"

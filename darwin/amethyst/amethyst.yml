@@ -62,7 +62,7 @@ select-two-pane-layout:
 
 select-fullscreen-layout:
   mod: mod1
-  key: "7"
+  key: "f"
 
 select-tall-layout:
   mod: mod1
