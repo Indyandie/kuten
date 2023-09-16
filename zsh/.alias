@@ -119,6 +119,7 @@ alias gbm="git branch -m"
 alias gin="git init"
 alias gcll="git clone"
 alias grao="git remote add origin"
+alias gsoup="git rev-parse --abbrev-ref HEAD | git push --set-upstream origin"
 
 # alacritty
 alias dtt="alacritty msg create-window --working-directory=\"`pwd`\""
