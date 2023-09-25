@@ -59,10 +59,6 @@ elif [[ $OSTYPE == linux* ]]; then
       alias reload-dunst="killall dunst && nohup dunst >& /dev/null &"
    fi
 
-   # helix
-   alias hx="helix"
-   alias he="helix"
-
    # flatpak
    alias flk="flatpak"
    alias flki="flatpak install"
