@@ -101,16 +101,16 @@ font:
   # Normal (roman) font face
   size: 16
   normal:
-    family: Jetbrains Mono 
+    family: Jetbrains Mono Nerdfont 
     style: Light 
   bold:
-    family: Jetbrains Mono 
+    family: Jetbrains Mono Nerdfont 
     style: Bold
   italic:
-    family: Jetbrains Mono 
+    family: Jetbrains Mono Nerdfont 
     style: Italic
   bold_italic:
-    family: Jetbrains Mono 
+    family: Jetbrains Mono Nerdfont 
     style: ExtraBold 
 
   # Point size
@@ -308,10 +308,10 @@ live_config_reload: true
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-shell:
-  program: /usr/bin/zsh
-  args:
-    - --login
+# shell:
+#   program: /usr/bin/zsh
+#   args:
+#     - --login
 
 # Startup directory
 #
