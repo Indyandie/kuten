@@ -54,4 +54,6 @@ done
 
 if [[ $OSTYPE == darwin* ]]; then
 	zsh darwin/setconfigs
+elif [[ $OSTYPE == linux* ]]; then
+	zsh linux/setconfigs
 fi
