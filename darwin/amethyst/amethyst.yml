@@ -56,9 +56,15 @@ mod2:
 # two-pane:
 # select-two-pane-layout:
 # Select-Two-Pane-layout:
+
+# remove default shortcut `mod1`+`s`
+select-wide-layout:
+  mod: mod1
+  key: "0"
+
 select-two-pane-layout:
   mod: mod1
-  key: "2"
+  key: "s"
 
 select-fullscreen-layout:
   mod: mod1
