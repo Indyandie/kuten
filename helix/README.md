@@ -40,4 +40,10 @@ hx --health | grep "✓ [a-z]" | sed -E 's/(^[a-z]+).*/\1, /g' | tr -d '\n'
 Piping certain thing proved challenging,luckaly `xargs` came to the rescue.
 
 ```sh
-pipe:xargs -I {} echo {} | xargs -I {} grep {} attachment.csv | sed -E 's/(.*),(.*)/\1/g'```
+pipe:xargs -I {} echo {} | xargs -I {} grep {} attachment.csv | sed -E 's/(.*),(.*)/\1/g'
+```
+
+
+## Alt Workaround (macos)
+
+Instead of a getting all fancy with the terminal config use the literal character in the helix config. [workaround](https://github.com/helix-editor/helix/issues/2469#issuecomment-1714470713)
