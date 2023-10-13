@@ -150,3 +150,9 @@ eval "$(fnm env --use-on-cd)"
 
 # prompt_nix_shell_setup
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+# zoxide
+if command -v zoxide &> /dev/null; then
+    eval "$(zoxide init zsh)"
+fi
+
