@@ -96,7 +96,7 @@ ENABLE_CORRECTION="true"
 # see 'man strftime' for details.
 HIST_STAMPS="mm/dd/yyyy"
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 export EDITOR='vim'
 
@@ -119,12 +119,12 @@ rustbin(){
   rustc --out-dir bin "$1.rs" && "bin/$1"
 }
 
-# run in the backgroug
+# run in the background with logs
 bgpr(){
   nohup $1 > "$HOME/.nohuplogs" &
 }
 
-# run in the backgroug
+# run in the background with no logs
 bgnl(){
   nohup $1 > /dev/null 2>&1 &
 }
@@ -139,20 +139,24 @@ vim_prompt() {
 export VIMSHELL=$(vim_prompt)
 
 # Starship
-eval "$(starship init zsh)"
+if command -v starship &> /dev/null; then
+  eval "$(starship init zsh)"
+fi
 
 # zprof # speed profiling on start
 
 export RANGER_LOAD_DEFAULT_RC=false
 
 # fnm
-eval "$(fnm env --use-on-cd)"
+if command -v fnm &> /dev/null; then
+  eval "$(fnm env --use-on-cd)"
+fi
 
 # prompt_nix_shell_setup
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # zoxide
 if command -v zoxide &> /dev/null; then
-    eval "$(zoxide init zsh)"
+  eval "$(zoxide init zsh)"
 fi
 
