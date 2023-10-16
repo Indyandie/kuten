@@ -22,6 +22,9 @@ if [[ $OSTYPE == darwin* ]] then
     # nix-zsh-completions
   )
 
+  source $ZSH/oh-my-zsh.sh
+
+
   # Autojump
   [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
@@ -95,8 +98,6 @@ ENABLE_CORRECTION="true"
 # history timestamp - "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # see 'man strftime' for details.
 HIST_STAMPS="mm/dd/yyyy"
-
-# source $ZSH/oh-my-zsh.sh
 
 export EDITOR='vim'
 
