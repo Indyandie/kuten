@@ -143,6 +143,10 @@ alias visudo="sudo EDITOR=vim visudo"
 # batman
 alias man="batman"
 
-## lsd
-alias ls="lsd"
-alias la="lsd -la"
+## eza
+
+export EZA_ICONS_AUTO=true
+
+alias ls="eza || lsd || ls"
+alias la="eza -la || lsd -la || ls -la"
+alias l="eza -lah || lsd -lah || ls -lah"
