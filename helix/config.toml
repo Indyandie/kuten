@@ -84,7 +84,7 @@ newline = "none"
 nbsp = "⍽"
 tab = "→"
 # newline = "⏎"
-tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+tabpad = "•" # Tabs will look like "→···" (depending on tab width)
 
 [editor.gutters]
 layout = ["diagnostics", "line-numbers", "diff"]
