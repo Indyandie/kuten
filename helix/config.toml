@@ -37,7 +37,8 @@ left = [
   "selections",
   "spacer",
   "spinner",
-  "diagnostics"
+  "diagnostics",
+  "register"
 ]
 center = [
   # "separator",
