@@ -58,9 +58,9 @@ mod2:
 # Select-Two-Pane-layout:
 
 # remove default shortcut `mod1`+`s`
-select-wide-layout:
-  mod: mod1
-  key: "0"
+# select-wide-layout:
+#   mod: mod1
+#   key: "0"
 
 select-two-pane-layout:
   mod: mod1
@@ -70,9 +70,9 @@ select-fullscreen-layout:
   mod: mod1
   key: "f"
 
-select-tall-layout:
-  mod: mod1
-  key: "8"
+# select-tall-layout:
+#   mod: mod1
+#   key: "8"
 
 # Move to the next layout in the list.
 cycle-layout:
@@ -95,14 +95,14 @@ expand-main:
   key: right
 
 # Increase the number of windows in the main pane. Note that not all layouts respond to this command.
-increase-main:
-  mod: mod1
-  key: ','
+# increase-main:
+#   mod: mod1
+#   key: ','
 
 # Decrease the number of windows in the main pane. Note that not all layouts respond to this command.
-decrease-main:
-  mod: mod1
-  key: '.'
+# decrease-main:
+#   mod: mod1
+#   key: '.'
 
 # General purpose command for custom layouts. Functionality is layout-dependent.
 # command1:
@@ -202,9 +202,9 @@ throw-space-right:
 #   key: t
 
 # Display the layout HUD with the current layout on each screen.
-display-current-layout:
-  mod: mod1
-  key: i
+# display-current-layout:
+#   mod: mod1
+#   key: i
 
 # Turn on or off tiling entirely.
 # toggle-tiling:
@@ -212,9 +212,9 @@ display-current-layout:
 #   key: t
 
 # Rerun the current layout's algorithm.
-reevaluate-windows:
-  mod: mod1
-  key: z
+# reevaluate-windows:
+#   mod: mod1
+#   key: z
 
 # Turn on or off focus-follows-mouse.
 toggle-focus-follows-mouse:
