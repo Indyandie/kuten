@@ -70,16 +70,16 @@ scrolling:
 font:
   size: 20
   normal:
-    family: JetbrainsMono Nerd Font 
+    family: JetbrainsMono NF 
     style: Light 
   bold:
-    family: JetbrainsMono Nerd Font 
+    family: JetbrainsMono NF 
     style: Bold
   italic:
-    family: JetbrainsMono Nerd Font 
+    family: JetbrainsMono NF 
     style: Italic
   bold_italic:
-    family: JetbrainsMono Nerd Font 
+    family: JetbrainsMono NF 
     # style: Bold Italic
     style: ExtraBold 
 
