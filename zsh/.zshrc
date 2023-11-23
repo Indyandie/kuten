@@ -47,6 +47,9 @@ if [[ $OSTYPE == darwin* ]] then
     # export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
     # gpgconf --launch gpg-agent
   fi
+
+  # brew sbin
+  export PATH="/usr/local/sbin:$PATH"
   
 # macos-end ------------------------------------------------------------------------------------------
 
