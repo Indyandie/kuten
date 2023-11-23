@@ -24,10 +24,6 @@ if [[ $OSTYPE == darwin* ]] then
 
   source $ZSH/oh-my-zsh.sh
 
-
-  # Autojump
-  [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
   # pyenv
   export PYENV_ROOT="$HOME/.pyenv"
   command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
