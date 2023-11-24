@@ -35,7 +35,6 @@ roots = ["deno.json", "package.json", "tsconfig.json"]
 config = { enable = true, lint = true, unstable = true }
 language-server = { command = "deno", args = ["lsp"], language-id = "typescriptreact" }
 
-
 # Astro
 
 [[language]]
@@ -48,21 +47,18 @@ language-server = { command = "astro-ls", args = ["--stdio"] }
 
 # Markdown
 
-# [[language]]
-# name = "markdown"
-
-# [language.auto-pairs]
-# '_' = '_'
-# '**' = '**'
-# '```' = '```'
-# '_' = '_'
-
 [[language]]
 name = "markdown"
 scope = "source.markdown"
+language-servers = [ "marksman", "ltex-ls", "vscode-html-language-server" ]
 
 [language.auto-pairs]
+"_" = "_"
 '*' = '*'
+
+[language-server.ltex-ls.config]
+ltex.disabledRules = { "en-US" = ["PROFANITY"], "en-GB" = ["PROFANITY"] }
+ltex.dictionary = { "en-US" = ["builtin"], "en-GB" = ["builtin"] }
 
 # # toml
 
