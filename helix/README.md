@@ -43,10 +43,10 @@ hx --health | grep "✓ [a-z]" | sed -E 's/(^[a-z]+).*/\1, /g' | tr -d '\n'
 - typescript-language-server
 - typescript
 - vscode-langservers-extracted
+- ansible/ansible-language-server
 
 ```sh
-npm i -g @astrojs/language-server bash-language-server dot-language-server svelte-language-server typescript-language-server typescript vscode-langservers-extracted
-```
+npm i -g @astrojs/language-server bash-language-server dot-language-server svelte-language-server typescript-language-server typescript vscode-langservers-extracted ansible/ansible-language-server```
 
 ### brew lsp
 
@@ -54,9 +54,10 @@ npm i -g @astrojs/language-server bash-language-server dot-language-server svelt
 - lua-language-server
 - python-lsp-server
 - yaml-language-server
+- ansible-lint
 
 ```sh
-brew install marksman lua-language-server python-lsp-server yaml-language-server
+brew install marksman lua-language-server python-lsp-server yaml-language-server ansible-lint
 ```
 
 ## Piping selections
