@@ -5,10 +5,6 @@ name = "rust"
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 
-# # toml
-#
-# sudo ln -s ~/.cargo/bin/taplo /bin
-
 # Deno 
 
 [[language]]
@@ -49,3 +45,34 @@ injection-regex = "astro"
 file-types = ["astro"]
 roots = ["package.json", "astro.config.mjs"]
 language-server = { command = "astro-ls", args = ["--stdio"] }
+
+# Markdown
+
+# [[language]]
+# name = "markdown"
+
+# [language.auto-pairs]
+# '_' = '_'
+# '**' = '**'
+# '```' = '```'
+# '_' = '_'
+
+[[language]]
+name = "markdown"
+scope = "source.markdown"
+
+[language.auto-pairs]
+'*' = '*'
+
+# # toml
+
+# ## Installation 
+
+# ```sh
+# cargo install taplo-cli --locked --features lsp
+# ```
+# sudo ln -s ~/.cargo/bin/taplo /bin
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
