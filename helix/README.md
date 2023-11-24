@@ -49,6 +49,17 @@ hx --health | grep "✓ [a-z]" | sed -E 's/(^[a-z]+).*/\1, /g' | tr -d '\n'
 npm i -g @astrojs/language-server bash-language-server dot-language-server svelte-language-server typescript-language-server typescript vscode-langservers-extracted
 ```
 
+### brew lsp
+
+- marksman
+- lua-language-server
+- python-lsp-server
+- yaml-language-server
+
+```sh
+brew install marksman lua-language-server python-lsp-server yaml-language-server
+```
+
 ## Piping selections
 
 Piping certain thing proved challenging,luckaly `xargs` came to the rescue.
