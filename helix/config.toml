@@ -29,7 +29,20 @@ shell = ["zsh", "-c"]
 line-number = "absolute"
 cursorline = true
 color-modes = true
+# auto-pairs = true
 
+# [editor.auto-pairs]
+# '_' = '_'
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'<' = '>'
+'*' = '*'
+"_" = "_"
+'~' = '~'
 
 [editor.statusline]
 left = [
@@ -103,3 +116,4 @@ wrap-indicator = "..."  # set wrap-indicator to "" to hide it
 [editor.smart-tab]
 enable = false
 # supersede-menu = true
+
