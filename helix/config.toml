@@ -31,18 +31,15 @@ cursorline = true
 color-modes = true
 # auto-pairs = true
 
-# [editor.auto-pairs]
-# '_' = '_'
-
 [editor.auto-pairs]
 '(' = ')'
 '{' = '}'
 '[' = ']'
 '"' = '"'
 '<' = '>'
-'*' = '*'
-"_" = "_"
 '~' = '~'
+'_' = '_'
+'*' = '*'
 
 [editor.statusline]
 left = [
