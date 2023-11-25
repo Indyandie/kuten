@@ -46,7 +46,8 @@ hx --health | grep "✓ [a-z]" | sed -E 's/(^[a-z]+).*/\1, /g' | tr -d '\n'
 - ansible/ansible-language-server
 
 ```sh
-npm i -g @astrojs/language-server bash-language-server dot-language-server svelte-language-server typescript-language-server typescript vscode-langservers-extracted ansible/ansible-language-server```
+npm i -g @astrojs/language-server bash-language-server dot-language-server svelte-language-server typescript-language-server typescript vscode-langservers-extracted ansible/ansible-language-server
+```
 
 ### brew lsp
 
