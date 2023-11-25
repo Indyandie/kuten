@@ -63,7 +63,7 @@ brew install marksman lua-language-server python-lsp-server yaml-language-server
 
 ## Piping selections
 
-Piping certain thing proved challenging,luckaly `xargs` came to the rescue.
+Piping certain things proved challenging, luckily `xargs` came to the rescue.
 
 ```sh
 pipe:xargs -I {} echo {} | xargs -I {} grep {} attachment.csv | sed -E 's/(.*),(.*)/\1/g'
