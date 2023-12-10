@@ -147,6 +147,7 @@ alias man="batman"
 
 export EZA_ICONS_AUTO=true
 
-alias ls="eza --icons || lsd || ls"
-alias la="eza --icons -la || lsd -la || ls -la"
-alias l="eza --icons -lah || lsd -lah || ls -lah"
+alias lz="eza"
+alias la="eza -la"
+alias l="eza -lah"
+
