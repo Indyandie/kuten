@@ -136,6 +136,11 @@ vim_prompt() {
   fi
 }
 
+# bc
+xx() {
+  bc <<< "$@"
+}
+
 export VIMSHELL=$(vim_prompt)
 
 # Starship

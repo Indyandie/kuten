@@ -81,7 +81,7 @@ alias brok="brew outdated --cask"
 alias bub="bubu && brupk" # brew upgrade
 
 # ## Aliases
-alias x="expr"
+alias x="bc <<<"
 alias vomz="vim ~/.zshrc"                 # edit .zshrc
 alias apps="cd /Applications"
 alias ..="cd .."                          # go back up
