@@ -20,6 +20,9 @@ if [[ $OSTYPE == darwin* ]] then
     brew
     vi-mode
     rust
+    ripgrep
+    yarn
+    zoxide
     # nix-zsh-completions
   )
 
