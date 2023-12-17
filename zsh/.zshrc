@@ -19,6 +19,7 @@ if [[ $OSTYPE == darwin* ]] then
     sudo
     brew
     vi-mode
+    rust
     # nix-zsh-completions
   )
 
