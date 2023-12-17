@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+
+formulae=($(brew leaves --installed-on-request))
+casks=($(brew list --cask))
+output="package,description,status,type\n"
+
+function addrow() {
+	name=$1
+	type=$2
+	info=`brew info $name | grep ^http`
+	append="$output$name,$info,installed,$type\n"
+	output=$append
+}
+
+for i in {1..$#formulae}; do
+	addrow $formulae[i] formula
+done
+
+for i in {1..$#apps}; do
+	addrow $casks[i] cask
+done
+
+echo $output > formulae-casks.csv
