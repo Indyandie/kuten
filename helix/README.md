@@ -8,6 +8,8 @@ Get a list of languages with an installed lsp.
 
 ```shell
 hx --health | grep "✓ [a-z]" | sed -E 's/(^[a-z]+).*/\1, /g' | tr -d '\n'
+
+hx --health | rg "✓ [a-z]" | sd '(^[a-z\-]+).*' '$1'
 ```
 
 - bash
@@ -46,7 +48,7 @@ hx --health | grep "✓ [a-z]" | sed -E 's/(^[a-z]+).*/\1, /g' | tr -d '\n'
 - ansible/ansible-language-server
 
 ```sh
-npm i -g @astrojs/language-server bash-language-server dot-language-server svelte-language-server typescript-language-server typescript vscode-langservers-extracted ansible/ansible-language-server
+npm i -g @astrojs/language-server bash-language-server dot-language-server svelte-language-server typescript-language-server typescript vscode-langservers-extracted @ansible/ansible-language-server
 ```
 
 ### brew lsp
@@ -60,6 +62,10 @@ npm i -g @astrojs/language-server bash-language-server dot-language-server svelt
 ```sh
 brew install marksman lua-language-server python-lsp-server yaml-language-server ansible-lint
 ```
+
+### cargo
+
+- [taplo (toml)](https://github.com/helix-editor/helix/wiki/How-to-install-the-default-language-servers#toml)
 
 ## Piping selections
 
