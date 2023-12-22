@@ -2,13 +2,16 @@
 
 formulae=($(brew leaves --installed-on-request))
 casks=($(brew list --cask))
-output="package,description,status,type\n"
+output="name,version,date,description,status,type\n"
 
 function addrow() {
 	name=$1
 	type=$2
-	info=`brew info $name | grep ^http`
-	append="$output$name,$info,installed,$type\n"
+	info=`brew info $name`
+	url=`rg ^http <<< $info`
+	date=`rg Poured <<< $info | rg -o '(\d+\-){2}\d+' || rg /usr <<< $info | head --line 1 | sd ' \(.*\)[ \s]+' '' | xargs stat -f "%SB" | xargs -I {} date -j -f "%b %d %T %Y" {} "+%Y-%m-%d"`
+	version=`rg "==> $name:" <<< $info | rg -o '((\d+\.*)+)' | head --line 1`
+	append="$output$name,$version,$date,description,installed,$type\n"
 	output=$append
 }
 
@@ -16,7 +19,7 @@ for i in {1..$#formulae}; do
 	addrow $formulae[i] formula
 done
 
-for i in {1..$#apps}; do
+for i in {1..$#casks}; do
 	addrow $casks[i] cask
 done
 
