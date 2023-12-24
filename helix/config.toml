@@ -23,6 +23,9 @@ theme = "kurokula"
 "P" = ":clipboard-paste-before"
 "," = "keep_primary_selection"
 
+[keys.normal."space"]
+"x" = ":bclose"
+
 [editor]
 bufferline = "multiple"
 shell = ["zsh", "-c"]
