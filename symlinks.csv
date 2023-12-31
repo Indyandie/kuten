@@ -1,8 +1,5 @@
 link,confdir,conf
-/zsh/.zshrc,/,.zshrc
-/zsh/.alias,/,.alias
-/starship/jetpack.toml,/.config/,starship.toml
-/vim/.vimrc,/,.vimrc
+/alacritty/alacritty.toml,/.config/alacritty/,alacritty.toml
 /helix/config.toml,/.config/helix/,config.toml
 /helix/language.toml,/.config/helix/,language.toml
 /helix/kurokula.toml,/.config/helix/themes/,kurokula.toml
@@ -14,3 +11,7 @@ link,confdir,conf
 /nvim/nvchad/lspconfig.lua,/.config/nvim/lua/custom/configs/,lspconfig.lua
 /nvim/nvchad/null-ls.lua,/.config/nvim/lua/custom/configs/,null-ls.lua
 /nvim/nvchad/overrides.lua,/.config/nvim/lua/custom/configs/,overrides.lua
+/starship/jetpack.toml,/.config/,starship.toml
+/vim/.vimrc,/,.vimrc
+/zsh/.zshrc,/,.zshrc
+/zsh/.alias,/,.alias
