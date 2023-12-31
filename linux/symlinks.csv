@@ -1,2 +1,2 @@
 link,confdir,conf
-/linux/alacritty/alacritty.yml,/.config/alacritty/,alacritty.yml
+/linux/alacritty/keys.toml,/.config/alacritty/,keys.toml

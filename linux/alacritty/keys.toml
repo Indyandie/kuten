@@ -1,0 +1,17 @@
+[keyboard]
+bindings = [
+	{ key ="V",      mods = "Control|Shift",      action = "Paste" },
+	{ key ="C",      mods = "Control|Shift",      action = "Copy" },
+	{ key ="Insert", mods = "Shift",              action = "PasteSelection" },
+	{ key ="Key0",   mods = "Control",            action = "ResetFontSize"   },
+	{ key ="Equals", mods = "Control",            action = "IncreaseFontSize" },
+	{ key ="Plus",   mods = "Control",            action = "IncreaseFontSize" },
+	{ key ="Minus",  mods = "Control",            action = "DecreaseFontSize" },
+	{ key ="J",      mods = "Command|Alt",        action = "ScrollLineDown" },
+	{ key ="K",      mods = "Command|Alt",        action = "ScrollLineUp" },
+	{ key ="N",      mods = "Command",            action = "CreateNewWindow" },
+	{ key = "V",      mods = "Alt|Shift|Control", action = "ToggleViMode" },
+	{ key = "ArrowRight", action = "SearchFocusNext", mode = "Search" },
+	{ key = "ArrowLeft", action = "SearchFocusPrevious", mode = "Search" },
+	{ key = "?", mods = "Shift|Control", action = "SearchForward" }
+]

@@ -1,0 +1,136 @@
+import = [
+  "~/.config/alacritty/keys.toml"
+]
+
+# [shell]
+# program = "/bin/zsh"
+# args = ["-l"]
+
+working_directory = "None"
+live_config_reload = true
+ipc_socket = true
+
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+dimensions = { columns = 100, lines = 30 }
+padding = { x = 16, y = 0 }
+dynamic_padding = true
+decorations = "Buttonless"
+startup_mode = "Maximized" # (changes require restart)
+opacity = 0.7
+blur = true
+option_as_alt = "OnlyLeft"
+
+[scrolling]
+history = 10000
+multiplier = 3 # Scrolling distance multiplier.
+
+[font]
+size = 20
+normal = { family = "JetbrainsMono NF", style = "Regular" }
+bold = { family = "JetbrainsMono NF", style = "Bold" }
+italic = { family = "JetbrainsMono NF", style = "Italic" }
+bold_italic = { family = "JetbrainsMono NF", style = "Bold Italic" }
+  # bold_italic:
+  #   family: JetbrainsMono NF
+  #   style: ExtraBold
+  # # Point size
+  #   size: 18.0
+
+[keyboard]
+bindings = []
+
+[bell]
+animation = "EaseOutExpo"
+duration = 200
+color = '#aa0000'
+# command = {program = "noti", args = [ "-t", "BELL" ] }
+
+[selection]
+save_to_clipboard = true
+
+
+[cursor]
+unfocused_hollow = true
+blink_interval = 500
+blink_timeout = 15
+thickness = 0.50
+style = { shape =  "Block", blinking = "Always" }
+vi_mode_style = { shape = "Beam", blinking = "Never" }
+
+[terminal]
+osc52 = "OnlyCopy"
+
+[mouse]  
+hide_when_typing = true
+bindings = [
+  { mouse = "Left", mods = "Shift|Control", action = "ExpandSelection" }
+]
+
+[hints]
+alphabet = "asdfjkl;"
+
+[[hints.enabled]]
+binding = { key = "U", mods = "Control|Shift" }
+command = "open"
+hyperlinks = true
+action = "Copy"
+post_processing = true
+persist = false
+mouse.enabled = true
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+
+[colors]
+transparent_background_colors = true
+# draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "#515151"
+blue = "#8efff3"
+cyan = "#bcffc7"
+green = "#c1ffae"
+magenta = "#ffa2ed"
+red = "#ffb7b7"
+white = "#ffffff"
+yellow = "#fcffb8"
+
+[colors.normal]
+black = "#333333"
+blue = "#2ab9ff"
+cyan = "#1ef9f5"
+green = "#54ca74"
+magenta = "#ff50da"
+red = "#d23e08"
+white = "#ddd0c4"
+yellow = "#fff700"
+
+[colors.primary]
+background = "#141515"
+foreground = "#ffffff"
+
+[colors.cursor]
+cursor = "#ffc663"
+text = "#141515"
+
+[colors.selection]
+background = "#515151"
+text = "#ffc663"
+
+[colors.search]
+matches = { background = "#515151", foreground = "#ffc663" }
+focused_match = { background = "#ffc663", foreground = "#000000" }
+
+[colors.vi_mode_cursor]
+text = "#000000"
+cursor = "#ffa2ed"
+
+[colors.footer_bar]
+background = "#515151"
+foreground = "#ffc663"
+
+[colors.hints]
+start = { background = "#d23e08", foreground = "#ffffff" }
+end = { background = "#2ab9ff", foreground = "#ffffff" }
