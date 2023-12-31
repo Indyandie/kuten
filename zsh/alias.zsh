@@ -153,3 +153,6 @@ alias lz="eza"
 alias la="eza -la"
 alias l="eza -lah"
 
+
+# BELL
+alias bell='echo "\a"'
