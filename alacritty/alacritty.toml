@@ -2,6 +2,10 @@ import = [
   "~/.config/alacritty/keys.toml"
 ]
 
+shell.program = "/bin/zsh"
+shell.args = ["-l"]
+
+# This format causes an error
 # [shell]
 # program = "/bin/zsh"
 # args = ["-l"]
@@ -22,7 +26,6 @@ decorations = "Buttonless"
 startup_mode = "Maximized" # (changes require restart)
 opacity = 0.7
 blur = true
-option_as_alt = "OnlyLeft"
 
 [scrolling]
 history = 10000
@@ -34,11 +37,6 @@ normal = { family = "JetbrainsMono NF", style = "Regular" }
 bold = { family = "JetbrainsMono NF", style = "Bold" }
 italic = { family = "JetbrainsMono NF", style = "Italic" }
 bold_italic = { family = "JetbrainsMono NF", style = "Bold Italic" }
-  # bold_italic:
-  #   family: JetbrainsMono NF
-  #   style: ExtraBold
-  # # Point size
-  #   size: 18.0
 
 [keyboard]
 bindings = []
@@ -47,7 +45,7 @@ bindings = []
 animation = "EaseOutExpo"
 duration = 200
 color = '#aa0000'
-# command = {program = "noti", args = [ "-t", "BELL" ] }
+# command = { program = "noti", args = [ "-t", "BELL" ] }
 
 [selection]
 save_to_clipboard = true
