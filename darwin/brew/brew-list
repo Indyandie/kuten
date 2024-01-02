@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
-mv formulae-casks.csv "formulae-casks-`date +%Y-%m-%d`.csv"
+new_csv="formulae-casks-`date +%Y-%m-%d`.csv"
+cp formulae-casks.csv "$new_csv"
 
 formulae=($(brew leaves --installed-on-request))
 casks=($(brew list --cask))
@@ -9,11 +10,19 @@ output="name,version,date,description,status,type"
 function addrow() {
 	name=$1
 	type=$2
-	info=`brew info $name`
-	url=`rg ^http <<< $info`
-	date=`rg Poured <<< $info | rg -o '(\d+\-){2}\d+' || rg /usr <<< $info | head --line 1 | sd ' \(.*\)[ \s]+' '' | xargs stat -f "%SB" | xargs -I {} date -j -f "%b %d %T %Y" {} "+%Y-%m-%d"`
-	version=`rg "==> $name:" <<< $info | rg -o '((\d+\.*)+)' | head --line 1`
-	append="\n$output$name,$version,$date,description,installed,$type"
+	exist=`qsv search $name -n $new_csv`
+
+	if [[ $exist == "" ]]; then
+		info=`brew info $name`
+		url=`rg ^http <<< $info`
+		date=`rg Poured <<< $info | rg -o '(\d+\-){2}\d+' || rg /usr <<< $info | head --line 1 | sd ' \(.*\)[ \s]+' '' | xargs stat -f "%SB" | xargs -I {} date -j -f "%b %d %T %Y" {} "+%Y-%m-%d"`
+		version=`rg "==> $name:" <<< $info | rg -o '((\d+\.*)+)' | head --line 1`
+		row="\n$name,$version,$date,description,installed,$type"
+	else
+		row="\n$exist"
+	fi
+
+	append="$output$row"
 	output=$append
 }
 
@@ -26,5 +35,6 @@ for i in {1..$#casks}; do
 done
 
 echo $output > temp.csv
-csvsort -c name temp.csv > formulae-casks.csv
+# rm formulae-casks.csv
+qsv sort temp.csv | qsv dedup > formulae-casks.csv
 rm temp.csv
