@@ -68,7 +68,7 @@ elif [[ $OSTYPE == linux* ]] then
     deno
     sudo
     vi-mode
-    # ssh-agent
+    ssh-agent
   )
 
   export LANG=en_US.UTF-8
