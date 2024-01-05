@@ -7,7 +7,7 @@
 Get a list of languages with an installed lsp.
 
 ```shell
-hx --health | grep "✓ [a-z]" | sed -E 's/(^[a-z]+).*/\1, /g' | tr -d '\n'
+hx --health | rg "✓ [a-z]" | sd '(^[a-z]+).*' '$1, ' | tr -d '\n'
 
 hx --health | rg "✓ [a-z]" | sd '(^[a-z\-]+).*' '$1'
 ```
