@@ -87,6 +87,12 @@ elif [[ $OSTYPE == linux* ]] then
   if [[ $XDG_CURRENT_DESKTOP = Hyprland ]]; then
     # stuff to do
   fi
+
+  if [[ -f /etc/NIXOS ]]; then
+    # export PATH=~/.npm-packages/bin:$PATH
+    # export NODE_PATH=~/.npm-packages/lib/node_modules
+  fi
+
 # linux-end  ------------------------------------------------------------------------------------------
 
 fi
