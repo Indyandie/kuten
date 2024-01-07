@@ -91,6 +91,7 @@ elif [[ $OSTYPE == linux* ]] then
   if [[ -f /etc/NIXOS ]]; then
     # export PATH=~/.npm-packages/bin:$PATH
     # export NODE_PATH=~/.npm-packages/lib/node_modules
+    export PATH="$HOME/bin:$PATH"
   fi
 
 # linux-end  ------------------------------------------------------------------------------------------
