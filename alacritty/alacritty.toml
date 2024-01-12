@@ -23,13 +23,13 @@ dimensions = { columns = 100, lines = 30 }
 padding = { x = 16, y = 0 }
 dynamic_padding = true
 decorations = "Buttonless"
-startup_mode = "Maximized" # (changes require restart)
-opacity = 0.7
+startup_mode = "Maximized" # change require restart
+opacity = 0.75
 blur = true
 
 [scrolling]
 history = 10000
-multiplier = 3 # Scrolling distance multiplier.
+multiplier = 3 # scroll distance multiplier
 
 [font]
 size = 20
