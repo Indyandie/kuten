@@ -4,6 +4,8 @@
 
 ## [Default Language Servers][def-lang-serv]
 
+- [simple-completion-language-server](https://github.com/estin/simple-completion-language-server)
+
 Get a list of languages with an installed lsp.
 
 ```shell
