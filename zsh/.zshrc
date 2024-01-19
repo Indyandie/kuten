@@ -56,14 +56,10 @@ if [[ $OSTYPE == darwin* ]] then
 
   cmatrix -bs
 
-  # atuin
-  # eval "$(atuin init zsh)"
-
-  # Bind ctrl-r but not up arrow
-  eval "$(atuin init zsh --disable-up-arrow)"
-
+  # atuin 
   # UP arrow + alt/opt
   bindkey '^[[1;3A' _atuin_search_widget
+
 # macos-end ------------------------------------------------------------------------------------------
 
 elif [[ $OSTYPE == linux* ]] then
@@ -106,6 +102,10 @@ elif [[ $OSTYPE == linux* ]] then
     # export NODE_PATH=~/.npm-packages/lib/node_modules
     export PATH="$HOME/bin:$PATH"
   fi
+
+  # atuin
+  # UP arrow + alt/opt
+  bindkey '^[[1;5A' _atuin_search_widget
 
 # linux-end  ------------------------------------------------------------------------------------------
 
@@ -188,3 +188,9 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 if command -v zoxide &> /dev/null; then
   eval "$(zoxide init zsh)"
 fi
+
+  # atuin
+  # eval "$(atuin init zsh)"
+
+  # Bind ctrl-r but not up arrow
+  eval "$(atuin init zsh --disable-up-arrow)"
