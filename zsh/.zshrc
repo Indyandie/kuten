@@ -55,7 +55,13 @@ if [[ $OSTYPE == darwin* ]] then
   fortune | cowsay
 
   cmatrix -bs
-  
+
+  # atuin
+  # eval "$(atuin init zsh)"
+
+  # Bind ctrl-r but not up arrow
+  eval "$(atuin init zsh --disable-up-arrow)"
+
 # macos-end ------------------------------------------------------------------------------------------
 
 elif [[ $OSTYPE == linux* ]] then
@@ -180,4 +186,5 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 if command -v zoxide &> /dev/null; then
   eval "$(zoxide init zsh)"
 fi
+
 

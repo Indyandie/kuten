@@ -15,3 +15,4 @@ link,confdir,conf
 /vim/.vimrc,/,.vimrc
 /zsh/.zshrc,/,.zshrc
 /zsh/alias.zsh,/,.alias
+/atuin/config.toml,/.config/atuin/,config.toml

@@ -1,0 +1,22 @@
+# SQLite database db_path = "~/.config/atuin/.history.db"
+
+# key
+key = "~/.atuin-key"
+
+# stats display
+dialect = "us"
+
+# vim mode
+keymap_mode = "vim-normal"
+
+# default filter
+filter_mode = "directory"
+
+# git pseudo filter
+workspaces = true
+
+# style
+style = "compact"
+invert = true # top search bar
+
+exit_mode = "return-query" # return query on exit
