@@ -50,6 +50,11 @@ if [[ $OSTYPE == darwin* ]] then
 
   # brew sbin
   export PATH="/usr/local/sbin:$PATH"
+
+  # silly crap - let's see how long before I get really annoyed
+  fortune | cowsay
+
+  cmatrix -bs
   
 # macos-end ------------------------------------------------------------------------------------------
 
