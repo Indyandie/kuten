@@ -62,6 +62,8 @@ if [[ $OSTYPE == darwin* ]] then
   # Bind ctrl-r but not up arrow
   eval "$(atuin init zsh --disable-up-arrow)"
 
+  # UP arrow + alt/opt
+  bindkey '^[[1;3A' _atuin_search_widget
 # macos-end ------------------------------------------------------------------------------------------
 
 elif [[ $OSTYPE == linux* ]] then
@@ -186,5 +188,3 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 if command -v zoxide &> /dev/null; then
   eval "$(zoxide init zsh)"
 fi
-
-
