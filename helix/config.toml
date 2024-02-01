@@ -24,8 +24,18 @@ theme = "kurokula"
 "," = "keep_primary_selection"
 
 [keys.normal."space"]
-"d" = ":bclose"
-D = ":bclose!"
+# close buffer
+"d" = ":bc"
+D = ":bc!"
+# quit Helix
+q = ":q"
+Q = ":q!"
+# write
+s = ":w"
+S = ":w!"
+v = { o = ":vs", n = ":vnew", q = "wclose" }
+H = "jump_view_left"
+L = "jump_view_right"
 
 [editor]
 bufferline = "multiple"
@@ -46,14 +56,7 @@ color-modes = true
 '*' = '*'
 
 [editor.statusline]
-left = [
-  "mode",
-  "selections",
-  "spacer",
-  "spinner",
-  "diagnostics",
-  "register"
-]
+left = ["mode", "selections", "spacer", "spinner", "diagnostics", "register"]
 center = [
   # "separator",
   "version-control",
@@ -110,11 +113,10 @@ min-width = 1
 
 [editor.soft-wrap]
 enable = true
-max-wrap = 25 # increase value to reduce forced mid-word wrapping
+max-wrap = 25         # increase value to reduce forced mid-word wrapping
 max-indent-retain = 0
 wrap-indicator = "…"  # set wrap-indicator to "" to hide it
 
 [editor.smart-tab]
 enable = false
 # supersede-menu = true
-
