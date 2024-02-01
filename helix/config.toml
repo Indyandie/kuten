@@ -24,7 +24,8 @@ theme = "kurokula"
 "," = "keep_primary_selection"
 
 [keys.normal."space"]
-"x" = ":bclose"
+"d" = ":bclose"
+D = ":bclose!"
 
 [editor]
 bufferline = "multiple"
@@ -69,9 +70,9 @@ right = [
   "position-percentage",
 ]
 separator = "│"
-mode.normal = "● nor"
-mode.insert = "◉ ins"
-mode.select = "◍ sel"
+mode.normal = "●"
+mode.insert = "◉"
+mode.select = "◍"
 
 [editor.lsp]
 display-messages = true
@@ -111,7 +112,7 @@ min-width = 1
 enable = true
 max-wrap = 25 # increase value to reduce forced mid-word wrapping
 max-indent-retain = 0
-wrap-indicator = "..."  # set wrap-indicator to "" to hide it
+wrap-indicator = "…"  # set wrap-indicator to "" to hide it
 
 [editor.smart-tab]
 enable = false
