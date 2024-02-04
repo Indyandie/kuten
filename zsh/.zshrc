@@ -124,7 +124,7 @@ ENABLE_CORRECTION="true"
 HIST_STAMPS="mm/dd/yyyy"
 
 # export EDITOR='vim'
-export EDITOR='helix'
+export EDITOR='hx' # helix editor
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
