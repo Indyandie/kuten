@@ -123,7 +123,8 @@ ENABLE_CORRECTION="true"
 # see 'man strftime' for details.
 HIST_STAMPS="mm/dd/yyyy"
 
-export EDITOR='vim'
+# export EDITOR='vim'
+export EDITOR='helix'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
