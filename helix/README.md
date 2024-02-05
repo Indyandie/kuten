@@ -44,13 +44,29 @@ hx --health | rg "✓ [a-z]" | sd '(^[a-z\-]+).*' '$1'
 - bash-language-server
 - dot-language-server
 - svelte-language-server
+- typescript-svelte-plugin
 - typescript-language-server
 - typescript
 - vscode-langservers-extracted
 - ansible/ansible-language-server
 
 ```sh
-npm i -g @astrojs/language-server bash-language-server dot-language-server svelte-language-server typescript-language-server typescript vscode-langservers-extracted @ansible/ansible-language-server
+npm i -g @astrojs/language-server bash-language-server dot-language-server svelte-language-server typescript-language-server typescript vscode-langservers-extracted @ansible/ansible-language-server typescript-svelte-plugin
+```
+
+#### svelte
+
+Add to each project's `[js|ts]config.json`
+
+```json
+{
+    "compilerOptions": {
+        ...
+        "plugins": [{
+            "name": "typescript-svelte-plugin"
+        }]
+    }
+}
 ```
 
 ### brew lsp
