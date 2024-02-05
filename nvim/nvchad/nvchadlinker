@@ -32,7 +32,8 @@ link_file () {
 }
 
 if [ -d $nvchad ]; then
-  if [ -f "$nvchadfilepath" || -h "$nvchadfilepath" ]; then
+  # if [ -f "$nvchadfilepath" || -h "$nvchadfilepath" ]; then
+  if [ -f "$nvchadfilepath" ]; then
     echo "$nvchadfilepath exist!"
     backup_files  
     remove_file

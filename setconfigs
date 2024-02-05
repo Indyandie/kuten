@@ -5,13 +5,6 @@ function linkconf() {
 	local link=$2
 
 	ln -s "$link" $conf
-
-	# if [[ $OSTYPE == darwin* ]] then
-	# 	ln -s "$KUTEN/$konfdir/mac-alacritty.yml" $conf
-	# elif [[ $OSTYPE == linux* ]] then
-	# 	ln -s "$KUTEN/$konflinux" $conf
-	# 	ln -s "$KUTEN/$konfdir/linux-alacritty.yml" $conf
-	# fi
 }
 
 setconf() {
@@ -41,8 +34,15 @@ setconf() {
 		mkdir $confdir
 		linkconf $conf $link
 	fi
+
+	echo "\n"
+	printf "%0.s—" {1..`tput cols`}	
+	echo "\n"
 }
 
+echo "Setconfig: kuten(dotfiles)"
+printf "%0.s—" {1..`tput cols`}	
+echo "\n\n"
 # while read line
 exec < "$KUTEN/symlinks.csv"
 read header
@@ -53,7 +53,9 @@ do
 done
 
 if [[ $OSTYPE == darwin* ]]; then
+	echo "Darwin"
 	zsh darwin/setconfigs
 elif [[ $OSTYPE == linux* ]]; then
+	echo "Linux"
 	zsh linux/setconfigs
 fi
