@@ -33,18 +33,15 @@ local modes = {
 	["!"] = { "shell", "❱", "St_TerminalMode" },
 }
 
-for mode, mapping in pairs(modes) do
-  vim.api.nvim_set_keymap(mode, mapping[2], ":" .. mapping[3] .. "<CR>", { noremap = true, silent = true })
-end
-
 M.ui = {
 	theme = "monekai",
 	theme_toggle = { "monekai", "one_light" },
 
 	hl_override = highlights.override,
 	hl_add = highlights.add,
+
 	statusline = {
-		theme = "default",
+		theme = "minimal",
 		-- theme = "minimal"
 		separator_style = "block",
 		overriden_modules = function()
@@ -80,7 +77,6 @@ M.ui = {
 
 M.plugins = "custom.plugins"
 
--- check core.mappings for table structure
 M.mappings = require("custom.mappings")
 
 return M
