@@ -7,6 +7,7 @@
 # This removes the current preferences and causes Amethyst to restart with default preferences and pull configs from this file.
 
 # layouts - Ordered list of layouts to use by layout key (default tall, wide, fullscreen, and column).
+
 layouts:
   - fullscreen
   # - tall-right
@@ -53,15 +54,6 @@ mod2:
 # '.'
 # ','
 
-# two-pane:
-# select-two-pane-layout:
-# Select-Two-Pane-layout:
-
-# remove default shortcut `mod1`+`s`
-# select-wide-layout:
-#   mod: mod1
-#   key: "0"
-
 select-two-pane-layout:
   mod: mod1
   key: "s"
@@ -69,6 +61,12 @@ select-two-pane-layout:
 select-fullscreen-layout:
   mod: mod1
   key: "f"
+
+### Default Override
+
+select-wide-layout:
+  mod: ""
+  key: ""
 
 # select-tall-layout:
 #   mod: mod1
@@ -171,21 +169,6 @@ swap-main:
   mod: mod1
   key: enter
 
-# Move focus to the n-th screen in the list; e.g., focus-screen-3 will move mouse focus to the 3rd screen. Note that the main window in the given screen will be focused.
-#focus-screen-n:
-# focus-screen-<screen-number>:
-#   mod: mod1
-#   key: y
-# Move the currently focused window to the n-th screen; e.g., throw-screen-3 will move the window to the 3rd screen.
-# throw-screen-n:
-# throw-screen-<screen-number>:
-#   mod: mod1
-#   key: u
-# Move the currently focused window to the n-th space; e.g., throw-space-3 will move the window to the 3rd space.
-# throw-space-<screen-number>:
-#   mod: mod1
-#   key: i
-
 # Move the currently focused window to the space to the left.
 throw-space-left:
   mod: mod2
@@ -195,26 +178,6 @@ throw-space-left:
 throw-space-right:
   mod: mod2
   key: right
-
-# Toggle the floating state of the currently focused window; i.e., if it was floating make it tiled and if it was tiled make it floating.
-# toggle-float:
-#   mod: mod1
-#   key: t
-
-# Display the layout HUD with the current layout on each screen.
-# display-current-layout:
-#   mod: mod1
-#   key: i
-
-# Turn on or off tiling entirely.
-# toggle-tiling:
-#   mod: mod1
-#   key: t
-
-# Rerun the current layout's algorithm.
-# reevaluate-windows:
-#   mod: mod1
-#   key: z
 
 # Turn on or off focus-follows-mouse.
 toggle-focus-follows-mouse:
