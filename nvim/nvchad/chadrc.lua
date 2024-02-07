@@ -42,36 +42,7 @@ M.ui = {
 
 	statusline = {
 		theme = "minimal",
-		-- theme = "minimal"
 		separator_style = "block",
-		overriden_modules = function()
-			-- local st_modules = require("nvchad_ui.statusline.default")
-			-- this is just default table of statusline modules
-
-			return {
-				mode = function()
-					-- return st_modules.mode() .. " bruh "
-					-- or just return "" to hide this module
-					-- return ""
-					local m = vim.api.nvim_get_mode().mode
-
-					-- return current_mode .. mode_sep1 .. "%#ST_EmptySpace#" .. sep_r
-					-- return modes[m][1] .. " " .. modes[m][2]
-					return "%#"
-							.. modes[m][3]
-							.. "#"
-							.. " "
-							.. modes[m][2]
-							.. " "
-							.. modes[m][1]
-							.. " "
-							.. "%#"
-							.. modes[m][3]
-							.. "Sep"
-							.. "#"
-				end,
-			}
-		end,
 	},
 }
 
