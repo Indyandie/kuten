@@ -16,3 +16,4 @@ link,confdir,conf
 /zsh/.zshrc,/,.zshrc
 /zsh/alias.zsh,/,.alias
 /atuin/config.toml,/.config/atuin/,config.toml
+/zellij/zellij-config.kdl,/.config/zellij/,config.kdl
