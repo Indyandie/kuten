@@ -144,7 +144,6 @@ mcd() {
 # rustc
 rustbin(){
   name=`echo $1 | sd '\.rs' ''`
-  echo $name
   rustc --out-dir bin "$1" && "bin/$name"
 }
 
