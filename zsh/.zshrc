@@ -52,9 +52,10 @@ if [[ $OSTYPE == darwin* ]] then
   export PATH="/usr/local/sbin:$PATH"
 
   # silly crap - let's see how long before I get really annoyed
-  fortune | cowsay
+  # I'm annoyned
+  # fortune | cowsay
 
-  cmatrix -bs
+  # cmatrix -bs
 
   # atuin 
   # UP arrow + alt/opt
@@ -142,7 +143,9 @@ mcd() {
 
 # rustc
 rustbin(){
-  rustc --out-dir bin "$1.rs" && "bin/$1"
+  name=`echo $1 | sd '\.rs' ''`
+  echo $name
+  rustc --out-dir bin "$1" && "bin/$name"
 }
 
 # run in the background with logs
