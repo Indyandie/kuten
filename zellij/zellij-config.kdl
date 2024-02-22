@@ -174,9 +174,9 @@ plugins {
 on_force_close "quit"
 
 //  Send a request for a simplified ui (without arrow fonts) to plugins
-simplified_ui true
+simplified_ui false
 
-// default_shell "fish"
+default_shell "zsh"
 
 // Choose the path to override cwd that zellij will use for opening new panes
 // default_cwd ""
