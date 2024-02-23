@@ -152,6 +152,7 @@ export EZA_ICONS_AUTO=true
 alias lz="eza"
 alias la="eza -la"
 alias l="eza -lah"
+alias tree="eza --tree"
 
 # zellij
 alias zj="zellij"
