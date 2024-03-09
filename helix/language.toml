@@ -49,7 +49,8 @@ language-server = { command = "astro-ls", args = ["--stdio"] }
 
 [[language]]
 name = "markdown"
-scope = "source.markdown"
+file-types = [ "md", "mdx", "markdown" ]
+# scope = "source.markdown"
 language-servers = [ "marksman", "ltex-ls", "vscode-html-language-server" ]
 
 [language.auto-pairs]
