@@ -13,6 +13,8 @@ shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 config = { enable = true, lint = true, unstable = true }
 language-server = { command = "deno", args = ["lsp"], language-id = "javascript" }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js" ] }
+auto-format = true
 
 [[language]]
 name = "jsx"
@@ -20,6 +22,10 @@ shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 config = { enable = true, lint = true, unstable = true }
 language-server = { command = "deno", args = ["lsp"], language-id = "javascriptreact" }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx" ] }
+auto-format = true
+
+# typescript
 
 [[language]]
 name = "typescript"
@@ -27,6 +33,9 @@ shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 config = { enable = true, lint = true, unstable = true }
 language-server = { command = "deno", args = ["lsp"], language-id = "typescript" }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts" ] }
+auto-format = true
+
 
 [[language]]
 name = "tsx"
@@ -34,6 +43,8 @@ shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 config = { enable = true, lint = true, unstable = true }
 language-server = { command = "deno", args = ["lsp"], language-id = "typescriptreact" }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx" ] }
+auto-format = true
 
 # Astro
 
@@ -52,14 +63,16 @@ name = "markdown"
 file-types = [ "md", "mdx", "markdown" ]
 # scope = "source.markdown"
 language-servers = [ "marksman", "ltex-ls", "vscode-html-language-server" ]
-
-[language.auto-pairs]
-"_" = "_"
-'*' = '*'
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md" ] }
+auto-format = true
 
 [language-server.ltex-ls.config]
 ltex.disabledRules = { "en-US" = ["PROFANITY"], "en-GB" = ["PROFANITY"] }
 ltex.dictionary = { "en-US" = ["builtin"], "en-GB" = ["builtin"] }
+
+[language.auto-pairs]
+"_" = "_"
+'*' = '*'
 
 # # toml
 
@@ -90,3 +103,10 @@ language-servers = [ "sql-language-server" ]
 name = "python"
 formatter = { command = "black", args = ["--quiet", "-"] }
 auto-format = true
+
+# JSON
+
+[[language]]
+name = "json"
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json" ] }
+
