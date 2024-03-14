@@ -30,8 +30,10 @@ name = "javascript"
 shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 config = { enable = true, lint = true, unstable = true }
-language-server = { command = "deno", args = ["lsp"], language-id = "javascript" }
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js" ] }
+language-server = { command = "deno", args = [
+  "lsp",
+], language-id = "javascript" }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js"] }
 # formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
@@ -40,8 +42,10 @@ name = "jsx"
 shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 config = { enable = true, lint = true, unstable = true }
-language-server = { command = "deno", args = ["lsp"], language-id = "javascriptreact" }
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx" ] }
+language-server = { command = "deno", args = [
+  "lsp",
+], language-id = "javascriptreact" }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx"] }
 auto-format = true
 
 # typescript
@@ -51,8 +55,10 @@ name = "typescript"
 shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 config = { enable = true, lint = true, unstable = true }
-language-server = { command = "deno", args = ["lsp"], language-id = "typescript" }
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts" ] }
+language-server = { command = "deno", args = [
+  "lsp",
+], language-id = "typescript" }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts"] }
 # formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
@@ -61,8 +67,10 @@ name = "tsx"
 shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 config = { enable = true, lint = true, unstable = true }
-language-server = { command = "deno", args = ["lsp"], language-id = "typescriptreact" }
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx" ] }
+language-server = { command = "deno", args = [
+  "lsp",
+], language-id = "typescriptreact" }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx"] }
 # formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
@@ -80,19 +88,15 @@ language-server = { command = "astro-ls", args = ["--stdio"] }
 
 [[language]]
 name = "markdown"
-file-types = [ "md", "mdx", "markdown" ]
-# scope = "source.markdown"
-language-servers = [ "marksman", "ltex-ls", "vscode-html-language-server" ]
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md" ] }
+file-types = ["md", "mdx", "markdown"]
+scope = "source.markdown"
+language-servers = ["marksman", "ltex-ls", "vscode-html-language-server"]
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md"] }
 auto-format = true
 
 [language-server.ltex-ls.config]
 ltex.disabledRules = { "en-US" = ["PROFANITY"], "en-GB" = ["PROFANITY"] }
 ltex.dictionary = { "en-US" = ["builtin"], "en-GB" = ["builtin"] }
-
-[language.auto-pairs]
-"_" = "_"
-'*' = '*'
 
 # TOML
 
@@ -105,18 +109,33 @@ ltex.dictionary = { "en-US" = ["builtin"], "en-GB" = ["builtin"] }
 
 [[language]]
 name = "toml"
-formatter = { command = "taplo", args = ["fmt", "-"] }
+# formatter = { command = "taplo", args = ["fmt", "-"] }
+formatter = { command = "taplo", args = ["format", "-"] }
+auto-format = true
 
 # SQL
-
-[[language]]
-name = "sql"
-language-servers = [ "sql-language-server" ]
 
 [language-server.sql-language-server]
 command = "sql-language-server"
 args = ["up", "--method", "stdio"]
-formatter = { command = "sqlformat", args = ["--reindent", "--indent_width", "2", "--keywords", "upper", "--identifiers", "lower", "-"] }
+formatter = { command = "sqlformat", args = [
+  "--reindent",
+  "--indent_width",
+  "2",
+  "--keywords",
+  "upper",
+  "--identifiers",
+  "lower",
+  "-",
+] }
+
+[language-server.sqls]
+command = "sqls"
+
+[[language]]
+name = "sql"
+language-servers = ["sql-language-server", "sqls"]
+
 
 # py
 
@@ -129,6 +148,9 @@ auto-format = true
 
 [[language]]
 name = "json"
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json" ] }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json"] }
 # formatter = { command = 'prettier', args = ["--parser", "json"] }
 
+# [language.auto-pairs]
+# "_" = "_"
+# '*' = '*'
