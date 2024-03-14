@@ -109,13 +109,14 @@ formatter = { command = "taplo", args = ["fmt", "-"] }
 
 # SQL
 
-[language-server.sql-language-server]
-command = "sql-language-server"
-args = ["up", "--method", "stdio"]
-
 [[language]]
 name = "sql"
 language-servers = [ "sql-language-server" ]
+
+[language-server.sql-language-server]
+command = "sql-language-server"
+args = ["up", "--method", "stdio"]
+formatter = { command = "sqlformat", args = ["--reindent", "--indent_width", "2", "--keywords", "upper", "--identifiers", "lower", "-"] }
 
 # py
 
