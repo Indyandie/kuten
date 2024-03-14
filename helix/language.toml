@@ -5,7 +5,19 @@ name = "rust"
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 
-# Deno 
+# HTML
+
+[[language]]
+name = "html"
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+
+# CSS
+
+[[language]]
+name = "css"
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+
+# JS
 
 [[language]]
 name = "javascript"
@@ -14,6 +26,7 @@ roots = ["deno.json", "package.json", "tsconfig.json"]
 config = { enable = true, lint = true, unstable = true }
 language-server = { command = "deno", args = ["lsp"], language-id = "javascript" }
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js" ] }
+# formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
@@ -34,8 +47,8 @@ roots = ["deno.json", "package.json", "tsconfig.json"]
 config = { enable = true, lint = true, unstable = true }
 language-server = { command = "deno", args = ["lsp"], language-id = "typescript" }
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts" ] }
+# formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
-
 
 [[language]]
 name = "tsx"
@@ -44,6 +57,7 @@ roots = ["deno.json", "package.json", "tsconfig.json"]
 config = { enable = true, lint = true, unstable = true }
 language-server = { command = "deno", args = ["lsp"], language-id = "typescriptreact" }
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx" ] }
+# formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
 
 # Astro
@@ -74,7 +88,7 @@ ltex.dictionary = { "en-US" = ["builtin"], "en-GB" = ["builtin"] }
 "_" = "_"
 '*' = '*'
 
-# # toml
+# TOML
 
 # ## Installation 
 
@@ -109,4 +123,5 @@ auto-format = true
 [[language]]
 name = "json"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json" ] }
+# formatter = { command = 'prettier', args = ["--parser", "json"] }
 
