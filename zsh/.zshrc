@@ -193,8 +193,19 @@ if command -v zoxide &> /dev/null; then
   eval "$(zoxide init zsh)"
 fi
 
-  # atuin
-  # eval "$(atuin init zsh)"
+# atuin
+# eval "$(atuin init zsh)"
 
-  # Bind ctrl-r but not up arrow
-  eval "$(atuin init zsh --disable-up-arrow)"
+# Bind ctrl-r but not up arrow
+eval "$(atuin init zsh --disable-up-arrow)"
+
+# yazi
+
+function ya() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
