@@ -83,3 +83,10 @@ args = ["up", "--method", "stdio"]
 [[language]]
 name = "sql"
 language-servers = [ "sql-language-server" ]
+
+# py
+
+[[language]]
+name = "python"
+formatter = { command = "black", args = ["--quiet", "-"] }
+auto-format = true
