@@ -159,3 +159,6 @@ alias zj="zellij"
 
 # BELL
 alias bell='echo "\a"'
+
+# ASCII
+alias aic='ascii-image-converter'
