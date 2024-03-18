@@ -30,7 +30,7 @@ keybinds clear-defaults=true { // clear all defaults
         bind "n" { NewPane; SwitchToMode "Normal"; }
         bind "d" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "r" { NewPane "Right"; SwitchToMode "Normal"; }
-        bind "x" { CloseFocus; SwitchToMode "Normal"; }
+        bind "d" { CloseFocus; SwitchToMode "Normal"; }
         bind "f" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
         bind "z" { TogglePaneFrames; SwitchToMode "Normal"; }
         bind "w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
@@ -52,7 +52,8 @@ keybinds clear-defaults=true { // clear all defaults
         bind "h" "Left" "Up" "k" { GoToPreviousTab; }
         bind "l" "Right" "Down" "j" { GoToNextTab; }
         bind "n" { NewTab; SwitchToMode "Normal"; }
-        bind "x" { CloseTab; SwitchToMode "Normal"; }
+        bind "n" { NewTab { name "●"; }; SwitchToMode "Normal"; }
+        bind "d" { CloseTab; SwitchToMode "Normal"; }
         bind "s" { ToggleActiveSyncTab; SwitchToMode "Normal"; }
         bind "b" { BreakPane; SwitchToMode "Normal"; }
         bind "]" { BreakPaneRight; SwitchToMode "Normal"; }
@@ -122,9 +123,13 @@ keybinds clear-defaults=true { // clear all defaults
         }
     }
     shared_except "locked" {
+        bind "Alt p" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
+        bind "Alt o" { ToggleFloatingPanes; SwitchToMode "Normal"; }
+        bind "Alt d" { CloseFocus; SwitchToMode "Normal"; }
         bind "Ctrl g" { SwitchToMode "Locked"; }
         bind "Alt q" { Quit; }
         bind "Alt n" { NewPane; }
+        bind "Alt t" { NewTab { name "●"; }; SwitchToMode "Normal"; }
         bind "Alt Left" { MoveFocusOrTab "Left"; }
         bind "Alt Right" { MoveFocusOrTab "Right"; }
         bind "Alt Down" { MoveFocus "Down"; }
