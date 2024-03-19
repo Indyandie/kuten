@@ -201,7 +201,7 @@ serialize_pane_viewport true
 // Scrollback lines to serialize along with the pane viewport when serializing sessions, 0
 // defaults to the scrollback size. If this number is higher than the scrollback size, it will
 // also default to the scrollback size. This does nothing if `serialize_pane_viewport` is not true.
-scrollback_lines_to_serialize 10000
+scrollback_lines_to_serialize 100
 
 themes {
     default {
@@ -237,6 +237,13 @@ theme "gruvbox-dark"
 
 // The name of the default layout to load on startup
 default_layout "compact"
+
+
+ui {
+    pane_frames {
+        rounded_corners true
+    }
+}
 
 // Choose the mode that zellij uses when starting up.
 default_mode "normal"
