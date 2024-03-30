@@ -101,3 +101,7 @@ Instead of a getting all fancy with the terminal config use the literal characte
 ## Links
 
 [language.toml](https://github.com/helix-editor/helix/blob/090ed97e0045bfad1e5bff8b96c61707b996b85a/languages.toml#L609)
+
+## TODO
+
+- [ ] Update from [release 24.03](https://helix-editor.com/news/release-24-03-highlights/)
