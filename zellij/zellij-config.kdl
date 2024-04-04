@@ -125,7 +125,7 @@ keybinds clear-defaults=true { // clear all defaults
     shared_except "locked" {
         bind "Alt p" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "Alt o" { ToggleFloatingPanes; SwitchToMode "Normal"; }
-        bind "Alt d" { CloseFocus; SwitchToMode "Normal"; }
+        bind "Alt x" { CloseFocus; SwitchToMode "Normal"; }
         bind "Ctrl g" { SwitchToMode "Locked"; }
         bind "Alt q" { Quit; }
         bind "Alt n" { NewPane; }
