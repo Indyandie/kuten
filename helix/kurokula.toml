@@ -3,17 +3,17 @@
 # https://github.com/helix-editor/helix/blob/master/runtime/themes/darcula.toml 
 # Author : Nick Ogden <nick@nickogden.org>
 
-"ui.background" = { bg = "black-normal" }
-"ui.menu" = { fg = "white-light", bg = "black-dark" }
-"ui.menu.selected" = { fg = "white-light", bg = "blue-dark" }
-"ui.linenr" = { fg = "white-dark", bg = "black-normal" }
+"ui.background" = { bg = "black-dark" }
+"ui.menu" = { fg = "white-light", bg = "black-normal" }
+"ui.menu.selected" = { fg = "white-light", bg = "blue-normal" }
+"ui.linenr" = { fg = "white-dark", bg = "black-dark" }
 "ui.linenr.selected" = { fg = "white-light", bg = "black-light", modifiers = ["bold"] }
-"ui.gutter" = { bg = "black-normal" }
+"ui.gutter" = { bg = "black-dark" }
 "ui.popup" = { fg = "white-normal", bg = "black-normal" }
 "ui.popup.info" = { fg = "yellow-dark", bg = "black-dark", modifiers = ["italic"] }
 "ui.window" = { bg = "black-light" }
 "ui.selection" = { bg = "black-light" }
-"ui.statusline" = { fg = "white-dark", bg = "black-dark", modifiers = ["regular"] }
+"ui.statusline" = { fg = "white-normal", bg = "black-normal", modifiers = ["regular"] }
 "ui.statusline.normal" = { fg = "white-light", modifiers = ["bold"] }
 "ui.statusline.insert" = { fg = "cyan-dark", modifiers = ["bold"] }
 "ui.statusline.select" = { fg = "yellow-dark", modifiers = ["bold"] }
@@ -31,8 +31,8 @@
 "ui.virtual.indent-guide" = "sel-bg"
 "ui.virtual.whitespace" = "grey03"
 "ui.virtual.inlay-hint" = { fg = "grey03", modifiers = ["italic"] }
-"ui.bufferline" = { fg = "white-dark", bg = "black-dark" }
-"ui.bufferline.active" = { fg = "white-normal", bg = "black-light" }
+"ui.bufferline" = { fg = "white-dark", bg = "black-normal" }
+"ui.bufferline.active" = { fg = "white-normal", bg = "black-dark" }
 
 "operator" = "white-dark"
 "punctuation" = { fg = "white-dark" } #, modifiers = ["bold"] }
