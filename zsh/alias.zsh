@@ -156,6 +156,13 @@ alias tree="eza --tree"
 
 # zellij
 alias zj="zellij"
+alias zja="zellij a# attach session"
+alias zjd="zellij d# delete session"
+alias zjk="zellij k# kill session"
+alias zjs="zellij -s# new session with custom name"
+alias zjl="zellij ls# list"
+alias zjac="zellij ac# action" 
+alias zjr="zellij r# run a comman in new panel" 
 
 # BELL
 alias bell='echo "\a"'
