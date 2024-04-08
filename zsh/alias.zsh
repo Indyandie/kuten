@@ -169,3 +169,9 @@ alias bell='echo "\a"'
 
 # ASCII
 alias aic='ascii-image-converter'
+
+# deno
+
+alias dn="deno"
+alias dnr="deno run"
+alias dnnw="deno run --allow-net --watch"
