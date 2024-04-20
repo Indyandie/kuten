@@ -174,4 +174,6 @@ alias aic='ascii-image-converter'
 
 alias dn="deno"
 alias dnr="deno run"
-alias dnnw="deno run --allow-net --watch"
+alias dnt="deno task"
+alias dnnt="deno run --allow-net --watch"
+alias dnrd="deno run --allow-net"
