@@ -17,7 +17,7 @@ bindings = [
 ]
 
 [font]
-size = 20
+size = 18
 normal = { family = "JetBrainsMono NF", style = "Regular" }
 bold = { family = "JetBrainsMono NF", style = "Bold" }
 italic = { family = "JetBrainsMono NF", style = "Italic" }
