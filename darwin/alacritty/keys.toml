@@ -18,3 +18,14 @@ bindings = [
 
 [window]
 option_as_alt = "OnlyLeft"
+
+[font]
+size = 20
+normal = { family = "JetbrainsMono NF", style = "Regular" }
+bold = { family = "JetbrainsMono NF", style = "Bold" }
+italic = { family = "JetbrainsMono NF", style = "Italic" }
+bold_italic = { family = "JetbrainsMono NF", style = "Bold Italic" }
+
+shell.program = "/bin/zsh"
+shell.args = ["-l"]
+

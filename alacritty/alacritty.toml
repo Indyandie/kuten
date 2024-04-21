@@ -2,9 +2,6 @@ import = [
   "~/.config/alacritty/keys.toml"
 ]
 
-shell.program = "/bin/zsh"
-shell.args = ["-l"]
-
 # This format causes an error
 # [shell]
 # program = "/bin/zsh"
@@ -30,13 +27,6 @@ blur = true
 [scrolling]
 history = 10000
 multiplier = 3 # scroll distance multiplier
-
-[font]
-size = 20
-normal = { family = "JetbrainsMono NF", style = "Regular" }
-bold = { family = "JetbrainsMono NF", style = "Bold" }
-italic = { family = "JetbrainsMono NF", style = "Italic" }
-bold_italic = { family = "JetbrainsMono NF", style = "Bold Italic" }
 
 [keyboard]
 bindings = []

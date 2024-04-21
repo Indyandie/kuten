@@ -15,3 +15,11 @@ bindings = [
 	{ key = "ArrowLeft", action = "SearchFocusPrevious", mode = "Search" },
 	{ key = "?", mods = "Shift|Control", action = "SearchForward" }
 ]
+
+[font]
+size = 20
+normal = { family = "JetBrainsMono NF", style = "Regular" }
+bold = { family = "JetBrainsMono NF", style = "Bold" }
+italic = { family = "JetBrainsMono NF", style = "Italic" }
+bold_italic = { family = "JetBrainsMono NF", style = "Bold Italic" }
+
