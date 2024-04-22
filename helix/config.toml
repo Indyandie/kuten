@@ -51,9 +51,6 @@ color-modes = true
 '[' = ']'
 '"' = '"'
 '<' = '>'
-'~' = '~'
-'_' = '_'
-'*' = '*'
 
 [editor.statusline]
 left = ["mode", "selections", "spacer", "spinner", "diagnostics", "register"]

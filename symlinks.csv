@@ -1,7 +1,7 @@
 link,confdir,conf
 /alacritty/alacritty.toml,/.config/alacritty/,alacritty.toml
 /helix/config.toml,/.config/helix/,config.toml
-/helix/language.toml,/.config/helix/,language.toml
+/helix/languages.toml,/.config/helix/,languages.toml
 /helix/kurokula.toml,/.config/helix/themes/,kurokula.toml
 /nvim/nvchad/chadrc.lua,/.config/nvim/lua/custom/,chadrc.lua
 /nvim/nvchad/init.lua,/.config/nvim/lua/custom/,init.lua
