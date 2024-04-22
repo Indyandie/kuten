@@ -93,10 +93,11 @@ Piping certain things proved challenging, luckily `xargs` came to the rescue.
 pipe:xargs -I {} echo {} | xargs -I {} grep {} attachment.csv | sed -E 's/(.*),(.*)/\1/g'
 ```
 
-
 ## Alt Workaround (macos)
 
-Instead of a getting all fancy with the terminal config use the literal character in the helix config. [workaround](https://github.com/helix-editor/helix/issues/2469#issuecomment-1714470713)
+Instead of a getting all fancy with the terminal config use the literal
+character in the helix config.
+[workaround](https://github.com/helix-editor/helix/issues/2469#issuecomment-1714470713)
 
 ## Links
 
@@ -104,4 +105,5 @@ Instead of a getting all fancy with the terminal config use the literal characte
 
 ## TODO
 
-- [ ] Update from [release 24.03](https://helix-editor.com/news/release-24-03-highlights/)
+- [ ] Update from
+      [release 24.03](https://helix-editor.com/news/release-24-03-highlights/)
