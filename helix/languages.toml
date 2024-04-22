@@ -89,7 +89,6 @@ language-servers = [
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md"] }
 auto-format = true
 
-# no worky
 [language.auto-pairs]
 '~' = '~'
 '_' = '_'
