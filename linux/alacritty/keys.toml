@@ -1,19 +1,19 @@
 [keyboard]
 bindings = [
-	{ key ="V",      mods = "Control|Shift",      action = "Paste" },
-	{ key ="C",      mods = "Control|Shift",      action = "Copy" },
-	{ key ="Insert", mods = "Shift",              action = "PasteSelection" },
-	{ key ="Key0",   mods = "Control",            action = "ResetFontSize"   },
-	{ key ="Equals", mods = "Control",            action = "IncreaseFontSize" },
-	{ key ="Plus",   mods = "Control",            action = "IncreaseFontSize" },
-	{ key ="Minus",  mods = "Control",            action = "DecreaseFontSize" },
-	{ key ="J",      mods = "Control|Alt",        action = "ScrollLineDown" },
-	{ key ="K",      mods = "Control|Alt",        action = "ScrollLineUp" },
-	{ key ="N",      mods = "Control",            action = "CreateNewWindow" },
-	{ key = "V",      mods = "Alt|Shift|Control", action = "ToggleViMode" },
-	{ key = "ArrowRight", action = "SearchFocusNext", mode = "Search" },
-	{ key = "ArrowLeft", action = "SearchFocusPrevious", mode = "Search" },
-	{ key = "?", mods = "Shift|Control", action = "SearchForward" }
+  { key = "V", mods = "Control", action = "Paste" },
+  { key = "C", mods = "Control", action = "Copy" },
+  { key = "Insert", mods = "Shift", action = "PasteSelection" },
+  { key = "Key0", mods = "Control", action = "ResetFontSize" },
+  { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
+  { key = "Plus", mods = "Control", action = "IncreaseFontSize" },
+  { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+  { key = "J", mods = "Control|Alt", action = "ScrollLineDown" },
+  { key = "K", mods = "Control|Alt", action = "ScrollLineUp" },
+  { key = "N", mods = "Control", action = "CreateNewWindow" },
+  { key = "V", mods = "Alt|Shift|Control", action = "ToggleViMode" },
+  { key = "ArrowRight", action = "SearchFocusNext", mode = "Search" },
+  { key = "ArrowLeft", action = "SearchFocusPrevious", mode = "Search" },
+  { key = "?", mods = "Shift|Control", action = "SearchForward" },
 ]
 
 [font]
@@ -22,4 +22,3 @@ normal = { family = "JetBrainsMono NF", style = "Regular" }
 bold = { family = "JetBrainsMono NF", style = "Bold" }
 italic = { family = "JetBrainsMono NF", style = "Italic" }
 bold_italic = { family = "JetBrainsMono NF", style = "Bold Italic" }
-
