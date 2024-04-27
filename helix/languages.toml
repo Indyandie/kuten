@@ -24,10 +24,28 @@ formatter = { command = 'prettier', args = ["--parser", "css"] }
 
 # JS
 
+[language-server.deno-lsp]
+command = "deno"
+args = ["lsp"]
+environment = { NO_COLOR = "1" }
+
+[language-server.deno-lsp.config.deno]
+enable = true
+unstable = true
+suggest = { completeFunctionCalls = false, imports = { hosts = { "https://deno.land" = true } } }
+# inlay hints
+inlayHints.parameterNames.enabled = "all"
+inlayHints.parameterTypes.enabled = true
+inlayHints.variableTypes.enabled = true
+inlayHints.propertyDeclarationTypes.enabled = true
+inlayHints.functionLikeReturnTypes.enabled = true
+inlayHints.enumMemberValues.enabled = true
+
 [[language]]
 name = "javascript"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
+language-servers = ["deno-lsp"]
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js"] }
 auto-format = true
 
@@ -35,6 +53,7 @@ auto-format = true
 name = "jsx"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
+language-servers = ["deno-lsp"]
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx"] }
 auto-format = true
 
@@ -44,6 +63,7 @@ auto-format = true
 name = "typescript"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
+language-servers = ["deno-lsp"]
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts"] }
 auto-format = true
 
@@ -51,6 +71,7 @@ auto-format = true
 name = "tsx"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
+language-servers = ["deno-lsp"]
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx"] }
 auto-format = true
 
