@@ -26,19 +26,15 @@ formatter = { command = 'prettier', args = ["--parser", "css"] }
 
 [[language]]
 name = "javascript"
-shebangs = ["deno", "node"]
-roots = ["deno.json", "package.json", "tsconfig.json"]
-# config = { enable = true, lint = true, unstable = true }
-# language-server = { command = "deno", args = ["lsp"], language-id = "javascript" }
+shebangs = ["deno"]
+roots = ["deno.json", "deno.jsonc"]
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js"] }
 auto-format = true
 
 [[language]]
 name = "jsx"
-shebangs = ["deno", "node"]
-roots = ["deno.json", "package.json", "tsconfig.json"]
-# config = { enable = true, lint = true, unstable = true }
-# language-server = { command = "deno", args = [ "lsp" ], language-id = "javascriptreact" }
+shebangs = ["deno"]
+roots = ["deno.json", "deno.jsonc"]
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx"] }
 auto-format = true
 
@@ -46,19 +42,15 @@ auto-format = true
 
 [[language]]
 name = "typescript"
-shebangs = ["deno", "node"]
-roots = ["deno.json", "package.json", "tsconfig.json"]
-# config = { enable = true, lint = true, unstable = true }
-# language-server = { command = "deno", args = ["lsp"], language-id = "typescript" }
+shebangs = ["deno"]
+roots = ["deno.json", "deno.jsonc"]
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts"] }
 auto-format = true
 
 [[language]]
 name = "tsx"
-shebangs = ["deno", "node"]
-roots = ["deno.json", "package.json", "tsconfig.json"]
-# config = { enable = true, lint = true, unstable = true }
-# language-server = { command = "deno", args = ["lsp"], language-id = "typescriptreact" }
+shebangs = ["deno"]
+roots = ["deno.json", "deno.jsonc"]
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx"] }
 auto-format = true
 
