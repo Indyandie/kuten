@@ -139,6 +139,12 @@ keybinds clear-defaults=true { // clear all defaults
         bind "Alt [" { GoToPreviousTab; }
         bind "Alt ]" { GoToNextTab; }
         bind "Alt m" { ToggleFocusFullscreen; }
+        bind "Alt 1" {
+            LaunchPlugin "filepicker" {
+                floating true;
+                close_on_selection true;
+            };
+        }
     }
     shared_except "normal" "locked" {
         bind "Enter" "Esc" { SwitchToMode "Normal"; }
