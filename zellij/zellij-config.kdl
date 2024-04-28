@@ -130,6 +130,8 @@ keybinds clear-defaults=true { // clear all defaults
         bind "Alt q" { Quit; }
         bind "Alt n" { NewPane; }
         bind "Alt t" { NewTab { name "●"; }; SwitchToMode "Normal"; }
+        bind "Alt 9" { MoveTab "Left"; }
+        bind "Alt 0" { MoveTab "Right"; }
         bind "Alt Left" { MoveFocusOrTab "Left"; }
         bind "Alt Right" { MoveFocusOrTab "Right"; }
         bind "Alt Down" { MoveFocus "Down"; }
