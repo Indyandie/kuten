@@ -12,60 +12,59 @@ alias today="date -I date || date -I"
 alias hr='printf "%0.s—" {1..`tput cols`}'
 
 if [[ $OSTYPE == darwin* ]]; then
-   
-   # macos
-   alias mql="quick-look"
-   alias tb="tab"
-   alias tv="vsplit-tab"
-   alias opn="ofd"
-   alias fnd="cdf"
-   alias poweroff="sudo shutdown -h now"
-   alias reboot="sudo reboot"
-   alias oa="open -a"
-   alias macupdate="sudo nvram manufacturing-enter-picker=false && softwareupdate -i -r"
-   alias linux-picker="sudo nvram manufacturing-enter-picker=true"
-   alias backitup="tmutil startbackup -b | noti -t 'BIU' -m -"
-   alias sleepy="pmset sleepnow"
 
-   # diskutil
-   alias duck="diskutil"
-   alias eject="diskutil unmountDisk"
-   
-   ## Pico 8
-   alias pc8="cd ~/Library/Application\ Support/pico-8"
-   alias pico8="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/pico-8"
+    # macos
+    alias mql="quick-look"
+    alias tb="tab"
+    alias tv="vsplit-tab"
+    alias opn="ofd"
+    alias fnd="cdf"
+    alias poweroff="sudo shutdown -h now"
+    alias reboot="sudo reboot"
+    alias oa="open -a"
+    alias macupdate="sudo nvram manufacturing-enter-picker=false && softwareupdate -i -r"
+    alias linux-picker="sudo nvram manufacturing-enter-picker=true"
+    alias backitup="tmutil startbackup -b | noti -t 'BIU' -m -"
+    alias sleepy="pmset sleepnow"
 
-   # helix
-   alias vx="hx"
-   alias he="hx"
+    # diskutil
+    alias duck="diskutil"
+    alias eject="diskutil unmountDisk"
 
-   # sqlite3
-   alias sql="sqlite3"
+    ## Pico 8
+    alias pc8="cd ~/Library/Application\ Support/pico-8"
+    alias pico8="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/pico-8"
 
-   # mullvad
-   alias mlv-rs="mullvad && mullvad reconnect && sleep 1 && mullvad status"
+    # helix
+    alias vx="hx"
+    alias he="hx"
+
+    # sqlite3
+    alias sql="sqlite3"
+
+    # mullvad
+    alias mlv-rs="mullvad && mullvad reconnect && sleep 1 && mullvad status"
 
 elif [[ $OSTYPE == linux* ]]; then
 
-   alias pacman="sudo pacman"
+    alias pacman="sudo pacman"
 
-   # Hibernate
-   alias sleepy="systemctl suspend"
+    # Hibernate
+    alias sleepy="systemctl suspend"
 
-   
-   # Hyprland
-   if [[ $XDG_CURRENT_DESKTOP = Hyprland ]]; then
-      # stuff to do
-      alias reload-dunst="killall dunst && nohup dunst >& /dev/null &"
-   fi
+    # Hyprland
+    if [[ $XDG_CURRENT_DESKTOP = Hyprland ]]; then
+        # stuff to do
+        alias reload-dunst="killall dunst && nohup dunst >& /dev/null &"
+    fi
 
-   # flatpak
-   alias flk="flatpak"
-   alias flki="flatpak install"
-   alias flkun="flatpak uhinstall"
-   alias flks="flatpak search"
-   alias flkl="flatpak list"
-   alias flkup="flatpak upgrade"
+    # flatpak
+    alias flk="flatpak"
+    alias flki="flatpak install"
+    alias flkun="flatpak uhinstall"
+    alias flks="flatpak search"
+    alias flkl="flatpak list"
+    alias flkup="flatpak upgrade"
 fi
 
 # Brew
@@ -82,17 +81,17 @@ alias bub="bubu && brupk" # brew upgrade
 
 # ## Aliases
 alias x="bc <<<"
-alias vomz="vim ~/.zshrc"                 # edit .zshrc
+alias vomz="vim ~/.zshrc" # edit .zshrc
 alias apps="cd /Applications"
-alias ..="cd .."                          # go back up
-alias home="cd ~"                         # Go home 
-alias cl="clear"                          # clear the screen
-alias src="omz reload"               # reload zshrc
-alias pt="pwd"                            # echo current working path 
-alias zhe="chmod +x"                      # make script executable 
-alias %=""                                # ignore %
-alias tc="touch"                          # Create a file `tc new.txt`
-alias kan="taskell"                        # Kanban board
+alias ..="cd .."       # go back up
+alias home="cd ~"      # Go home
+alias cl="clear"       # clear the screen
+alias src="omz reload" # reload zshrc
+alias pt="pwd"         # echo current working path
+alias zhe="chmod +x"   # make script executable
+alias %=""             # ignore %
+alias tc="touch"       # Create a file `tc new.txt`
+alias kan="taskell"    # Kanban board
 
 # vim
 alias v="vim"
@@ -120,11 +119,11 @@ alias gdcw="git diff --color-words"
 alias gdf="git diff --color-words | diff-so-fancy"
 
 # alacritty
-alias dtt="alacritty msg create-window --working-directory=\"`pwd`\""
+alias dtt="alacritty msg create-window --working-directory=\"$(pwd)\""
 
 # vscodium
 alias cod="codium"
-alias co="code"                         # open in vs code (req shell command install)
+alias co="code" # open in vs code (req shell command install)
 
 # NPM
 alias npr="npm run"
@@ -156,13 +155,15 @@ alias tree="eza --tree"
 
 # zellij
 alias zj="zellij"
-alias zja="zellij a" # attach session
-alias zjd="zellij d" # delete session
-alias zjk="zellij k" # kill session
-alias zjs="zellij -s" # new session with custom name
-alias zjl="zellij ls" # list sessions
+alias zja="zellij a"   # attach session
+alias zjd="zellij d"   # delete session
+alias zjk="zellij k"   # kill session
+alias zjs="zellij -s"  # new session with custom name
+alias zjl="zellij ls"  # list sessions
 alias zjac="zellij ac" # action
-alias zjr="zellij r" # run a command in new panel
+alias zjr="zellij r"   # run a command in new panel
+alias zpipe="zellij pipe"
+alias zjp="zellij pipe -p filepicker" # open file picker
 
 # BELL
 alias bell='echo "\a"'
