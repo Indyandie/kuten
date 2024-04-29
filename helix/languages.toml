@@ -12,9 +12,19 @@ auto-format = true
 
 # HTML
 
+[language-server.emmet-ls]
+command = "emmet-ls"
+args = ["--stdio"]
+
+[language-server.vscode-html]
+command = "vscode-html-language-server"
+args = ["--stdio"]
+
 [[language]]
 name = "html"
+language-servers = ["vscode-html", "emmet-ls"]
 formatter = { command = 'prettier', args = ["--parser", "html"] }
+auto-format = true
 
 # CSS
 
