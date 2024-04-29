@@ -109,7 +109,6 @@ auto-format = true
 [language.auto-pairs]
 '~' = '~'
 '_' = '_'
-'*' = '*'
 '(' = ')'
 '{' = '}'
 '[' = ']'
