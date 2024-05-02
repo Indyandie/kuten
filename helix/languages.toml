@@ -168,3 +168,10 @@ auto-format = true
 name = "json"
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json"] }
 auto-format = true
+
+# nix
+
+[[language]]
+name = "nix"
+formatter = { command = "nixpkgs-fmt" }
+auto-format = true
