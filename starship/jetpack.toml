@@ -178,8 +178,8 @@ renamed = "[◎◦](italic bright-blue)"
 deleted = "[✕](italic red)"
 
 [deno]
-format = " deno [∫ $version](blue italic)"
-version_format = "${major}.${minor}"
+format = " deno [∫ $version](green italic)"
+version_format = "${major}.${minor} ${patch}"
 
 [lua]
 format = " lua [${symbol}${version}]($style)"
