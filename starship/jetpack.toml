@@ -189,10 +189,10 @@ style = "italic bright-yellow"
 
 [nodejs]
 format = " node [◫ ($version)](italic bright-green)"
-detect_files = ["package-lock.json", "yarn.lock"]
 version_format = "${raw}"
-# detect_folders = ["node_modules"]
-# detect_extensions = ["js", "mjs", "cjs", "ts", "mts", "cts"]
+detect_files = ["package-lock.json", "yarn.lock"]
+detect_folders = ["node_modules"]
+detect_extensions = []
 
 [python]
 format = " py [${symbol}${version}]($style)"
