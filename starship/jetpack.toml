@@ -114,11 +114,11 @@ disabled = false
 [directory]
 home_symbol = "⌂"
 truncation_length = 2
-truncation_symbol = "▦ "
-read_only = " ■"
+truncation_symbol = "□ "                                 # ■□▫
+read_only = " ◈"
 use_os_path_sep = true
 style = "italic blue"
-format = ' [$path]($style)[$read_only]($read_only_style)'
+format = '[$path]($style)[$read_only]($read_only_style)'
 
 [cmd_duration]
 min_time = 500
@@ -160,20 +160,20 @@ style = "dimmed white"
 
 [git_branch]
 format = "[ $symbol $branch(:$remote_branch)]($style)"
-symbol = "[◬](bold bright-blue)"
+symbol = "[△](bold bright-blue)"
 style = "bold italic bright-blue"
 
 [git_status]
 style = "italic bright-blue"
 format = """([⎪$ahead_behind$staged$modified$untracked$renamed$deleted$conflicted$stashed⎥]($style))"""
 conflicted = "[◪◦](italic bright-magenta)"
-ahead = "[▲│[${count}](bold white)│](italic green)"
-behind = "[▽│[${count}](bold white)│](italic red)"
-diverged = "[◇ ▲┤[${ahead_count}](regular white)│▽┤[${behind_count}](regular white)│](italic bright-magenta)"
+ahead = "[▴│[${count}](bold white)│](italic green)"
+behind = "[▿│[${count}](bold white)│](italic red)"
+diverged = "[◇ ▴┤[${ahead_count}](regular white)│▿┤[${behind_count}](regular white)│](italic bright-magenta)"
 untracked = "[◌◦](italic bright-yellow)"
-stashed = "[◦◫◦](italic white)"
+stashed = "[◃◈](italic white)"
 modified = "[●◦](italic yellow)"
-staged = "[■┤[$count](bold white)│](italic bright-cyan)"
+staged = "[▪┤[$count](bold white)│](italic bright-cyan)"
 renamed = "[◎◦](italic bright-blue)"
 deleted = "[✕](italic red)"
 
@@ -183,7 +183,7 @@ version_format = "${major}.${minor}"
 
 [lua]
 format = " lua [${symbol}${version}]($style)"
-symbol = "⨀ " # ⏾◕
+symbol = "⨀ "                                 # ⏾◕
 # version_format = "${major}.${minor}"
 style = "italic bright-yellow"
 
@@ -235,8 +235,8 @@ symbol = "■ "
 format = " buf [$symbol $version $buf_version]($style)"
 
 [c]
-symbol = "∁ "
-format = " c [$symbol($version(-$name))]($style)"
+symbol = "ℂ "
+format = " [$symbol($version(-$name))]($style)"
 
 [conda]
 symbol = "◯ "
@@ -283,7 +283,7 @@ symbol = "▴▲▴ "
 format = " nim [$symbol($version )]($style)"
 
 [nix_shell]
-symbol = "⊛ "
+symbol = "✶ "
 format = " nix [$symbol$state $name]($style)"
 
 [spack]
