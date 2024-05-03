@@ -1,6 +1,7 @@
 theme = "kurokula"
 
 [keys.normal]
+"A-w" = ":toggle soft-wrap.enable"
 "A-/" = "toggle_comments"
 "C-y" = ":clipboard-yank"
 "tab" = ":buffer-next"
