@@ -179,42 +179,42 @@ deleted = "[✕](italic red)"
 
 [deno]
 format = " deno [∫ $version](green italic)"
-version_format = "${major}.${minor} ${patch}"
+version_format = "${raw}"
 
 [lua]
 format = " lua [${symbol}${version}]($style)"
 symbol = "⨀ "                                 # ⏾◕
-# version_format = "${major}.${minor}"
+version_format = "${raw}"
 style = "italic bright-yellow"
 
 [nodejs]
 format = " node [◫ ($version)](italic bright-green)"
 detect_files = ["package-lock.json", "yarn.lock"]
-version_format = "${major}.${minor}"
+version_format = "${raw}"
 # detect_folders = ["node_modules"]
 # detect_extensions = ["js", "mjs", "cjs", "ts", "mts", "cts"]
 
 [python]
 format = " py [${symbol}${version}]($style)"
 symbol = "[⌉](italic bright-blue)⌊ "
-version_format = "${major}.${minor}"
+version_format = "${raw}"
 style = "italic bright-yellow"
 
 [ruby]
 format = " rb [${symbol}${version}]($style)"
 symbol = "◆ "
-version_format = "${major}.${minor}"
+version_format = "${raw}"
 style = "italic red"
 
 [rust]
 format = " rs [$symbol$version]($style)"
 symbol = "⊃ "
-version_format = "${major}.${minor}"
+version_format = "${raw}"
 style = "italic red"
 
 [package]
 format = " pkg [$symbol$version]($style)"
-version_format = "${major}.${minor}"
+version_format = "${raw}"
 symbol = "◫ "
 style = "bright-yellow italic"
 
@@ -222,7 +222,7 @@ style = "bright-yellow italic"
 format = " sw [${symbol}${version}]($style)"
 symbol = "◁ "
 style = "italic bright-red"
-version_format = "${major}.${minor}"
+version_format = "${raw}"
 
 [aws]
 disabled = true
