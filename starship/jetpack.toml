@@ -215,7 +215,7 @@ style = "italic red"
 [package]
 format = " pkg [$symbol$version]($style)"
 version_format = "${raw}"
-symbol = "◫ "
+symbol = "◨ "
 style = "bright-yellow italic"
 
 [swift]
