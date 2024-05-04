@@ -122,7 +122,7 @@ format = '[$path]($style)[$read_only]($read_only_style)'
 
 [cmd_duration]
 min_time = 500
-format = "[$duration ](italic bright-yellow)"
+format = "[$duration ](italic dimmed yellow)"
 
 [jobs]
 format = "[ $symbol$number]($style)"
