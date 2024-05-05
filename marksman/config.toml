@@ -1,0 +1,13 @@
+[core]
+markdown.file_extensions = ["md", "markdown", "mdx"]
+text_sync = "full"
+incremental_references = false
+
+[code_action]
+toc.enable = true
+
+# Enable/disable "Create missing linked file" code action
+create_missing_file.enable = true
+
+[completion]
+wiki.style = "file-path-stem"

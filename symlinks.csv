@@ -18,3 +18,4 @@ link,confdir,conf
 /atuin/config.toml,/.config/atuin/,config.toml
 /zellij/zellij-config.kdl,/.config/zellij/,config.kdl
 /deno/deno.json,/.config/deno/,deno.json
+/marksman/config.toml,/.config/marksman/,config.toml

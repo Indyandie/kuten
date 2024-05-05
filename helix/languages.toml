@@ -109,6 +109,7 @@ ltex.dictionary = { "en-US" = ["builtin"], "en-GB" = ["builtin"] }
 
 [[language]]
 name = "markdown"
+file-types = ["md", "mdx", "markdown", "mkd", "mkdn", "mdwn", "mdown", "markdn", "mdtxt", "mdtext", "workbook", { glob = "PULLREQ_EDITMSG" }]
 language-servers = [
   "marksman",
   "ltex-ls",
