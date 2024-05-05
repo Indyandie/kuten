@@ -42,6 +42,10 @@ v = { o = ":vs", n = ":vnew", q = "wclose" }
 H = "jump_view_left"
 L = "jump_view_right"
 
+[keys.normal.g]
+j = "goto_next_change"
+k = "goto_prev_change"
+
 [editor]
 bufferline = "multiple"
 shell = ["zsh", "-c"]
