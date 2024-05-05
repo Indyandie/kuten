@@ -4,8 +4,8 @@ theme = "kurokula"
 A-w = ":toggle soft-wrap.enable"
 "A-/" = "toggle_comments"
 C-y = ":clipboard-yank"
-tab = ":buffer-next"
-S-tab = ":buffer-previous"
+"]" = { "]" = ":buffer-next" }
+"[" = { "[" = ":buffer-previous" }
 "{" = "rotate_selection_contents_backward"
 "}" = "rotate_selection_contents_forward"
 S-left = "select_mode"
