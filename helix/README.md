@@ -5,6 +5,7 @@
 ## [Default Language Servers][def-lang-serv]
 
 - [simple-completion-language-server](https://github.com/estin/simple-completion-language-server)
+- [languages.toml](https://github.com/helix-editor/helix/blob/master/languages.toml)
 
 Get a list of languages with an installed lsp.
 
