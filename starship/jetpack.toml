@@ -89,7 +89,7 @@ $time\
 
 add_newline = true
 
-continuation_prompt = "[┗╺▶  ](bold italic dimmed white)"
+continuation_prompt = "[◦◦◦ ](white)"
 
 [character]
 format = "$symbol "
