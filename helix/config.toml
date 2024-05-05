@@ -41,6 +41,8 @@ S = ":w!"
 v = { o = ":vs", n = ":vnew", q = "wclose" }
 H = "jump_view_left"
 L = "jump_view_right"
+space = "add_newline_below"
+up = "add_newline_above"
 
 [keys.normal.g]
 j = "goto_next_change"
