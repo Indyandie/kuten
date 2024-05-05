@@ -48,14 +48,14 @@ name = "javascript"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
 language-servers = ["deno-lsp"]
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js"] }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js", "--no-semicolons", "--single-quote"] }
 
 [[language]]
 name = "jsx"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
 language-servers = ["deno-lsp"]
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx"] }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx", "--no-semicolons", "--single-quote"] }
 
 # typescript
 
