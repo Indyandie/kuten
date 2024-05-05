@@ -48,14 +48,28 @@ name = "javascript"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
 language-servers = ["deno-lsp"]
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js", "--no-semicolons", "--single-quote"] }
+formatter = { command = 'deno', args = [
+  "fmt",
+  "-",
+  "--ext",
+  "js",
+  "--no-semicolons",
+  "--single-quote",
+] }
 
 [[language]]
 name = "jsx"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
 language-servers = ["deno-lsp"]
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx", "--no-semicolons", "--single-quote"] }
+formatter = { command = 'deno', args = [
+  "fmt",
+  "-",
+  "--ext",
+  "jsx",
+  "--no-semicolons",
+  "--single-quote",
+] }
 
 # typescript
 
@@ -101,7 +115,13 @@ language-servers = [
   "markdown-oxide",
   "vscode-html-language-server",
 ]
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md", "--prose-wrap=never" ] }
+formatter = { command = 'deno', args = [
+  "fmt",
+  "-",
+  "--ext",
+  "md",
+  "--prose-wrap=never",
+] }
 
 [language.auto-pairs]
 '~' = '~'
