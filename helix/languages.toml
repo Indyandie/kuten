@@ -101,7 +101,7 @@ language-servers = [
   "markdown-oxide",
   "vscode-html-language-server",
 ]
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md"] }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md", "--prose-wrap=never" ] }
 
 [language.auto-pairs]
 '~' = '~'
