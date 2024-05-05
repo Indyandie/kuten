@@ -133,7 +133,7 @@ alias nps="npm start"
 alias aju="autojump"
 
 # Notes
-alias note="vim ~/notes/$(date "+%y-%m-%d").md"
+alias note="hx ~/notes/$(date "+%y-%m-%d").md"
 
 # sudo
 alias visudo="sudo EDITOR=vim visudo"
