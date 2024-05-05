@@ -17,3 +17,4 @@ link,confdir,conf
 /zsh/alias.zsh,/,.alias
 /atuin/config.toml,/.config/atuin/,config.toml
 /zellij/zellij-config.kdl,/.config/zellij/,config.kdl
+/deno/deno.json,/.config/deno/,deno.json
