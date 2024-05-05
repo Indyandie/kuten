@@ -129,9 +129,6 @@ alias co="code" # open in vs code (req shell command install)
 alias npr="npm run"
 alias nps="npm start"
 
-# ranger
-# alias rn=". ranger"
-
 # Autojump
 alias aju="autojump"
 
