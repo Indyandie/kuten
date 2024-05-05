@@ -19,10 +19,14 @@ theme = "kurokula"
 "S-down" = "move_visual_line_down"
 
 [keys.normal.","]
-"/" = "toggle_comments"
-"p" = ":clipboard-paste-after"
-"P" = ":clipboard-paste-before"
 "," = "keep_primary_selection"
+"/" = "toggle_comments"
+p = ":clipboard-paste-after"
+P = ":clipboard-paste-before"
+r = ":reload"
+R = ":reload-all"
+c = { r = ":config-reload" }
+f = ":fmt"
 
 [keys.normal."space"]
 # close buffer
