@@ -48,6 +48,9 @@ up = "add_newline_above"
 j = "goto_next_change"
 k = "goto_prev_change"
 
+[keys.insert]
+j = { k = "normal_mode" } # exit insert mode
+
 [editor]
 bufferline = "multiple"
 shell = ["zsh", "-c"]
