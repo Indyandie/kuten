@@ -38,6 +38,12 @@ hx --health | rg "✓ [a-z]" | sd '(^[a-z\-]+).*' '$1'
 - zig
 - Rust
 
+### LSP List
+
+### Deno lsp
+
+Deno provides a lsp via the `deno lsp` command. It supports JavaScript and TypeScript.
+
 ### npm lsp
 
 - @astrojs/language-server
@@ -49,9 +55,10 @@ hx --health | rg "✓ [a-z]" | sd '(^[a-z\-]+).*' '$1'
 - typescript
 - vscode-langservers-extracted
 - ansible/ansible-language-server
+- emmet-ls
 
 ```sh
-npm i -g @astrojs/language-server bash-language-server dot-language-server svelte-language-server typescript-language-server typescript vscode-langservers-extracted @ansible/ansible-language-server typescript-svelte-plugin
+npm i -g @astrojs/language-server bash-language-server dot-language-server svelte-language-server typescript-language-server typescript vscode-langservers-extracted @ansible/ansible-language-server typescript-svelte-plugin sql-formatter emmet-ls
 ```
 
 #### svelte
@@ -85,6 +92,12 @@ brew install marksman lua-language-server python-lsp-server yaml-language-server
 
 - [taplo (toml)](https://github.com/helix-editor/helix/wiki/How-to-install-the-default-language-servers#toml)
 
+## Formatter & Snippets
+
+### npm formatters
+
+- sql-formatter
+
 ## Piping selections
 
 Piping certain things proved challenging, luckily `xargs` came to the rescue.
@@ -95,9 +108,7 @@ pipe:xargs -I {} echo {} | xargs -I {} grep {} attachment.csv | sed -E 's/(.*),(
 
 ## Alt Workaround (macos)
 
-Instead of a getting all fancy with the terminal config use the literal
-character in the helix config.
-[workaround](https://github.com/helix-editor/helix/issues/2469#issuecomment-1714470713)
+Instead of a getting all fancy with the terminal config use the literal character in the helix config. [workaround](https://github.com/helix-editor/helix/issues/2469#issuecomment-1714470713)
 
 ## Links
 
@@ -105,5 +116,4 @@ character in the helix config.
 
 ## TODO
 
-- [ ] Update from
-      [release 24.03](https://helix-editor.com/news/release-24-03-highlights/)
+- [ ] Update from [release 24.03](https://helix-editor.com/news/release-24-03-highlights/)
