@@ -1,22 +1,22 @@
 theme = "kurokula"
 
 [keys.normal]
-"A-w" = ":toggle soft-wrap.enable"
+A-w = ":toggle soft-wrap.enable"
 "A-/" = "toggle_comments"
-"C-y" = ":clipboard-yank"
-"tab" = ":buffer-next"
-"S-tab" = ":buffer-previous"
+C-y = ":clipboard-yank"
+tab = ":buffer-next"
+S-tab = ":buffer-previous"
 "{" = "rotate_selection_contents_backward"
 "}" = "rotate_selection_contents_forward"
-"S-left" = "select_mode"
-"S-right" = "select_mode"
+S-left = "select_mode"
+S-right = "select_mode"
 
 [keys.select]
-"C-c" = ":clipboard-yank"
-"S-left" = "move_char_left"
-"S-right" = "move_char_right"
-"S-up" = "move_visual_line_up"
-"S-down" = "move_visual_line_down"
+C-c = ":clipboard-yank"
+S-left = "move_char_left"
+S-right = "move_char_right"
+S-up = "move_visual_line_up"
+S-down = "move_visual_line_down"
 
 [keys.normal.","]
 "," = "keep_primary_selection"
@@ -30,7 +30,7 @@ f = ":fmt"
 
 [keys.normal."space"]
 # close buffer
-"d" = ":bc"
+d = ":bc"
 D = ":bc!"
 # quit Helix
 q = ":q"
