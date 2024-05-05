@@ -89,6 +89,8 @@ $time\
 
 add_newline = true
 
+continuation_prompt = "[┗╺▶  ](bold italic dimmed white)"
+
 [character]
 format = "$symbol "
 success_symbol = "[◉](bold italic bright-yellow)"
