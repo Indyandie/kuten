@@ -1,9 +1,7 @@
-format = """
-$cmd_duration\
+format = """$nix_shell\n$cmd_duration\
 $hostname\
 $localip\
 $shlvl\
-$nix_shell\
 $shell\
 $env_var\
 $username\
@@ -285,11 +283,12 @@ symbol = "▴▲▴ "
 format = " nim [$symbol($version )]($style)"
 
 [nix_shell]
-symbol = "✶"
-format = '[$name](dimmed white) [$symbol nix$state](bold blue) '
-impure_msg = '⎪[⌽](bold bright-red)⎪'
-pure_msg = '⎪[⌾](bold green)⎪'
-unknown_msg = '⎪[◌](bold yellow)⎪'
+style = 'bold dimmed blue'
+symbol = '✶'
+format = '[$symbol nix⎪$state⎪]($style) [$name](dimmed white)'
+impure_msg = '[⌽](bold dimmed red)'
+pure_msg = '[⌾](bold dimmed green)'
+unknown_msg = '[◌](bold dimmed ellow)'
 
 [spack]
 symbol = "◇ "
