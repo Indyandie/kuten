@@ -6,11 +6,9 @@ $shell\
 $env_var\
 $username\
 $sudo\
-$character\
-"""
+$character"""
 
-right_format = """
-$singularity\
+right_format = """$singularity\
 $kubernetes\
 $directory\
 $vcsh\
@@ -82,8 +80,7 @@ $status\
 $os\
 $container\
 $battery\
-$time\
-"""
+$time"""
 
 add_newline = true
 
