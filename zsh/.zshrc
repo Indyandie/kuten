@@ -1,119 +1,117 @@
 # zmodload zsh/zprof # speed profiling on start
 
-if [[ $OSTYPE == darwin* ]] then
+if [[ $OSTYPE == darwin* ]]; then
 
-# macos ------------------------------------------------------------------------------------------
+    # macos ------------------------------------------------------------------------------------------
 
-  export PATH=$HOME/bin:/usr/local/bin:$PATH
+    export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-  # Path to your oh-my-zsh installation.
-  export ZSH="/Users/$USER/.oh-my-zsh"
+    # Path to your oh-my-zsh installation.
+    export ZSH="/Users/$USER/.oh-my-zsh"
 
-  # plugins
-  plugins=(
-    git
-    zsh-autosuggestions 
-    zsh-syntax-highlighting
-    deno
-    macos
-    sudo
-    brew
-    vi-mode
-    rust
-    ripgrep
-    yarn
-    zoxide
-    # nix-zsh-completions
-  )
+    # plugins
+    plugins=(
+        git
+        zsh-autosuggestions
+        zsh-syntax-highlighting
+        deno
+        macos
+        sudo
+        brew
+        vi-mode
+        rust
+        ripgrep
+        yarn
+        zoxide
+        # nix-zsh-completions
+    )
 
-  source $ZSH/oh-my-zsh.sh
+    source $ZSH/oh-my-zsh.sh
 
-  # pyenv
-  export PYENV_ROOT="$HOME/.pyenv"
-  command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init --path)"
+    # pyenv
+    export PYENV_ROOT="$HOME/.pyenv"
+    command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
 
-  # gpg
-  GPG_TTY=$(tty)
-  export GPG_TTY
+    # gpg
+    GPG_TTY=$(tty)
+    export GPG_TTY
 
-  if [[ $GPG_SSH_CONF ]]; then
-    unset SSH_AGENT_PID
-    if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-      export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+    if [[ $GPG_SSH_CONF ]]; then
+        unset SSH_AGENT_PID
+        if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+            export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+        fi
+        export GPG_TTY=$(tty)
+        gpg-connect-agent updatestartuptty /bye >/dev/null
+        # export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+        # gpgconf --launch gpg-agent
     fi
-    export GPG_TTY=$(tty)
-    gpg-connect-agent updatestartuptty /bye >/dev/null
-    # export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-    # gpgconf --launch gpg-agent
-  fi
 
-  # brew sbin
-  export PATH="/usr/local/sbin:$PATH"
+    # brew sbin
+    export PATH="/usr/local/sbin:$PATH"
 
-  # silly crap - let's see how long before I get really annoyed
-  # I'm annoyned
-  # fortune | cowsay
+    # silly crap - let's see how long before I get really annoyed
+    # I'm annoyned
+    # fortune | cowsay
 
-  # cmatrix -bs
+    # cmatrix -bs
 
-  # atuin 
-  # UP arrow + alt/opt
-  bindkey '^[[1;3A' _atuin_search_widget
+    # atuin
+    # UP arrow + alt/opt
+    bindkey '^[[1;3A' _atuin_search_widget
 
 # macos-end ------------------------------------------------------------------------------------------
 
-elif [[ $OSTYPE == linux* ]] then
+elif [[ $OSTYPE == linux* ]]; then
 
-# linux  ------------------------------------------------------------------------------------------
+    # linux  ------------------------------------------------------------------------------------------
 
-  export PATH=$HOME/.local/bin:$PATH
+    export PATH=$HOME/.local/bin:$PATH
 
-  export ZSH="/home/$USER/.oh-my-zsh"
+    export ZSH="/home/$USER/.oh-my-zsh"
 
-  plugins=(
-    git
-    zsh-autosuggestions 
-    zsh-syntax-highlighting
-    deno
-    sudo
-    vi-mode
-    ssh-agent
-  )
+    plugins=(
+        git
+        zsh-autosuggestions
+        zsh-syntax-highlighting
+        deno
+        sudo
+        vi-mode
+        ssh-agent
+    )
 
-  export LANG=en_US.UTF-8
+    export LANG=en_US.UTF-8
 
-  # gpg-agent
- 
-  unset SSH_AGENT_PID
+    # gpg-agent
 
-  if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-    export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-  fi
-  export GPG_TTY=$(tty)
-  gpg-connect-agent updatestartuptty /bye >/dev/null
+    unset SSH_AGENT_PID
 
-  # Hyprland
-  if [[ $XDG_CURRENT_DESKTOP = Hyprland ]]; then
-    # stuff to do
-  fi
+    if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+        export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+    fi
+    export GPG_TTY=$(tty)
+    gpg-connect-agent updatestartuptty /bye >/dev/null
 
-  if [[ -f /etc/NIXOS ]]; then
-    # https://matthewrhone.dev/nixos-npm-globally
-    export PATH="$HOME/bin:$PATH"
-    export PATH=~/.npm-packages/bin:$PATH
-    export NODE_PATH=~/.npm-packages/lib/node_modules
-  fi
+    # Hyprland
+    if [[ $XDG_CURRENT_DESKTOP = Hyprland ]]; then
+        # stuff to do
+    fi
 
-  # atuin
-  # UP arrow + alt/opt
-  bindkey '^[[1;5A' _atuin_search_widget
+    if [[ -f /etc/NIXOS ]]; then
+        # https://matthewrhone.dev/nixos-npm-globally
+        export PATH="$HOME/bin:$PATH"
+        export PATH=~/.npm-packages/bin:$PATH
+        export NODE_PATH=~/.npm-packages/lib/node_modules
+    fi
+
+    # atuin
+    # UP arrow + alt/opt
+    bindkey '^[[1;5A' _atuin_search_widget
 
 # linux-end  ------------------------------------------------------------------------------------------
 
 fi
-
-
 
 zstyle ':omz:update' frequency 7
 
@@ -138,42 +136,42 @@ if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
 
 # md && cd
 mcd() {
-  md -p $1 && cd $1
+    md -p $1 && cd $1
 }
 
 # rustc
-rustbin(){
-  name=`echo $1 | sd '\.rs' ''`
-  rustc --out-dir bin "$1" && "bin/$name"
+rustbin() {
+    name=$(echo $1 | sd '\.rs' '')
+    rustc --out-dir bin "$1" && "bin/$name"
 }
 
 # run in the background with logs
-bgpr(){
-  nohup $1 > "$HOME/.nohuplogs" &
+bgpr() {
+    nohup $1 >"$HOME/.nohuplogs" &
 }
 
 # run in the background with no logs
-bgnl(){
-  nohup $1 > /dev/null 2>&1 &
+bgnl() {
+    nohup $1 >/dev/null 2>&1 &
 }
 
 # vim shell env
 vim_prompt() {
-  if [ ! -z $VIMRUNTIME ]; then
-    echo "▾ ";
-  fi
+    if [ ! -z $VIMRUNTIME ]; then
+        echo "▾ "
+    fi
 }
 
 # bc
 xx() {
-  bc <<< "$@"
+    bc <<<"$@"
 }
 
 export VIMSHELL=$(vim_prompt)
 
 # Starship
-if command -v starship &> /dev/null; then
-  eval "$(starship init zsh)"
+if command -v starship &>/dev/null; then
+    eval "$(starship init zsh)"
 fi
 
 # zprof # speed profiling on start
@@ -181,16 +179,16 @@ fi
 export RANGER_LOAD_DEFAULT_RC=false
 
 # fnm
-if command -v fnm &> /dev/null; then
-  eval "$(fnm env --use-on-cd)"
+if command -v fnm &>/dev/null; then
+    eval "$(fnm env --use-on-cd)"
 fi
 
 # prompt_nix_shell_setup
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # zoxide
-if command -v zoxide &> /dev/null; then
-  eval "$(zoxide init zsh)"
+if command -v zoxide &>/dev/null; then
+    eval "$(zoxide init zsh)"
 fi
 
 # atuin
@@ -202,10 +200,10 @@ eval "$(atuin init zsh --disable-up-arrow)"
 # yazi
 
 function yaz() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
+    local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
 }
