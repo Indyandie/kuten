@@ -179,3 +179,9 @@ alias dnr="deno run"
 alias dnt="deno task"
 alias dnnt="deno run --allow-net --watch"
 alias dnrd="deno run --allow-net"
+
+# nix
+
+alias nx="nix"
+alias nxr="nix repl"
+alias nsh="nix-shell"
