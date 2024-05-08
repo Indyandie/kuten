@@ -115,7 +115,7 @@ ENABLE_CORRECTION="true"
 
 # history timestamp - "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # see 'man strftime' for details.
-HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # export EDITOR='vim'
 export EDITOR='hx' # helix editor
