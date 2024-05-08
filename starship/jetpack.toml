@@ -1,3 +1,8 @@
+add_newline = true
+scan_timeout = 500
+command_timeout = 1000
+continuation_prompt = "[▸▹ ](dimmed white)"
+
 format = """$nix_shell\n$cmd_duration\
 $hostname\
 $localip\
@@ -82,10 +87,6 @@ $container\
 $battery\
 $time"""
 
-add_newline = true
-
-continuation_prompt = "[▸▹ ](dimmed white)"
-
 [character]
 format = "$symbol "
 success_symbol = "[◉](bold italic bright-yellow)"
@@ -137,7 +138,7 @@ format = "[ $time]($style)"
 time_format = "%R"
 utc_time_offset = "local"
 style = "dimmed white"
-# time_range = "00:00:00-07:00:00"
+time_range = "00:00:00-07:00:00"
 
 [battery]
 format = "[ $percentage $symbol]($style)"
