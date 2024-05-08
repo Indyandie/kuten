@@ -139,7 +139,7 @@ format = "[ $time]($style)"
 time_format = "%R"
 utc_time_offset = "local"
 style = "dimmed white"
-time_range = "00:00:00-07:00:00"
+time_range = "00:00:00-17:00:00"
 
 [battery]
 format = "[ $percentage $symbol]($style)"
