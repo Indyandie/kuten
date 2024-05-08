@@ -51,13 +51,8 @@ if [[ $OSTYPE == darwin* ]]; then
     # brew sbin
     export PATH="/usr/local/sbin:$PATH"
 
-    # silly crap - let's see how long before I get really annoyed
-    # I'm annoyned
-    # fortune | cowsay
-
-    # cmatrix -bs
-
     # atuin
+
     # UP arrow + alt/opt
     bindkey '^[[1;3A' _atuin_search_widget
 
@@ -125,14 +120,8 @@ HIST_STAMPS="mm/dd/yyyy"
 # export EDITOR='vim'
 export EDITOR='hx' # helix editor
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # alias
 source ~/.alias
-
-# ranger shell indicator
-if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
 
 # md && cd
 mcd() {
@@ -173,10 +162,6 @@ export VIMSHELL=$(vim_prompt)
 if command -v starship &>/dev/null; then
     eval "$(starship init zsh)"
 fi
-
-# zprof # speed profiling on start
-
-export RANGER_LOAD_DEFAULT_RC=false
 
 # fnm
 if command -v fnm &>/dev/null; then
