@@ -160,7 +160,11 @@ style = "dimmed white"
 [git_branch]
 format = "[ $symbol $branch(:$remote_branch)]($style)"
 symbol = "[△](bold bright-blue)"
-style = "bold italic bright-blue"
+style = "italic bright-blue"
+truncation_symbol = "⋯" # ⋯ ┄ ⊸
+truncation_length = 11
+ignore_branches = ["main", "master"]
+only_attached = true
 
 [git_status]
 style = "italic bright-blue"
