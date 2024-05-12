@@ -8,35 +8,35 @@ local modes = {
   -- See https://github.com/NvChad/ui/blob/v2.0/lua/nvchad/statusline/default.lua
 
   -- Normal
-	["n"] = { "", "●", "St_NormalMode" },
-	["niI"] = { " nor i", "●", "St_NormalMode" },
-	["niR"] = { " nor r", "●", "St_NormalMode" },
-	["niV"] = { " nor v", "●", "St_NormalMode" },
-	["no"] = { " N-PENDING", "●", "St_NormalMode" },
+	["n"] = { "", "◉", "St_NormalMode" },
+	["niI"] = { " nor i", "◉", "St_NormalMode" },
+	["niR"] = { " nor r", "◉", "St_NormalMode" },
+	["niV"] = { " nor v", "◉", "St_NormalMode" },
+	["no"] = { " N-PENDING", "◉", "St_NormalMode" },
 
   -- Insert
-	["i"] = { "", "◉", "St_InsertMode" },
-	["ic"] = { " ins (completion)", "◉", "St_InsertMode" },
-	["ix"] = { " ins completion", "◉", "St_InsertMode" },
+	["i"] = { "", "◎", "St_InsertMode" },
+	["ic"] = { " ins (completion)", "◎", "St_InsertMode" },
+	["ix"] = { " ins completion", "◎", "St_InsertMode" },
 
   -- Terminal
 	["t"] = { "term", "❯", "St_TerminalMode" },
 	["nt"] = { "nterm", "❯", "St_NTerminalMode" },
 
   -- Visual
-	["v"] = { "", "◍", "St_VisualMode" },
-	["V"] = { "vis-ln", "◍", "St_VisualMode" },
-	["Vs"] = { "v-ln(Ctrl O)", "◍", "St_VisualMode" },
-	[""] = { "vlk", "◍", "St_VisualMode" },
+	["v"] = { "", "▼", "St_VisualMode" },
+	["V"] = { "vis-ln", "▼", "St_VisualMode" },
+	["Vs"] = { "v-ln(Ctrl O)", "▼", "St_VisualMode" },
+	[""] = { "vlk", "▼", "St_VisualMode" },
 
   -- Replace
 	["R"] = { "", "◌", "St_ReplaceMode" },
 	["Rv"] = { " v-rep", "◌", "St_ReplaceMode" },
 
   -- Select
-	["s"] = { "", "◎", "St_SelectMode" },
-	["S"] = { " sel-ln", "◎", "St_SelectMode" },
-	[""] = { " sel-blk", "◎", "St_SelectMode" },
+	["s"] = { "", "△", "St_SelectMode" },
+	["S"] = { " sel-ln", "△", "St_SelectMode" },
+	[""] = { " sel-blk", "△", "St_SelectMode" },
 
   -- Command
 	["c"] = { "", "⨀", "St_CommandMode" },
@@ -47,7 +47,7 @@ local modes = {
 	["r"] = { "prompt", "┅", "St_ConfirmMode" },
 	["rm"] = { "more", "+", "St_ConfirmMode" },
 	["r?"] = { "confirm", "✓", "St_ConfirmMode" },
-	["!"] = { "shell", "❱", "St_TerminalMode" },
+	["!"] = { "shell", "➜", "St_TerminalMode" },
 }
 
 M.ui = {

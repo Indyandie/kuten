@@ -68,6 +68,9 @@ color-modes = true
 
 [editor.statusline]
 left = ["mode", "selections", "spacer", "spinner", "diagnostics", "register"]
+mode.normal = "■"
+mode.insert = "◎"
+mode.select = "▼"
 center = [
   # "separator",
   "version-control",
