@@ -67,18 +67,19 @@ color-modes = true
 '<' = '>'
 
 [editor.statusline]
-left = ["mode", "selections", "spacer", "spinner", "diagnostics", "register"]
+separator = "┃"
 mode.normal = "■"
 mode.insert = "◎"
 mode.select = "▼"
+left = ["mode", "selections", "spacer", "spinner",  "register", "separator" ]
 center = [
-  # "separator",
   "version-control",
   "file-name",
   "file-modification-indicator",
   "file-encoding",
 ]
 right = [
+  "separator",
   "diagnostics",
   "file-type",
   "file-encoding",
@@ -86,10 +87,6 @@ right = [
   "position",
   "position-percentage",
 ]
-separator = "│"
-mode.normal = "●"
-mode.insert = "◉"
-mode.select = "◍"
 
 [editor.lsp]
 display-messages = true
