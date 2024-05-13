@@ -93,7 +93,7 @@ symbol = ' '
 format = "$symbol "                               # ◌ ○ ● ◎ ◉ ⚇ ◈ ■ ▲
 success_symbol = "[◎](bold italic bright-yellow)"
 error_symbol = "[○](blink italic purple)"
-vicmd_symbol = "[■](italic green)"
+vicmd_symbol = "[■](italic dimmed green)"
 # not supported in zsh
 vimcmd_replace_one_symbol = "◌"
 vimcmd_replace_symbol = "□"
@@ -106,7 +106,7 @@ style = 'green italic'
 [sudo]
 format = "[$symbol]($style)"
 style = "italic bright-purple"
-symbol = "◇┈"
+symbol = "⋈┈"                  # ◇
 disabled = false
 
 [username]
