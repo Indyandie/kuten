@@ -3,7 +3,7 @@ scan_timeout = 500
 command_timeout = 1000
 continuation_prompt = "[▸▹ ](dimmed white)"
 
-format = """$nix_shell\n$cmd_duration\
+format = """($nix_shell$container$fill$git_metrics\n)$cmd_duration\
 $hostname\
 $localip\
 $shlvl\
@@ -13,7 +13,8 @@ $username\
 $sudo\
 $character"""
 
-right_format = """$singularity\
+right_format = """
+$singularity\
 $kubernetes\
 $directory\
 $vcsh\
@@ -21,7 +22,6 @@ $fossil_branch\
 $git_branch\
 $git_commit\
 $git_state\
-$git_metrics\
 $git_status\
 $hg_branch\
 $pijul_channel\
@@ -83,9 +83,11 @@ $custom\
 $jobs\
 $status\
 $os\
-$container\
 $battery\
 $time"""
+
+[fill]
+symbol = ' '
 
 [character]
 format = "$symbol "                               # ◌ ○ ● ◎ ◉ ⚇ ◈ ■ ▲
