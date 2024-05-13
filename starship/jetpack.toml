@@ -123,6 +123,8 @@ read_only = " ◈"
 use_os_path_sep = true
 style = "italic blue"
 format = '[$path]($style)[$read_only]($read_only_style)'
+repo_root_style	 = 'bold blue'
+repo_root_format = '[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) [△](bold bright-blue) '
 
 [cmd_duration]
 min_time = 800
@@ -172,7 +174,7 @@ style = "blink dimmed yellow"
 # style = "dimmed green"
 
 [git_branch]
-format = "[ $symbol $branch(:$remote_branch)]($style)"
+format = "[$branch(:$remote_branch)]($style)"
 symbol = "[△](bold bright-blue)"
 style = "italic bright-blue"
 truncation_symbol = "⋯"                                # ⋯ ┄ ⊸
@@ -189,7 +191,7 @@ disabled = false
 
 [git_status]
 style = "italic bright-blue"
-format = """([⎪$ahead_behind$staged$modified$untracked$renamed$deleted$conflicted$stashed⎥]($style))"""
+format = "([⎪$ahead_behind$staged$modified$untracked$renamed$deleted$conflicted$stashed⎥]($style))"
 conflicted = "[◪◦](italic bright-magenta)"
 ahead = "[▴│[${count}](bold white)│](italic green)"
 behind = "[▿│[${count}](bold white)│](italic red)"
