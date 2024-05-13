@@ -163,6 +163,11 @@ if command -v starship &>/dev/null; then
     eval "$(starship init zsh)"
 fi
 
+# right_prompt
+# remove trailing space
+# https://superuser.com/questions/655607/removing-the-useless-space-at-the-end-of-the-right-prompt-of-zsh-rprompt
+ZLE_RPROMPT_INDENT=0
+
 # fnm
 if command -v fnm &>/dev/null; then
     eval "$(fnm env --use-on-cd)"
