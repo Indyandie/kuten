@@ -178,6 +178,13 @@ truncation_length = 11
 ignore_branches = ["main", "master"]
 only_attached = true
 
+[git_metrics]
+format = '([▴$added]($added_style))([▿$deleted]($deleted_style))' # ⊟⊖-▿ ⊠⊕+▴
+added_style = 'dimmed green'
+deleted_style = 'dimmed red'
+ignore_submodules = true
+disabled = false
+
 [git_status]
 style = "italic bright-blue"
 format = """([⎪$ahead_behind$staged$modified$untracked$renamed$deleted$conflicted$stashed⎥]($style))"""
