@@ -16,7 +16,7 @@
   "italic",
 ] }
 "ui.window" = { bg = "black-light" }
-"ui.selection" = { bg = "black-light", fg = "white-light", modifiers = [
+"ui.selection" = { bg = "ui-sel-bg", fg = "ui-sel-txt", modifiers = [
   "italic",
   "bold",
 ] }
@@ -27,9 +27,9 @@
 "ui.help" = { fg = "yellow-light", bg = "black-dark" }
 "ui.cursor" = { bg = "yellow-dark", fg = "white-light" }
 "ui.cursor.insert" = { fg = "white-normal", modifiers = ["reversed", "bold"] }
-"ui.cursor.select" = { fg = "white-normal", modifiers = ["reversed", "bold"] }
+"ui.cursor.select" = { fg = "white-light", modifiers = ["reversed", "bold", "italic"] }
 "ui.cursor.primary" = { bg = "white-normal", fg = "black-dark" }
-"ui.cursor.match" = { fg = "white-normal", bg = "orange-dark", modifiers = [
+"ui.cursor.match" = { fg = "white-light", bg = "blue-dark", modifiers = [
   "underlined",
   "bold",
   "italic",
@@ -138,6 +138,8 @@
 bg-main = "#181818"  # Default Background
 bg-light = "#282828" # Lighter Background (Used for status bars, line number and folding marks)
 sel-bg = "#383838"   # Selection Background
+ui-sel-bg = "#515151"
+ui-sel-txt = "#ffc663"
 grey03 = "#585858"   # Comments, Invisibles, Line Highlighting
 grey05 = "#d8d8d8"   # Default Foreground, Caret, Delimiters, Operators
 
@@ -176,3 +178,4 @@ orange-dark = "#AB7B4E"
 brown-normal = "#9D5918"
 brown-light = "#F9CFB9"
 brown-dark = "#837369"
+
