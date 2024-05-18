@@ -5,10 +5,14 @@
 
 "ui.background" = { bg = "black-dark" }
 "ui.menu" = { fg = "white-light", bg = "black-normal" }
-"ui.menu.selected" = { fg = "white-light", bg = "blue-normal" }
+"ui.menu.selected" = { fg = "white-light", bg = "blue-normal", modifiers = [
+  "bold",
+  "italic",
+] }
 "ui.linenr" = { fg = "white-dark", bg = "black-dark", modifiers = ["italic"] }
 "ui.linenr.selected" = { fg = "white-light", bg = "black-light", modifiers = [
   "bold",
+  "italic",
 ] }
 "ui.gutter" = { bg = "black-dark" }
 "ui.popup" = { fg = "white-normal", bg = "black-normal" }
@@ -27,7 +31,11 @@
 "ui.help" = { fg = "yellow-light", bg = "black-dark" }
 "ui.cursor" = { bg = "yellow-dark", fg = "white-light" }
 "ui.cursor.insert" = { fg = "white-normal", modifiers = ["reversed", "bold"] }
-"ui.cursor.select" = { fg = "white-light", modifiers = ["reversed", "bold", "italic"] }
+"ui.cursor.select" = { fg = "white-light", modifiers = [
+  "reversed",
+  "bold",
+  "italic",
+] }
 "ui.cursor.primary" = { bg = "white-normal", fg = "black-dark" }
 "ui.cursor.match" = { fg = "white-light", bg = "blue-dark", modifiers = [
   "underlined",
@@ -42,8 +50,8 @@
 "ui.virtual.indent-guide" = "sel-bg"
 "ui.virtual.whitespace" = "grey03"
 "ui.virtual.inlay-hint" = { fg = "grey03", modifiers = ["italic"] }
-"ui.bufferline" = { fg = "white-dark", bg = "black-normal" }
-"ui.bufferline.active" = { fg = "white-normal", bg = "black-dark" }
+"ui.bufferline" = { fg = "white-dark", bg = "black-normal", modifiers = ["italic"] }
+"ui.bufferline.active" = { fg = "white-normal", bg = "black-dark", modifiers = ["bold"]}
 
 "operator" = "white-dark"
 "punctuation" = { fg = "white-dark" }                                            #, modifiers = ["bold"] }
@@ -135,13 +143,13 @@
 "error" = "red-normal"
 
 [palette]
-bg-main = "#181818"  # Default Background
-bg-light = "#282828" # Lighter Background (Used for status bars, line number and folding marks)
-sel-bg = "#383838"   # Selection Background
+bg-main = "#181818"    # Default Background
+bg-light = "#282828"   # Lighter Background (Used for status bars, line number and folding marks)
+sel-bg = "#383838"     # Selection Background
 ui-sel-bg = "#515151"
 ui-sel-txt = "#ffc663"
-grey03 = "#585858"   # Comments, Invisibles, Line Highlighting
-grey05 = "#d8d8d8"   # Default Foreground, Caret, Delimiters, Operators
+grey03 = "#585858"     # Comments, Invisibles, Line Highlighting
+grey05 = "#d8d8d8"     # Default Foreground, Caret, Delimiters, Operators
 
 # colors
 
@@ -178,4 +186,3 @@ orange-dark = "#AB7B4E"
 brown-normal = "#9D5918"
 brown-light = "#F9CFB9"
 brown-dark = "#837369"
-
