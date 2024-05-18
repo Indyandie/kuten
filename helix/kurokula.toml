@@ -6,23 +6,34 @@
 "ui.background" = { bg = "black-dark" }
 "ui.menu" = { fg = "white-light", bg = "black-normal" }
 "ui.menu.selected" = { fg = "white-light", bg = "blue-normal" }
-"ui.linenr" = { fg = "white-dark", bg = "black-dark" }
-"ui.linenr.selected" = { fg = "white-light", bg = "black-light", modifiers = ["bold"] }
+"ui.linenr" = { fg = "white-dark", bg = "black-dark", modifiers = ["italic"] }
+"ui.linenr.selected" = { fg = "white-light", bg = "black-light", modifiers = [
+  "bold",
+] }
 "ui.gutter" = { bg = "black-dark" }
 "ui.popup" = { fg = "white-normal", bg = "black-normal" }
-"ui.popup.info" = { fg = "yellow-dark", bg = "black-dark", modifiers = ["italic"] }
+"ui.popup.info" = { fg = "yellow-dark", bg = "black-dark", modifiers = [
+  "italic",
+] }
 "ui.window" = { bg = "black-light" }
-"ui.selection" = { bg = "black-light" }
-"ui.statusline" = { fg = "white-normal", bg = "black-normal", modifiers = ["regular"] }
-"ui.statusline.normal" = { fg = "white-light", modifiers = ["bold"] }
-"ui.statusline.insert" = { fg = "cyan-dark", modifiers = ["bold"] }
-"ui.statusline.select" = { fg = "yellow-dark", modifiers = ["bold"] }
+"ui.selection" = { bg = "black-light", fg = "white-light", modifiers = [
+  "italic",
+  "bold",
+] }
+"ui.statusline" = { fg = "white-dark", bg = "black-dark", modifiers = ["bold"] }
+"ui.statusline.normal" = { fg = "white-light", modifiers = ["bold", "italic"] }
+"ui.statusline.insert" = { fg = "cyan-normal", modifiers = ["bold", "italic"] }
+"ui.statusline.select" = { fg = "yellow-dark", modifiers = ["bold", "italic"] }
 "ui.help" = { fg = "yellow-light", bg = "black-dark" }
 "ui.cursor" = { bg = "yellow-dark", fg = "white-light" }
-"ui.cursor.insert" = { fg = "white-normal", modifiers = ["reversed"] }
-"ui.cursor.select" = { fg = "white-normal", modifiers = ["reversed"] }
+"ui.cursor.insert" = { fg = "white-normal", modifiers = ["reversed", "bold"] }
+"ui.cursor.select" = { fg = "white-normal", modifiers = ["reversed", "bold"] }
 "ui.cursor.primary" = { bg = "white-normal", fg = "black-dark" }
-"ui.cursor.match" = { fg = "white-normal", bg = "orange-dark", modifiers = ["underlined"] }
+"ui.cursor.match" = { fg = "white-normal", bg = "orange-dark", modifiers = [
+  "underlined",
+  "bold",
+  "italic",
+] }
 "ui.cursorline.primary" = { bg = "sel-bg" }
 "ui.cursorline.secondary" = { bg = "sel-bg" }
 "ui.text" = { fg = "white-normal" }
@@ -35,20 +46,27 @@
 "ui.bufferline.active" = { fg = "white-normal", bg = "black-dark" }
 
 "operator" = "white-dark"
-"punctuation" = { fg = "white-dark" } #, modifiers = ["bold"] }
+"punctuation" = { fg = "white-dark" }                                            #, modifiers = ["bold"] }
 "variable" = { fg = "magenta-dark", modifiers = ["bold"] }
 "variable.other" = { fg = "brown-normal", modifiers = ["bold"] }
 "variable.other.member" = { fg = "orange-dark", modifiers = ["bold", "italic"] }
-"constant" = { fg = "blue-normal", modifiers = ["bold"] }
+"constant" = { fg = "blue-normal", modifiers = ["bold", "italic"] }
 # "constant.builtin" = { fg = "white-normal", bg = "blue-dark", modifiers = ["italic", "bold"] }
 "constant.builtin" = { fg = "blue-normal", modifiers = ["italic", "bold"] }
 "constant.numeric" = { fg = "cyan-dark", modifiers = ["bold", "italic"] }
 "constant.character.escape" = { fg = "brown-light" }
 "attribute" = "yellow-normal"
-"type" = { fg = "orange-normal", modifiers = ["italic", "bold"], underline.style = "curl" } # structs, enum
-"type.builtin" = { fg = "blue-light", modifiers = ["italic"], underline.style = "curl" }
-"type.enum.variant" = { fg = "yellow-light", modifiers = ["italic"], underline.style = "curl" }
-"string"  = { fg = "green-dark", modifiers = ["normal"] } 
+"type" = { fg = "orange-normal", modifiers = [
+  "italic",
+  "bold",
+], underline.style = "curl" } # structs, enum
+"type.builtin" = { fg = "blue-light", modifiers = [
+  "italic",
+], underline.style = "curl" }
+"type.enum.variant" = { fg = "yellow-light", modifiers = [
+  "italic",
+], underline.style = "curl" }
+"string" = { fg = "green-dark", modifiers = ["italic"] }
 "function" = { fg = "yellow-dark", modifiers = ["italic", "bold"] }
 "function.macro" = { fg = "purple-light", modifiers = ["italic", "bold"] }
 "constructor" = "cyan-normal"
@@ -59,19 +77,37 @@
 "namespace" = { fg = "cyan-normal", modifiers = ["italic"] }
 
 # HTML
-"tag" = { fg = "blue-dark", modifiers = ["bold"]}
+"tag" = { fg = "blue-dark", modifiers = ["bold"] }
 
-"markup.heading.1" = { fg = "white-dark", modifiers = ["bold", "italic"], underline.style = "double_line" }
-"markup.heading.2" = { fg = "cyan-dark", modifiers = ["bold", "italic"], underline.style = "double_line" }
-"markup.heading.3" = { fg = "magenta-dark", modifiers = ["bold", "italic"], underline.style = "double_line" }
-"markup.heading.4" = { fg = "yellow-dark", modifiers = ["bold", "italic"], underline.style = "double_line" }
-"markup.heading.5" = { fg = "red-dark", modifiers = ["bold", "italic"], underline.style = "double_line" }
-"markup.heading.6" = { fg = "blue-dark", modifiers = ["bold", "italic"], underline.style = "double_line" }
+"markup.heading.1" = { fg = "white-dark", modifiers = [
+  "bold",
+  "italic",
+], underline.style = "double_line" }
+"markup.heading.2" = { fg = "cyan-dark", modifiers = [
+  "bold",
+  "italic",
+], underline.style = "double_line" }
+"markup.heading.3" = { fg = "magenta-dark", modifiers = [
+  "bold",
+  "italic",
+], underline.style = "double_line" }
+"markup.heading.4" = { fg = "yellow-dark", modifiers = [
+  "bold",
+  "italic",
+], underline.style = "double_line" }
+"markup.heading.5" = { fg = "red-dark", modifiers = [
+  "bold",
+  "italic",
+], underline.style = "double_line" }
+"markup.heading.6" = { fg = "blue-dark", modifiers = [
+  "bold",
+  "italic",
+], underline.style = "double_line" }
 "markup.list" = "blue-light"
 "markup.list.unnumbered" = { fg = "green-light", modifiers = ["bold"] }
 "markup.list.numbered" = { fg = "green-dark", modifiers = ["bold"] }
-"markup.list.unchecked" = { fg = "green-light", modifiers = ["bold"] }
-"markup.list.checked" = { fg = "green-dark", modifiers = ["bold"] }
+"markup.list.unchecked" = { fg = "green-light", modifiers = ["italic"] }
+"markup.list.checked" = { fg = "green-dark", modifiers = ["bold", "italic"] }
 "markup.bold" = { fg = "white-light", modifiers = ["bold"] }
 "markup.italic" = { fg = "white-light", modifiers = ["italic"] }
 "markup.strikethrough" = { fg = "white-dark", modifiers = ["crossed_out"] }
@@ -80,17 +116,17 @@
 "markup.quote" = "orange-light"
 "markup.raw" = "white-normal"
 "markup.raw.inline" = { fg = "green-light", bg = "black-dark" }
-"markup.raw.block" = {  bg = "black-dark" }
+"markup.raw.block" = { bg = "black-dark" }
 
 
 "diff.plus" = "green-dark"
 "diff.delta" = "white-dark"
 "diff.minus" = "red-dark"
 
-"diagnostic.warning" = { underline = { color = "orange-normal", style = "curl"} }
-"diagnostic.error" = { underline = { color = "red-normal", style = "curl"} }
-"diagnostic.info" = { underline = { color = "grey05", style = "curl"} }
-"diagnostic.hint" = { underline = { color = "grey05", style = "curl"} }
+"diagnostic.warning" = { underline = { color = "orange-normal", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red-normal", style = "curl" } }
+"diagnostic.info" = { underline = { color = "blue-light", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "green-light", style = "curl" } }
 
 "info" = "grey05"
 "hint" = "grey05"
@@ -99,11 +135,11 @@
 "error" = "red-normal"
 
 [palette]
-bg-main = "#181818" # Default Background
+bg-main = "#181818"  # Default Background
 bg-light = "#282828" # Lighter Background (Used for status bars, line number and folding marks)
-sel-bg = "#383838" # Selection Background
-grey03 = "#585858" # Comments, Invisibles, Line Highlighting
-grey05 = "#d8d8d8" # Default Foreground, Caret, Delimiters, Operators
+sel-bg = "#383838"   # Selection Background
+grey03 = "#585858"   # Comments, Invisibles, Line Highlighting
+grey05 = "#d8d8d8"   # Default Foreground, Caret, Delimiters, Operators
 
 # colors
 

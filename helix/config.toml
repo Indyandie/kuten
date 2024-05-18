@@ -67,7 +67,7 @@ color-modes = true
 '<' = '>'
 
 [editor.statusline]
-separator = "┃"
+separator = "▕ "
 mode.normal = "■"
 mode.insert = "◎"
 mode.select = "▼"
