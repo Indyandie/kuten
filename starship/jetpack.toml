@@ -160,15 +160,15 @@ empty_symbol = "▃"
 
 [[battery.display]]
 threshold = 20
-style = "blink italic bold dimmed red"
+style = "blink italic bold red"
 
 [[battery.display]]
 threshold = 60
-style = "italic dimmed purple"
+style = "italic dimmed bright-purple"
 
 [[battery.display]]
 threshold = 70
-style = "blink italic bold dimmed yellow"
+style = "italic dimmed yellow"
 
 # [[battery.display]]
 # threshold = 100
