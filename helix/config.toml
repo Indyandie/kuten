@@ -58,6 +58,8 @@ line-number = "absolute"
 cursorline = true
 color-modes = true
 # auto-pairs = true
+popup-border = "all"
+jump-label-alphabet = "asdfjkl;ghruvn1234567890"
 
 [editor.auto-pairs]
 '(' = ')'
@@ -74,6 +76,7 @@ mode.select = "▼"
 left = ["mode", "selections", "spacer", "spinner",  "register", "separator" ]
 center = [
   "version-control",
+  "read-only-indicator",
   "file-name",
   "file-modification-indicator",
   "file-encoding",
