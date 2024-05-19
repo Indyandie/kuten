@@ -40,8 +40,8 @@
 
 | key | description           |
 | --- | --------------------- |
-| `j`   | go to next change     |
-| `k`   | go to previous change |
+| `j` | go to next change     |
+| `k` | go to previous change |
 
 #### Comma Mode
 
