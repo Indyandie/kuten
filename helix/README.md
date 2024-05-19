@@ -38,10 +38,10 @@
 
 #### Go To Mode
 
-| key | description      |
-| --- | ---------------- |
-| j   | go to next change |
-| k   | go to previous change |
+| key | description           |
+| --- | --------------------- |
+| `j`   | go to next change     |
+| `k`   | go to previous change |
 
 #### Comma Mode
 
@@ -72,59 +72,46 @@
 Get a list of languages with an installed LSP.
 
 ```shell
-hx --health | rg "✓ [a-z]" | sd '(^[a-z]+).*' '$1, ' | tr -d '\n'
-
-hx --health | rg "✓ [a-z]" | sd '(^[a-z\-]+).*' '$1'
+hx --health
 ```
 
-- bash
-- c
-- cpp
-- css
-- dot
-- html
-- javascript
-- json
-- jsx
-- lua
-- markdown
-- opencl
-- python
-- rust
-- scss
-- svelte
-- swift
-- toml
-- tsx
-- typescript
-- yaml
-- zig
-- Rust
-
 ### LSP List
+
+| name                            | lang                     | type                    | package manager |
+| ------------------------------- | ------------------------ | ----------------------- | --------------- |
+| @astrojs/language-server        | astro                    | LSP                     | npm             |
+| bash-language-server            | bash                     | LSP                     | npm             |
+| dot-language-server             | dot                      | LSP                     | npm             |
+| svelte-language-server          | svelte                   | LSP                     | npm             |
+| typescript-svelte-plugin        | svelte                   | LSP                     | npm             |
+| typescript                      | typescript               | LSP                     | npm             |
+| typescript-svelte-plugin        | typescript               | LSP                     | npm             |
+| vscode-langservers-extracted    | ?                        | LSP                     | npm             |
+| ansible/ansible-language-server | ansible                  | LSP                     | npm             |
+| emmet-ls                        | html                     | LSP, snippet            | npm             |
+| vscode-html-languageserver-bin  | html                     | LSP                     | npm             |
+| prettier                        | css                      | LSP                     | npm             |
+| deno                            | markdown, html, js, json | lsp, formatter, snippet | deno            |
+| marksman                        | markdown                 | LSP                     | brew, cargo     |
+| lua-language-server             | lua                      | LSP                     | brew            |
+| python-lsp-server               | python                   | LSP                     | brew            |
+| black                           | python                   | formatter               | brew, pip       |
+| yaml-language-server            | yaml                     | LSP                     | brew            |
+| ansible-lint                    | yaml                     | LSP                     | brew            |
+| sql-formatter                   | sql                      | formatter               | NPM             |
+| sqls                            | sql                      | LSP                     | NPM             |
+| taplo                           | toml                     | LSP                     | cargo           |
+| nixpkgs-fmt                     | nix                      | fomatter                | nix             |
 
 ### Deno LSP
 
 Deno provides a LSP via the `deno lsp` command. It supports JavaScript and TypeScript.
 
-### NPM LSP
-
-- @astrojs/language-server
-- bash-language-server
-- dot-language-server
-- svelte-language-server
-- typescript-svelte-plugin
-- typescript-language-server
-- typescript
-- vscode-langservers-extracted
-- ansible/ansible-language-server
-- emmet-ls
-
 ```sh
 npm i -g @astrojs/language-server bash-language-server dot-language-server svelte-language-server typescript-language-server typescript vscode-langservers-extracted @ansible/ansible-language-server typescript-svelte-plugin sql-formatter emmet-ls
 ```
 
-#### svelte
+### svelte
 
 Add to each project's `[js|ts]config.json`
 
@@ -141,12 +128,6 @@ Add to each project's `[js|ts]config.json`
 
 ### brew LSP
 
-- marksman
-- lua-language-server
-- python-lsp-server
-- yaml-language-server
-- ansible-lint
-
 ```sh
 brew install marksman lua-language-server python-lsp-server yaml-language-server ansible-lint
 ```
@@ -154,12 +135,6 @@ brew install marksman lua-language-server python-lsp-server yaml-language-server
 ### cargo
 
 - [taplo (toml)](https://github.com/helix-editor/helix/wiki/How-to-install-the-default-language-servers#toml)
-
-## Formatter & Snippets
-
-### NPM Formatters
-
-- sql-formatter
 
 ## Piping selections
 
