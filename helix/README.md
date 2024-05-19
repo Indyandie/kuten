@@ -2,12 +2,74 @@
 
 [def-lang-serv]: https://github.com/helix-editor/helix/wiki/How-to-install-the-default-language-servers
 
+## Keys
+
+### Normal
+
+| key               | description                |
+| ----------------- | -------------------------- |
+| `alt` + `w`       | toggle soft-wrap           |
+| `alt` + `/`       | toggle comments            |
+| `ctrl` + `y`      | yank to global clipboard   |
+| `]` (2x)          | next buffer                |
+| `[` (2x)          | previous buffer            |
+| `{`               | rotate selection backwards |
+| `}`               | rotate selection forwards  |
+| `shift` + `left`  | select mode                |
+| `shift` + `right` | select mode                |
+
+#### Space Mode
+
+| key      | description                           |
+| -------- | ------------------------------------- |
+| `d`      | close buffer                          |
+| `D`      | force close buffer                    |
+| `q`      | quit helix                            |
+| `Q`      | force quit helix                      |
+| `s`      | write changes to disk                 |
+| `S`      | force write changes to disk           |
+| `v`, `o` | open file in vertical split           |
+| `v`, `n` | open scratch buffer in vertical split |
+| `v`, `q` | close vertical split buffer           |
+| `H`      | jump to left split                    |
+| `L`      | jump to right split                   |
+| `space`  | add newline below                     |
+| `up`     | add newline above                     |
+
+#### Go To Mode
+
+| key | description      |
+| --- | ---------------- |
+| j   | go to next change |
+| k   | go to previous change |
+
+#### Comma Mode
+
+| key      | description                                         |
+| -------- | --------------------------------------------------- |
+| `,`      | keep primary selection                              |
+| `/`      | toggle comments                                     |
+| `p`      | paste contents from the clipboard after the cursor  |
+| `P`      | paste contents from the clipboard before the cursor |
+| `r`      | reload buffer                                       |
+| `R`      | reload all buffers                                  |
+| `c`, `r` | reload config                                       |
+| `f`      | format                                              |
+
+### Insert
+
+| key      | description      |
+| -------- | ---------------- |
+| `j`, `k` | exit insert mode |
+
+---
+
 ## [Default Language Servers][def-lang-serv]
 
 - [simple-completion-language-server](https://github.com/estin/simple-completion-language-server)
 - [languages.toml](https://github.com/helix-editor/helix/blob/master/languages.toml)
 
-Get a list of languages with an installed lsp.
+Get a list of languages with an installed LSP.
 
 ```shell
 hx --health | rg "✓ [a-z]" | sd '(^[a-z]+).*' '$1, ' | tr -d '\n'
@@ -41,11 +103,11 @@ hx --health | rg "✓ [a-z]" | sd '(^[a-z\-]+).*' '$1'
 
 ### LSP List
 
-### Deno lsp
+### Deno LSP
 
-Deno provides a lsp via the `deno lsp` command. It supports JavaScript and TypeScript.
+Deno provides a LSP via the `deno lsp` command. It supports JavaScript and TypeScript.
 
-### npm lsp
+### NPM LSP
 
 - @astrojs/language-server
 - bash-language-server
@@ -77,7 +139,7 @@ Add to each project's `[js|ts]config.json`
 }
 ```
 
-### brew lsp
+### brew LSP
 
 - marksman
 - lua-language-server
@@ -95,7 +157,7 @@ brew install marksman lua-language-server python-lsp-server yaml-language-server
 
 ## Formatter & Snippets
 
-### npm formatters
+### NPM Formatters
 
 - sql-formatter
 
@@ -107,7 +169,7 @@ Piping certain things proved challenging, luckily `xargs` came to the rescue.
 pipe:xargs -I {} echo {} | xargs -I {} grep {} attachment.csv | sed -E 's/(.*),(.*)/\1/g'
 ```
 
-## Alt Workaround (macos)
+## Alt Workaround (macOS)
 
 Instead of a getting all fancy with the terminal config use the literal character in the helix config. [workaround](https://github.com/helix-editor/helix/issues/2469#issuecomment-1714470713)
 
@@ -115,6 +177,6 @@ Instead of a getting all fancy with the terminal config use the literal characte
 
 [language.toml](https://github.com/helix-editor/helix/blob/090ed97e0045bfad1e5bff8b96c61707b996b85a/languages.toml#L609)
 
-## TODO
+## To Do
 
 - [ ] Update from [release 24.03](https://helix-editor.com/news/release-24-03-highlights/)
