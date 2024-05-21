@@ -157,20 +157,20 @@ keybinds clear-defaults=true { // clear all defaults
     shared_except "pane" "locked" {
         bind "Alt 1" { SwitchToMode "Pane"; }
     }
-    shared_except "resize" "locked" {
-        bind "Alt 7" { SwitchToMode "Resize"; }
-    }
-    shared_except "scroll" "locked" {
-        bind "Alt 6" { SwitchToMode "Scroll"; }
-    }
-    shared_except "session" "locked" {
-        bind "Alt 8" { SwitchToMode "Session"; }
-    }
     shared_except "tab" "locked" {
         bind "Alt 2" { SwitchToMode "Tab"; }
     }
     shared_except "move" "locked" {
         bind "Alt 3" { SwitchToMode "Move"; }
+    }
+    shared_except "scroll" "locked" {
+        bind "Alt 6" { SwitchToMode "Scroll"; }
+    }
+    shared_except "resize" "locked" {
+        bind "Alt 7" { SwitchToMode "Resize"; }
+    }
+    shared_except "session" "locked" {
+        bind "Alt 8" { SwitchToMode "Session"; }
     }
 }
 
