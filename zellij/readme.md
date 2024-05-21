@@ -12,7 +12,6 @@
 | `Alt p`         | TogglePaneEmbedOrFloating |
 | `Alt o`         | ToggleFloatingPanes       |
 | `Alt m`         | ToggleFocusFullscreen     |
-| `Ctrl g`        | SwitchToMode "Locked"     |
 | `Alt q`         | Quit                      |
 | `Alt Left`      | MoveFocusOrTab "Left"     |
 | `Alt Right`     | MoveFocusOrTab "Right"    |

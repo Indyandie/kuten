@@ -144,7 +144,7 @@ keybinds clear-defaults=true { // clear all defaults
         bind "Alt g" {
             Run "zellij" "run" "-f" "--height" "100%" "--width" "100%" "-x" "0" "-y" "0" "--" "lazygit"
         }
-        bind "Alt 1" {
+        bind "Alt 4" {
             LaunchPlugin "filepicker" {
                 floating true;
                 close_on_selection true;
