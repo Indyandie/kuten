@@ -155,22 +155,22 @@ keybinds clear-defaults=true { // clear all defaults
         bind "Enter" "Esc" { SwitchToMode "Normal"; }
     }
     shared_except "pane" "locked" {
-        bind "Ctrl 1" { SwitchToMode "Pane"; }
+        bind "Alt 1" { SwitchToMode "Pane"; }
     }
     shared_except "resize" "locked" {
-        bind "Ctrl 7" { SwitchToMode "Resize"; }
+        bind "Alt 7" { SwitchToMode "Resize"; }
     }
     shared_except "scroll" "locked" {
-        bind "Ctrl 6" { SwitchToMode "Scroll"; }
+        bind "Alt 6" { SwitchToMode "Scroll"; }
     }
     shared_except "session" "locked" {
-        bind "Ctrl 8" { SwitchToMode "Session"; }
+        bind "Alt 8" { SwitchToMode "Session"; }
     }
     shared_except "tab" "locked" {
-        bind "Ctrl 2" { SwitchToMode "Tab"; }
+        bind "Alt 2" { SwitchToMode "Tab"; }
     }
     shared_except "move" "locked" {
-        bind "Ctrl 3" { SwitchToMode "Move"; }
+        bind "Alt 3" { SwitchToMode "Move"; }
     }
 }
 

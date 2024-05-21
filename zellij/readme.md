@@ -26,9 +26,9 @@
 
 | key bind | action                 |
 | -------- | ---------------------- |
-| `Ctrl 1` | Switch to pane mode    |
-| `Ctrl 7` | Switch to resize mode  |
-| `Ctrl 6` | Switch to scroll mode  |
-| `Ctrl 8` | Switch to session mode |
-| `Ctrl 2` | Switch to tab mode     |
-| `Ctrl 3` | Switch to move mode    |
+| `Alt 1`  | Switch to pane mode    |
+| `Alt 7`  | Switch to resize mode  |
+| `Alt 6`  | Switch to scroll mode  |
+| `Alt 8`  | Switch to session mode |
+| `Alt 2`  | Switch to tab mode     |
+| `Alt 3`  | Switch to move mode    |
