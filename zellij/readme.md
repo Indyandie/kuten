@@ -22,3 +22,14 @@
 | `Alt -`         | Resize "Decrease"         |
 | `Alt [`         | GoToPreviousTab           |
 | `Alt ]`         | GoToNextTab               |
+
+### Mode
+
+| key bind | action                 |
+| -------- | ---------------------- |
+| `Ctrl 1` | Switch to pane mode    |
+| `Ctrl 7` | Switch to resize mode  |
+| `Ctrl 6` | Switch to scroll mode  |
+| `Ctrl 8` | Switch to session mode |
+| `Ctrl 2` | Switch to tab mode     |
+| `Ctrl 3` | Switch to move mode    |

@@ -1,8 +1,8 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
+
 keybinds clear-defaults=true { // clear all defaults
     normal {
         bind "Ctrl c" { Copy; }
-        bind "Alt m" { ToggleFocusFullscreen; }
     }
     locked {
         bind "Ctrl u" { SwitchToMode "Normal"; }
@@ -126,7 +126,7 @@ keybinds clear-defaults=true { // clear all defaults
         bind "Alt p" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "Alt o" { ToggleFloatingPanes; SwitchToMode "Normal"; }
         bind "Alt x" { CloseFocus; SwitchToMode "Normal"; }
-        bind "Ctrl g" { SwitchToMode "Locked"; }
+        // bind "Ctrl g" { SwitchToMode "Locked"; }
         bind "Alt q" { Quit; }
         bind "Alt n" { NewPane; }
         bind "Alt t" { NewTab { name "●"; }; SwitchToMode "Normal"; }
@@ -155,26 +155,23 @@ keybinds clear-defaults=true { // clear all defaults
         bind "Enter" "Esc" { SwitchToMode "Normal"; }
     }
     shared_except "pane" "locked" {
-        bind "Ctrl p" { SwitchToMode "Pane"; }
+        bind "Ctrl 1" { SwitchToMode "Pane"; }
     }
     shared_except "resize" "locked" {
-        bind "Alt r" { SwitchToMode "Resize"; }
+        bind "Ctrl 7" { SwitchToMode "Resize"; }
     }
     shared_except "scroll" "locked" {
-        // bind "Alt s" { SwitchToMode "Scroll"; }
+        bind "Ctrl 6" { SwitchToMode "Scroll"; }
     }
     shared_except "session" "locked" {
-        bind "Ctrl o" { SwitchToMode "Session"; }
+        bind "Ctrl 8" { SwitchToMode "Session"; }
     }
     shared_except "tab" "locked" {
-        bind "Ctrl t" { SwitchToMode "Tab"; }
+        bind "Ctrl 2" { SwitchToMode "Tab"; }
     }
     shared_except "move" "locked" {
-        bind "Ctrl h" { SwitchToMode "Move"; }
+        bind "Ctrl 3" { SwitchToMode "Move"; }
     }
-    // shared_except "tmux" "locked" {
-        // bind "Ctrl b" { SwitchToMode "Tmux"; }
-    // }
 }
 
 // plugins {
