@@ -30,7 +30,6 @@
 | `Alt 1`  | Switch to pane mode    |
 | `Alt 2`  | Switch to tab mode     |
 | `Alt 3`  | Switch to move mode    |
-| `Alt 6`  | Switch to scroll mode  |
 | `Alt 7`  | Switch to resize mode  |
 | `Alt 8`  | Switch to session mode |
 
