@@ -1,6 +1,6 @@
 # Zellij Configuration
 
-## Keybinds
+## Key Binds
 
 ### Global
 
@@ -12,7 +12,7 @@
 | `Alt p`          | Toggle Pane Embed Or Floating |
 | `Alt o`          | Toggle Floating Panes         |
 | `Alt m`          | Toggle Focus Full screen      |
-| `Alt Q`          | Quit                          |
+| `Alt q`          | Quit                          |
 | `Alt Left`       | Move Focus Or Tab Left        |
 | `Alt Right`      | Move Focus Or Tab Right       |
 | `Alt Down`       | Move Focus "Down"             |
@@ -22,6 +22,7 @@
 | `Alt [`          | Go To Previous Tab            |
 | `Alt ]`          | Go To Next Tab                |
 | `Alt 4`          | file picker                   |
+| `Ctrl l`          | locked mode                   |
 
 ### Mode
 

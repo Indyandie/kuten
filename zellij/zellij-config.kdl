@@ -92,8 +92,8 @@ keybinds clear-defaults=true { // clear all defaults
         bind "Alt p" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "Alt o" { ToggleFloatingPanes; SwitchToMode "Normal"; }
         bind "Alt W" { CloseFocus; SwitchToMode "Normal"; }
-        // bind "Ctrl g" { SwitchToMode "Locked"; }
-        bind "Alt Q" { Quit; }
+        bind "Ctrl l" { SwitchToMode "Locked"; }
+        bind "Alt q" { Quit; }
         bind "Alt n" { NewPane; }
         bind "Alt t" { NewTab { name "●"; }; SwitchToMode "Normal"; }
         bind "Alt 9" { MoveTab "Left"; }
@@ -118,7 +118,7 @@ keybinds clear-defaults=true { // clear all defaults
         }
     }
     shared_except "normal" "locked" {
-        bind "Enter" "Esc" { SwitchToMode "Normal"; }
+        bind "Enter" "Esc" "Ctrl L" { SwitchToMode "Normal"; }
     }
     shared_except "pane" "locked" {
         bind "Alt 1" { SwitchToMode "Pane"; }
