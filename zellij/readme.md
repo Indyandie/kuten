@@ -54,6 +54,32 @@
 | `e`          | Toggle Pane Embed Or Floating & Normal mode   |
 | `c`          | Switch To Mode Rename Pane, Pane Name Input 0 |
 
+### Tab Mode
+
+| key bind                  | action                 |
+| ------------------------- | ---------------------- |
+| `Ctrl t`                  | Normal mode            |
+| `r`                       | Rename tab             |
+| `h`, `Left`, `Up`, `k`    | Go To Previous Tab     |
+| `l`, `Right`, `Down`, `j` | Go To Next Tab         |
+| `n`                       | New Tab                |
+| `n`                       | New Tab name ●         |
+| `d`                       | Close Tab              |
+| `s`                       | Toggle Active Sync Tab |
+| `b`                       | Break Pane             |
+| `]`                       | Break Pane Right       |
+| `[`                       | Break Pane Left        |
+| `1`                       | Go To Tab 1            |
+| `2`                       | Go To Tab 2            |
+| `3`                       | Go To Tab 3            |
+| `4`                       | Go To Tab 4            |
+| `5`                       | Go To Tab 5            |
+| `6`                       | Go To Tab 6            |
+| `7`                       | Go To Tab 7            |
+| `8`                       | Go To Tab 8            |
+| `9`                       | Go To Tab 9            |
+| `Tab`                     | Toggle tab             |
+
 ### Move Mode
 
 | key bind    | action              |
