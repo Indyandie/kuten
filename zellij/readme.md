@@ -22,9 +22,9 @@
 | `Alt [`          | Go To Previous Tab            |
 | `Alt ]`          | Go To Next Tab                |
 | `Alt 4`          | file picker                   |
-| `Ctrl l`          | locked mode                   |
+| `Ctrl l`         | locked mode                   |
 
-### Mode
+### Switch Mode
 
 | key bind | action                 |
 | -------- | ---------------------- |
@@ -107,3 +107,11 @@
 | `L`          | Resize Decrease Right |
 | `=`, `+`     | Resize Increase       |
 | `-`          | Resize Decrease       |
+
+### Session Mode
+
+| key bind         | action          |
+| ---------------- | --------------- |
+| `Ctrl o`, `Esc`  | Normal mode     |
+| `d`, `Backspace` | Detach          |
+| `w` `Space`      | Session manager |

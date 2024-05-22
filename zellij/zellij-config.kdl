@@ -78,9 +78,9 @@ keybinds clear-defaults=true { // clear all defaults
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     session {
-        bind "Ctrl o" { SwitchToMode "Normal"; }
-        bind "d" { Detach; }
-        bind "w" {
+        bind "Ctrl o" "Esc" { SwitchToMode "Normal"; }
+        bind "d" "Backspace" { Detach; }
+        bind "w" "Space" {
             LaunchOrFocusPlugin "zellij:session-manager" {
                 floating true
                 move_to_focused_tab true
