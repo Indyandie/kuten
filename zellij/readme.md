@@ -33,3 +33,19 @@
 | `Alt 6`  | Switch to scroll mode  |
 | `Alt 7`  | Switch to resize mode  |
 | `Alt 8`  | Switch to session mode |
+
+### Resize Mode
+
+| key bind     | action                |
+| ------------ | --------------------- |
+| `Esc`        | SwitchToMode Normal   |
+| `h`, `Left`  | Resize Increase Left  |
+| `j`, `Down`  | Resize Increase Down  |
+| `k`, `Up`    | Resize Increase Up    |
+| `l`, `Right` | Resize Increase Right |
+| `H`          | Resize Decrease Left  |
+| `J`          | Resize Decrease Down  |
+| `K`          | Resize Decrease Up    |
+| `L`          | Resize Decrease Right |
+| `=`, `+`     | Resize Increase       |
+| `-`          | Resize Decrease       |
