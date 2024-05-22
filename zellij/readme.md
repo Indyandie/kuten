@@ -6,33 +6,34 @@
 
 | key bind         | action                        |
 | ---------------- | ----------------------------- |
-| `Alt n`          | New Pane                      |
 | `Alt t`          | New Tab                       |
+| `Alt [`          | Go To Previous Tab            |
+| `Alt ]`          | Go To Next Tab                |
+| `Alt }`          | Move tab left                 |
+| `Alt {`          | Move tab right                |
+| `Alt n`          | New Pane                      |
 | `Alt W`          | Close Focus                   |
 | `Alt p`          | Toggle Pane Embed Or Floating |
 | `Alt o`          | Toggle Floating Panes         |
-| `Alt m`          | Toggle Focus Full screen      |
-| `Alt q`          | Quit                          |
+| `Alt 0`          | Toggle Focus Full screen      |
 | `Alt Left`       | Move Focus Or Tab Left        |
 | `Alt Right`      | Move Focus Or Tab Right       |
 | `Alt Down`       | Move Focus "Down"             |
 | `Alt Up`         | Move Focus "Up"               |
 | `Alt =`, `Alt +` | Resize "Increase"             |
 | `Alt -`          | Resize "Decrease"             |
-| `Alt [`          | Go To Previous Tab            |
-| `Alt ]`          | Go To Next Tab                |
-| `Alt 4`          | file picker                   |
 | `Ctrl l`         | locked mode                   |
+| `Alt q`          | Quit                          |
 
 ### Switch Mode
 
 | key bind | action                 |
 | -------- | ---------------------- |
-| `Alt 1`  | Switch to pane mode    |
-| `Alt 2`  | Switch to tab mode     |
-| `Alt 3`  | Switch to move mode    |
-| `Alt 7`  | Switch to resize mode  |
-| `Alt 8`  | Switch to session mode |
+| `Alt 1`  | Switch to tab mode     |
+| `Alt 2`  | Switch to pane mode    |
+| `Alt 7`  | Switch to move mode    |
+| `Alt 8`  | Switch to resize mode  |
+| `Alt 9`  | Switch to session mode |
 
 ### Pane Mode
 

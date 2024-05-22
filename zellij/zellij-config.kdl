@@ -96,8 +96,6 @@ keybinds clear-defaults=true { // clear all defaults
         bind "Alt q" { Quit; }
         bind "Alt n" { NewPane; }
         bind "Alt t" { NewTab { name "●"; }; SwitchToMode "Normal"; }
-        bind "Alt 9" { MoveTab "Left"; }
-        bind "Alt 0" { MoveTab "Right"; }
         bind "Alt Left" { MoveFocusOrTab "Left"; }
         bind "Alt Right" { MoveFocusOrTab "Right"; }
         bind "Alt Down" { MoveFocus "Down"; }
@@ -106,34 +104,36 @@ keybinds clear-defaults=true { // clear all defaults
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt [" { GoToPreviousTab; }
         bind "Alt ]" { GoToNextTab; }
-        bind "Alt m" { ToggleFocusFullscreen; }
+        bind "Alt {" { MoveTab "Left"; }
+        bind "Alt }" { MoveTab "Right"; }
+        bind "Alt 0" { ToggleFocusFullscreen; }
         bind "Alt g" {
             Run "zellij" "run" "-f" "--height" "100%" "--width" "100%" "-x" "0" "-y" "0" "--" "lazygit"
         }
-        bind "Alt 4" {
-            LaunchPlugin "filepicker" {
-                floating true;
-                close_on_selection true;
-            };
-        }
+        // bind "Alt 4" {
+        //     LaunchPlugin "filepicker" {
+        //         floating true;
+        //         close_on_selection true;
+        //     };
+        // }
     }
     shared_except "normal" "locked" {
-        bind "Enter" "Esc" "Ctrl L" { SwitchToMode "Normal"; }
-    }
-    shared_except "pane" "locked" {
-        bind "Alt 1" { SwitchToMode "Pane"; }
+        bind "Enter" "Esc" { SwitchToMode "Normal"; }
     }
     shared_except "tab" "locked" {
-        bind "Alt 2" { SwitchToMode "Tab"; }
+        bind "Alt 1" { SwitchToMode "Tab"; }
+    }
+    shared_except "pane" "locked" {
+        bind "Alt 2" { SwitchToMode "Pane"; }
     }
     shared_except "move" "locked" {
-        bind "Alt 3" { SwitchToMode "Move"; }
+        bind "Alt 7" { SwitchToMode "Move"; }
     }
     shared_except "resize" "locked" {
-        bind "Alt 7" { SwitchToMode "Resize"; }
+        bind "Alt 8" { SwitchToMode "Resize"; }
     }
     shared_except "session" "locked" {
-        bind "Alt 8" { SwitchToMode "Session"; }
+        bind "Alt 9" { SwitchToMode "Session"; }
     }
 }
 
