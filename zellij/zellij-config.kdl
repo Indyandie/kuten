@@ -197,18 +197,18 @@ themes {
         white 255 255 255
     }
     kurokula {
- 		fg "#94959B"
- 		bg "#333333"
- 		black "#141515"
- 		red "#D23E08"
- 		green "#85B1A9"
- 		yellow "#FFF700"
- 		blue "#2AB9FF"
- 		magenta "#FF50DA"
- 		cyan "#1EF9F5"
- 		white "#DDD0C4"
- 		orange "#E59605"
- 	}
+        fg "#94959B" // white-dark = "#94959B"
+        bg "#101010" // modified black-dark "#141515"
+        red "#FFB7B7" // red-light = "#FFB7B7"
+        green "#85B1A9" // green-dark = "#85B1A9"
+        yellow "#DBBB43" // yellow-dark = "#DBBB43"
+        blue "#6890D7" // blue-dark = "#6890D7"
+        magenta "#CC83BD" // magenta-dark = "#CC83BD"
+        orange "#AB7B4E" // orange-dark = "#AB7B4E"
+        cyan "#60BEBE" // cyan-dark = "#60BEBE"
+        white "#94959B" // white-dark = "#94959B"
+        black "#141518" // black-dark "#141515"
+    }
 }
 
 // Choose the theme that is specified in the themes section.
