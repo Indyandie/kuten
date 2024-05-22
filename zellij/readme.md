@@ -34,6 +34,26 @@
 | `Alt 7`  | Switch to resize mode  |
 | `Alt 8`  | Switch to session mode |
 
+### Pane Mode
+
+| key bind    | action                                        |
+| ----------- | --------------------------------------------- |
+| `Esc`       | SwitchToMode Normal                           |
+| `h` `Left`  | MoveFocus Left                                |
+| `l` `Right` | MoveFocus Right                               |
+| `j` `Down`  | MoveFocus Down                                |
+| `k` `Up`    | MoveFocus Up                                  |
+| `p`         | SwitchFocus                                   |
+| `n`         | NewPane SwitchToMode Normal                   |
+| `d`         | NewPane Down SwitchToMode Normal              |
+| `r`         | NewPane Right SwitchToMode Normal             |
+| `d`         | CloseFocus SwitchToMode Normal                |
+| `f`         | ToggleFocusFullscreen SwitchToMode Normal     |
+| `z`         | TogglePaneFrames SwitchToMode Normal          |
+| `w`         | ToggleFloatingPanes SwitchToMode Normal       |
+| `e`         | TogglePaneEmbedOrFloating SwitchToMode Normal |
+| `c`         | SwitchToMode RenamePane PaneNameInput 0       |
+
 ### Resize Mode
 
 | key bind     | action                |
