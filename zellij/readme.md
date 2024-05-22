@@ -8,16 +8,16 @@
 | --------------- | ------------------------- |
 | `Alt n`         | NewPane                   |
 | `Alt t`         | NewTab                    |
-| `Alt d`         | CloseFocus                |
+| `Alt W`         | CloseFocus                |
 | `Alt p`         | TogglePaneEmbedOrFloating |
 | `Alt o`         | ToggleFloatingPanes       |
 | `Alt m`         | ToggleFocusFullscreen     |
-| `Alt q`         | Quit                      |
+| `Alt Q`         | Quit                      |
 | `Alt Left`      | MoveFocusOrTab "Left"     |
 | `Alt Right`     | MoveFocusOrTab "Right"    |
 | `Alt Down`      | MoveFocus "Down"          |
 | `Alt Up`        | MoveFocus "Up"            |
-| `Alt =` `Alt +` | Resize "Increase"         |
+| `Alt =`, `Alt +` | Resize "Increase"         |
 | `Alt -`         | Resize "Decrease"         |
 | `Alt [`         | GoToPreviousTab           |
 | `Alt ]`         | GoToNextTab               |
@@ -39,10 +39,10 @@
 | key bind    | action                                        |
 | ----------- | --------------------------------------------- |
 | `Esc`       | SwitchToMode Normal                           |
-| `h` `Left`  | MoveFocus Left                                |
-| `l` `Right` | MoveFocus Right                               |
-| `j` `Down`  | MoveFocus Down                                |
-| `k` `Up`    | MoveFocus Up                                  |
+| `h`, `Left`  | MoveFocus Left                                |
+| `l`, `Right` | MoveFocus Right                               |
+| `j`, `Down`  | MoveFocus Down                                |
+| `k`, `Up`    | MoveFocus Up                                  |
 | `p`         | SwitchFocus                                   |
 | `n`         | NewPane SwitchToMode Normal                   |
 | `d`         | NewPane Down SwitchToMode Normal              |
