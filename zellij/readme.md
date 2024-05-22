@@ -4,24 +4,24 @@
 
 ### Global
 
-| keybind         | action                    |
-| --------------- | ------------------------- |
-| `Alt n`         | NewPane                   |
-| `Alt t`         | NewTab                    |
-| `Alt W`         | CloseFocus                |
-| `Alt p`         | TogglePaneEmbedOrFloating |
-| `Alt o`         | ToggleFloatingPanes       |
-| `Alt m`         | ToggleFocusFullscreen     |
-| `Alt Q`         | Quit                      |
-| `Alt Left`      | MoveFocusOrTab "Left"     |
-| `Alt Right`     | MoveFocusOrTab "Right"    |
-| `Alt Down`      | MoveFocus "Down"          |
-| `Alt Up`        | MoveFocus "Up"            |
-| `Alt =`, `Alt +` | Resize "Increase"         |
-| `Alt -`         | Resize "Decrease"         |
-| `Alt [`         | GoToPreviousTab           |
-| `Alt ]`         | GoToNextTab               |
-| `Alt 4`         | filepicker                |
+| key bind         | action                        |
+| ---------------- | ----------------------------- |
+| `Alt n`          | New Pane                      |
+| `Alt t`          | New Tab                       |
+| `Alt W`          | Close Focus                   |
+| `Alt p`          | Toggle Pane Embed Or Floating |
+| `Alt o`          | Toggle Floating Panes         |
+| `Alt m`          | Toggle Focus Full screen      |
+| `Alt Q`          | Quit                          |
+| `Alt Left`       | Move Focus Or Tab Left        |
+| `Alt Right`      | Move Focus Or Tab Right       |
+| `Alt Down`       | Move Focus "Down"             |
+| `Alt Up`         | Move Focus "Up"               |
+| `Alt =`, `Alt +` | Resize "Increase"             |
+| `Alt -`          | Resize "Decrease"             |
+| `Alt [`          | Go To Previous Tab            |
+| `Alt ]`          | Go To Next Tab                |
+| `Alt 4`          | file picker                   |
 
 ### Mode
 
@@ -36,29 +36,41 @@
 
 ### Pane Mode
 
-| key bind    | action                                        |
-| ----------- | --------------------------------------------- |
-| `Esc`       | SwitchToMode Normal                           |
-| `h`, `Left`  | MoveFocus Left                                |
-| `l`, `Right` | MoveFocus Right                               |
-| `j`, `Down`  | MoveFocus Down                                |
-| `k`, `Up`    | MoveFocus Up                                  |
-| `p`         | SwitchFocus                                   |
-| `n`         | NewPane SwitchToMode Normal                   |
-| `d`         | NewPane Down SwitchToMode Normal              |
-| `r`         | NewPane Right SwitchToMode Normal             |
-| `d`         | CloseFocus SwitchToMode Normal                |
-| `f`         | ToggleFocusFullscreen SwitchToMode Normal     |
-| `z`         | TogglePaneFrames SwitchToMode Normal          |
-| `w`         | ToggleFloatingPanes SwitchToMode Normal       |
-| `e`         | TogglePaneEmbedOrFloating SwitchToMode Normal |
-| `c`         | SwitchToMode RenamePane PaneNameInput 0       |
+| key bind     | action                                        |
+| ------------ | --------------------------------------------- |
+| `Esc`        | Normal mode                                   |
+| `h`, `Left`  | Move Focus Left                               |
+| `l`, `Right` | Move Focus Right                              |
+| `j`, `Down`  | Move Focus Down                               |
+| `k`, `Up`    | Move Focus Up                                 |
+| `p`          | Switch Focus                                  |
+| `n`          | New Pane and Normal mode                      |
+| `d`          | New Pane and Down & Normal mode               |
+| `r`          | New Pane and Right & Normal mode              |
+| `d`          | Close Focus & Normal mode                     |
+| `f`          | Toggle Focus Full screen & Normal mode        |
+| `z`          | Toggle Pane Frames & Normal mode              |
+| `w`          | Toggle Floating Panes & Normal mode           |
+| `e`          | Toggle Pane Embed Or Floating & Normal mode   |
+| `c`          | Switch To Mode Rename Pane, Pane Name Input 0 |
+
+### Move Mode
+
+| key bind    | action              |
+| ----------- | ------------------- |
+| `Esc`       | Normal mode         |
+| `n` `Tab`   | Move Pane           |
+| `p`         | Move Pane Backwards |
+| `h` `Left`  | Move Pane Left      |
+| `j` `Down`  | Move Pane Down      |
+| `k` `Up`    | Move Pane Up        |
+| `l` `Right` | Move Pane Right     |
 
 ### Resize Mode
 
 | key bind     | action                |
 | ------------ | --------------------- |
-| `Esc`        | SwitchToMode Normal   |
+| `Esc`        | Normal mode           |
 | `h`, `Left`  | Resize Increase Left  |
 | `j`, `Down`  | Resize Increase Down  |
 | `k`, `Up`    | Resize Increase Up    |
