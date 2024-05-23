@@ -68,6 +68,16 @@ select-wide-layout:
   mod: ""
   key: ""
 
+## conflicting keys - Alt + [w|W]
+
+focus-screen-1:
+  mod: ""
+  key: ""
+
+throw-screen-1:
+  mod: ""
+  key: ""
+
 # select-tall-layout:
 #   mod: mod1
 #   key: "8"
@@ -207,7 +217,8 @@ window-minimum-width: 0
 # List of bundle identifiers for applications to either be automatically floating or automatically tiled based on floating-is-blacklist (default []).
 floating: []
 
-# Boolean flag determining behavior of the floating list. true if the applications should be floating and all others tiled. false if the applications should be tiled and all others floating (default true).
+# Boolean flag determining behavior of the floating list. true if the applications should be floating and all others tiled. false if the applications should be
+# tiled and all others floating (default true).
 floating-is-blacklist: true
 
 # true if screen frames should exclude the status bar. false if the screen frames should include the status bar (default false).
