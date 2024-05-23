@@ -91,15 +91,39 @@ formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx"] }
 [language-server.astro-ls]
 command = "astro-ls"
 args = ["--stdio"]
+# to get the tsdk if typescript is install globally run
+# npm list -g | head -1
+# config = { typescript = { tsdk = "" }, environment = "node" }
+
 
 [[language]]
 name = "astro"
-scope = "source.astro"
-injection-regex = "astro"
-file-types = ["astro"]
-roots = ["package.json", "astro.config.mjs"]
+auto-format = true
 language-servers = ["astro-ls"]
-# language-server = { command = "astro-ls", args = ["--stdio"] }
+formatter = { command = 'prettier', args = [
+  "--parser",
+  "astro",
+  "--print-width",
+  "100000000000000000000",
+] }
+
+### formatter requires the following
+
+### install prettier locally on the project
+### https://github.com/withastro/prettier-plugin-astro
+
+### /** @type {import("prettier").Config} */
+### export default {
+###   plugins: ['prettier-plugin-astro'],
+###   overrides: [
+###     {
+###       files: '*.astro',
+###       options: {
+###         parser: 'astro',
+###       },
+###     },
+###   ],
+### };
 
 # Markdown
 
@@ -109,7 +133,20 @@ ltex.dictionary = { "en-US" = ["builtin"], "en-GB" = ["builtin"] }
 
 [[language]]
 name = "markdown"
-file-types = ["md", "mdx", "markdown", "mkd", "mkdn", "mdwn", "mdown", "markdn", "mdtxt", "mdtext", "workbook", { glob = "PULLREQ_EDITMSG" }]
+file-types = [
+  "md",
+  "mdx",
+  "markdown",
+  "mkd",
+  "mkdn",
+  "mdwn",
+  "mdown",
+  "markdn",
+  "mdtxt",
+  "mdtext",
+  "workbook",
+  { glob = "PULLREQ_EDITMSG" },
+]
 language-servers = [
   "marksman",
   "ltex-ls",
