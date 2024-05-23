@@ -91,6 +91,8 @@ hx --health
 | emmet-ls                        | html                     | LSP, snippet            | npm             |
 | vscode-html-languageserver-bin  | html                     | LSP                     | npm             |
 | prettier                        | css                      | LSP                     | npm             |
+| prettier-plugin-astro           | astro                    | formatter               | npm             |
+| prettier-plugin-tailwindcss     | tailwindcss              | formatter               | npm             |
 | deno                            | markdown, html, js, json | lsp, formatter, snippet | deno            |
 | marksman                        | markdown                 | LSP                     | brew, cargo     |
 | lua-language-server             | lua                      | LSP                     | brew            |
