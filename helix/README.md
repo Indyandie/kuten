@@ -87,10 +87,11 @@ hx --health
 | typescript-svelte-plugin        | svelte                   | LSP                     | npm             |
 | typescript                      | typescript               | LSP                     | npm             |
 | typescript-svelte-plugin        | typescript               | LSP                     | npm             |
-| vscode-langservers-extracted    | ?                        | LSP                     | npm             |
+| vscode-langservers-extracted    | css                      | LSP                     | npm             |
 | emmet-ls                        | html                     | LSP, snippet            | npm             |
 | vscode-html-languageserver-bin  | html                     | LSP                     | npm             |
 | prettier                        | css, yaml, html          | formatter               | npm             |
+| @tailwindcss/language-server    | tailwindcss              | LSP                     | npm, nix        |
 | prettier-plugin-tailwindcss     | tailwindcss              | formatter               | npm             |
 | deno                            | markdown, html, js, json | lsp, formatter, snippet | deno            |
 | marksman                        | markdown                 | LSP                     | brew, cargo     |

@@ -15,14 +15,22 @@ args = ["--stdio"]
 
 [[language]]
 name = "html"
-language-servers = ["vscode-html", "emmet-ls"]
+language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls"]
 formatter = { command = 'prettier', args = ["--parser", "html"] }
 
 # CSS
 
 [[language]]
 name = "css"
+language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
 formatter = { command = 'prettier', args = ["--parser", "css"] }
+
+# tailwindcss formatter cofig
+# 
+# .prettierrc.yaml
+#
+# plugins:
+#   - "prettier-plugin-tailwindcss"
 
 # JS
 
@@ -61,7 +69,7 @@ formatter = { command = 'deno', args = [
 name = "jsx"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
-language-servers = ["deno-lsp"]
+language-servers = ["deno-lsp", "tailwindcss-ls"]
 formatter = { command = 'deno', args = [
   "fmt",
   "-",
@@ -84,10 +92,11 @@ formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts"] }
 name = "tsx"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
-language-servers = ["deno-lsp"]
+language-servers = ["deno-lsp", "tailwindcss-ls"]
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx"] }
 
 # Astro
+
 [language-server.astro-ls]
 command = "astro-ls"
 args = ["--stdio"]
@@ -99,7 +108,7 @@ args = ["--stdio"]
 [[language]]
 name = "astro"
 auto-format = true
-language-servers = ["astro-ls"]
+language-servers = ["astro-ls", "tailwindcss-ls"]
 formatter = { command = 'prettier', args = [
   "--parser",
   "astro",
