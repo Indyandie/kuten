@@ -32,6 +32,31 @@ formatter = { command = 'prettier', args = ["--parser", "css"] }
 # plugins:
 #   - "prettier-plugin-tailwindcss"
 
+# Svelte
+
+[[language]]
+name = "svelte"
+language-servers = ["svelteserver", "tailwindcss-ls"]
+formatter = { command = 'prettier', args = [
+  "--parser",
+  "svelte",
+  "--no-semi",
+  "--single-quote",
+  "--bracket-same-line"
+] }
+# formatter = { command = 'prettier'  }
+
+# formatter requires the following
+
+# install the prettier plugin locally in the project - https://github.com/sveltejs/prettier-plugin-svelte
+
+# npm i --save-dev prettier-plugin-svelte
+#
+# .prettierrc.yaml - formatter config
+#
+# plugins:
+#   - "prettier-plugin-svelte"
+
 # JS
 
 [language-server.deno-lsp]
