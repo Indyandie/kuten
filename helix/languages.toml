@@ -139,16 +139,17 @@ formatter = { command = 'prettier', args = [
   "astro",
   "--print-width",
   "100000000000000000000",
+  "--no-semi",
+  "--single-quote",
+  "--bracket-same-line"
 ] }
 
-### formatter requires the following
+# formatter requires the following
 
-### install prettier locally on the project
-### https://github.com/withastro/prettier-plugin-astro
+# install prettier locally on the project - https://github.com/withastro/prettier-plugin-astro
+# npm i --save-dev prettier-plugin-astro
 
-# tailwindcss formatter config
-# 
-# .prettierrc.yaml
+# .prettierrc.yaml - formatter config 
 #
 # plugins:
 #   - "prettier-plugin-astro"
