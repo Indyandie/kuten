@@ -222,3 +222,13 @@ formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json"] }
 [[language]]
 name = "nix"
 formatter = { command = "nixpkgs-fmt" }
+
+# YAML
+
+[language-server.yaml-language-server.config.yaml]
+format = { enable = true }
+validation = true
+
+[[language]]
+name = "yaml"
+formatter = { command = 'prettier', args = ["--parser", "yaml"] }

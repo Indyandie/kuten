@@ -90,7 +90,7 @@ hx --health
 | ansible/ansible-language-server | ansible                  | LSP                     | npm             |
 | emmet-ls                        | html                     | LSP, snippet            | npm             |
 | vscode-html-languageserver-bin  | html                     | LSP                     | npm             |
-| prettier                        | css                      | LSP                     | npm             |
+| prettier                        | css, yaml, html          | formatter               | npm             |
 | prettier-plugin-astro           | astro                    | formatter               | npm             |
 | prettier-plugin-tailwindcss     | tailwindcss              | formatter               | npm             |
 | deno                            | markdown, html, js, json | lsp, formatter, snippet | deno            |
@@ -100,8 +100,8 @@ hx --health
 | black                           | python                   | formatter               | brew, pip       |
 | yaml-language-server            | yaml                     | LSP                     | brew            |
 | ansible-lint                    | yaml                     | LSP                     | brew            |
-| sql-formatter                   | sql                      | formatter               | NPM             |
 | sqls                            | sql                      | LSP                     | NPM             |
+| sql-formatter                   | sql                      | formatter               | NPM             |
 | taplo                           | toml                     | LSP                     | cargo           |
 | nixpkgs-fmt                     | nix                      | fomatter                | nix             |
 
