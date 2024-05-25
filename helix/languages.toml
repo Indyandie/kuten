@@ -187,6 +187,13 @@ formatter = { command = "taplo", args = ["format", "-"] }
 [language-server.sql-language-server]
 command = "sql-language-server"
 args = ["up", "--method", "stdio"]
+
+[language-server.sqls]
+command = "sqls"
+
+[[language]]
+name = "sql"
+language-servers = ["sql-language-server", "sqls"]
 formatter = { command = "sqlformat", args = [
   "--reindent",
   "--indent_width",
@@ -197,13 +204,11 @@ formatter = { command = "sqlformat", args = [
   "lower",
   "-",
 ] }
-
-[language-server.sqls]
-command = "sqls"
-
-[[language]]
-name = "sql"
-language-servers = ["sql-language-server", "sqls"]
+# formatter = { command = "sql-formatter", args = [
+#   "-l", "snowflake",
+#   "-c",
+#   '{ "language": "snowflake", "tabWidth": 2, "keywordCase": "upper"}',
+# ] }
 
 # py
 
