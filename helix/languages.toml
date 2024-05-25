@@ -25,7 +25,6 @@ name = "css"
 language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
 formatter = { command = 'prettier', args = ["--parser", "css"] }
 
-# tailwindcss formatter cofig
 # tailwindcss formatter config
 # 
 # .prettierrc.yaml
