@@ -26,6 +26,7 @@ language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
 formatter = { command = 'prettier', args = ["--parser", "css"] }
 
 # tailwindcss formatter cofig
+# tailwindcss formatter config
 # 
 # .prettierrc.yaml
 #
@@ -121,18 +122,17 @@ formatter = { command = 'prettier', args = [
 ### install prettier locally on the project
 ### https://github.com/withastro/prettier-plugin-astro
 
-### /** @type {import("prettier").Config} */
-### export default {
-###   plugins: ['prettier-plugin-astro'],
-###   overrides: [
-###     {
-###       files: '*.astro',
-###       options: {
-###         parser: 'astro',
-###       },
-###     },
-###   ],
-### };
+# tailwindcss formatter config
+# 
+# .prettierrc.yaml
+#
+# plugins:
+#   - "prettier-plugin-astro"
+# overrides:
+#   - files: "*.astro"
+#     options:
+#       parser: "astro"
+
 
 # Markdown
 
