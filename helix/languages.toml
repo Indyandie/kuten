@@ -130,7 +130,7 @@ args = ["--stdio"]
 # to get the tsdk if typescript is install globally run
 # npm list -g | head -1
 # config = { typescript = { tsdk = "/home/##USER##/.npm-packages/lib/node_modules/typescript/lib" }, environment = "node" }
-# config = { typescript = { tsdk = "/Users/##USER##/Library/Application Support/fnm/node-versions/v20.10.0/installation/lib/node_modules/typscript/lib" }, environment = "node" }
+# config = { typescript = { tsdk = "/Users/##USER##/Library/Application Support/fnm/node-versions/v20.10.0/installation/lib/node_modules/typescript/lib" }, environment = "node" }
 
 
 [[language]]
