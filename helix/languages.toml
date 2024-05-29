@@ -127,10 +127,9 @@ formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx"] }
 [language-server.astro-ls]
 command = "astro-ls"
 args = ["--stdio"]
-# to get the tsdk if typescript is install globally run
+# to get the tsdk if typescript is installed globally run
 # npm list -g | head -1
-# config = { typescript = { tsdk = "/home/##USER##/.npm-packages/lib/node_modules/typescript/lib" }, environment = "node" }
-# config = { typescript = { tsdk = "/Users/##USER##/Library/Application Support/fnm/node-versions/v20.10.0/installation/lib/node_modules/typescript/lib" }, environment = "node" }
+config = { typescript = { tsdk = "##TSDK##" }, environment = "node" }
 
 
 [[language]]
