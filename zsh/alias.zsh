@@ -112,11 +112,16 @@ alias gmnf="git merge --no-ff"
 alias gpo="git push origin"
 alias gbm="git branch -m"
 alias gin="git init"
-alias gcll="git clone"
+alias gcln="git clone"
 alias grao="git remote add origin"
 alias gsoup="git rev-parse --abbrev-ref HEAD | git push --set-upstream origin"
 alias gdcw="git diff --color-words"
 alias gdf="git diff --color-words | diff-so-fancy"
+alias gsm="git switch main"
+alias gsmm="git switch -m main"
+alias gs-="git switch main"
+alias gsm-..="git switch -m main"
+alias gsc="git switch -c"
 
 ## Lazygit
 
