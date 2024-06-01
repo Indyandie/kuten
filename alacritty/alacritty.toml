@@ -69,37 +69,39 @@ regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:
 transparent_background_colors = true
 # draw_bold_text_with_bright_colors = false
 
+# kurokula
+
 [colors.bright]
-black = "#515151"
-blue = "#8efff3"
-cyan = "#bcffc7"
-green = "#c1ffae"
-magenta = "#ffa2ed"
-red = "#ffb7b7"
-white = "#ffffff"
-yellow = "#fcffb8"
+black = '#515151'
+blue = '#a1d9ff'
+cyan = '#f9cfb9'
+green = '#c1ffae'
+magenta = '#a994ff'
+red = '#ffc663'
+white = '#ffffff'
+yellow = '#fff700'
 
 [colors.normal]
-black = "#333333"
-blue = "#2ab9ff"
-cyan = "#1ef9f5"
-green = "#54ca74"
-magenta = "#ff50da"
-red = "#d23e08"
-white = "#ddd0c4"
-yellow = "#fff700"
+black = '#333333'
+blue = '#6890d7'
+cyan = '#837369'
+green = '#85b1a9'
+magenta = '#887aa3'
+red = '#b66056'
+white = '#ddd0c4'
+yellow = '#dbbb43'
 
 [colors.primary]
-background = "#141515"
-foreground = "#ffffff"
+background = '#141515'
+foreground = '#ddd0c4'
+
+[colors.selection]
+background = '#515151'
+text = '#ffc663'
 
 [colors.cursor]
 cursor = "#ffc663"
 text = "#141515"
-
-[colors.selection]
-background = "#515151"
-text = "#ffc663"
 
 [colors.search]
 matches = { background = "#515151", foreground = "#ffc663" }
