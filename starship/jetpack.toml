@@ -100,6 +100,14 @@ purple = '#887aa3'
 red = '#b66056'
 white = '#ddd0c4'
 yellow = '#dbbb43'
+bright-black = '#515151'
+bright-blue = '#a1d9ff'
+bright-cyan = '#f9cfb9'
+bright-green = '#c1ffae'
+bright-purple = '#a994ff'
+bright-red = '#ffc663'
+bright-white = '#ffffff'
+bright-yellow = '#fff700'
 
 [character]
 format = "$symbol "                        # ◌ ○ ● ◎ ◉ ⚇ ◈ ■ ▲
