@@ -131,7 +131,7 @@ show_always = false
 [directory]
 home_symbol = "⌂"
 truncation_length = 2
-truncation_symbol = "□ "                                                                                                                                           # ■□▫
+truncation_symbol = "□ "                                                                                                                                             # ■□▫
 read_only = " ◈"
 use_os_path_sep = true
 style = "italic blue"
@@ -223,7 +223,7 @@ version_format = " ${raw}"
 [lua]
 format = " [lua](italic) [${symbol}${version}]($style)"
 version_format = " ${raw}"
-symbol = "⨀"                                           # ⏾◕
+symbol = "⨀"                                            # ⏾◕
 style = "bold bright-yellow"
 
 [nodejs]
