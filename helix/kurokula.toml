@@ -55,7 +55,7 @@
 ] }
 "ui.bufferline.active" = { fg = "white-normal", bg = "black-dark", modifiers = [
   "bold",
-  "underlined"
+  "underlined",
 ] }
 "ui.virtual.jump-label" = { bg = "red-dark", fg = "white-normal", modifiers = [
   "bold",
