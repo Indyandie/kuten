@@ -15,8 +15,8 @@ ZSH_HIGHLIGHT_STYLES[alias]='fg=yellow,bold,italic'
 # assign a specific command to a file type
 # ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=red'
 
-# global aliases 
-# Aggro alias that will translate in any positioon the alias is present
+# global aliases
+# Aggro alias that will translate in any position the alias is present
 # ZSH_HIGHLIGHT_STYLES[global-alias]='fg=red'
 
 # shell builtin commands (shift, pwd, zstyle)
@@ -24,7 +24,7 @@ ZSH_HIGHLIGHT_STYLES[builtin]='fg=magenta,bold,underline'
 
 # function names
 ZSH_HIGHLIGHT_STYLES[function]='fg=yellow,bold,underline'
-    
+
 # command names
 ZSH_HIGHLIGHT_STYLES[command]='fg=magenta,bold'
 
