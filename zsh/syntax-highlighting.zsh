@@ -188,3 +188,11 @@ ZSH_HIGHLIGHT_STYLES[arg0]="fg=$white_normal"
 
 # everything else
 # ZSH_HIGHLIGHT_STYLES[default]="fg=red"
+
+## Brackets
+
+ZSH_HIGHLIGHT_STYLES[bracket-error]="fg=$red_normal,underline,standout"
+ZSH_HIGHLIGHT_STYLES[bracket-level-1]="fg=$white_dark,bold"
+ZSH_HIGHLIGHT_STYLES[bracket-level-2]="fg=$white_normal,bold"
+ZSH_HIGHLIGHT_STYLES[bracket-level-3]="fg=$white_light,bold"
+ZSH_HIGHLIGHT_STYLES[bracket-level-4]="fg=$yellow_normal,bold"
