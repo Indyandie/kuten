@@ -197,3 +197,6 @@ function yaz() {
     fi
     rm -f -- "$tmp"
 }
+
+# zsh-syntax-highlighting
+source ~/.config/zsh/syntax
