@@ -39,7 +39,7 @@ brown_dark="#837369"
 typeset -A ZSH_HIGHLIGHT_STYLES
 
 # unknown tokens / errors
-ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=red,bold"
+ZSH_HIGHLIGHT_STYLES[unknown-token]="fg=$red_normal,bold"
 
 # shell reserved words (if, for)
 ZSH_HIGHLIGHT_STYLES[reserved-word]="fg=$blue_dark"
