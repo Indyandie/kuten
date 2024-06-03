@@ -196,3 +196,11 @@ ZSH_HIGHLIGHT_STYLES[bracket-level-1]="fg=$white_dark,bold"
 ZSH_HIGHLIGHT_STYLES[bracket-level-2]="fg=$white_normal,bold"
 ZSH_HIGHLIGHT_STYLES[bracket-level-3]="fg=$white_light,bold"
 ZSH_HIGHLIGHT_STYLES[bracket-level-4]="fg=$yellow_normal,bold"
+
+## Patterns
+
+# Declare the variable
+typeset -A ZSH_HIGHLIGHT_PATTERNS
+
+# To have commands starting with `rm -rf` in red:
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,underline,bg=red')
