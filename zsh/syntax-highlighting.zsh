@@ -76,13 +76,13 @@ ZSH_HIGHLIGHT_STYLES[commandseparator]="fg=$white_dark,italic"
 ZSH_HIGHLIGHT_STYLES[autodirectory]="fg=$red_light,italic,underline"
 
 # existing filenames
-ZSH_HIGHLIGHT_STYLES[path]="fg=$blue_light,underline"
+ZSH_HIGHLIGHT_STYLES[path]="fg=$blue_light"
 
 # path separators in filenames (/); if unset, path is used (default)
 ZSH_HIGHLIGHT_STYLES[path_pathseparator]="fg=$white_light"
 
 # prefixes of existing filenames
-ZSH_HIGHLIGHT_STYLES[path_prefix]="fg=$blue_dark"
+ZSH_HIGHLIGHT_STYLES[path_prefix]="fg=$blue_dark,underline"
 
 # path separators in prefixes of existing filenames (/); if unset, path_prefix is used (default)
 ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]="fg=$white_dark"
