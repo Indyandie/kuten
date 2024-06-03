@@ -121,7 +121,9 @@ HIST_STAMPS="yyyy-mm-dd"
 export EDITOR='hx' # helix editor
 
 # alias
-source ~/.alias
+if [[ -f ~/.config/zsh/alias ]]; then
+    source ~/.config/zsh/alias
+fi
 
 # md && cd
 mcd() {
@@ -197,6 +199,3 @@ function yaz() {
     fi
     rm -f -- "$tmp"
 }
-
-# zsh-syntax-highlighting
-source ~/.config/zsh/syntax

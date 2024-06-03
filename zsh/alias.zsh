@@ -201,3 +201,7 @@ alias nx="nix"
 alias nxr="nix repl"
 alias nsh="nix-shell"
 
+# zsh-syntax-highlighting
+if [ -f ~/.config/zsh/syntax ]; then
+    source ~/.config/zsh/syntax
+fi

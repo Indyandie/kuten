@@ -14,7 +14,7 @@ link,confdir,conf
 /starship/jetpack.toml,/.config/,starship.toml
 /vim/.vimrc,/,.vimrc
 /zsh/.zshrc,/,.zshrc
-/zsh/alias.zsh,/,.alias
+/zsh/alias.zsh,/.config/zsh/,alias
 /zsh/syntax-highlighting.zsh,/.config/zsh/,syntax
 /atuin/config.toml,/.config/atuin/,config.toml
 /zellij/zellij-config.kdl,/.config/zellij/,config.kdl
