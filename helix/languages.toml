@@ -34,6 +34,13 @@ formatter = { command = 'prettier', args = ["--parser", "css"] }
 # plugins:
 #   - "prettier-plugin-tailwindcss" # must be last
 
+# SCSS
+
+[[language]]
+name = "scss"
+language-servers = ["vscode-css-language-server"]
+formatter = { command = 'prettier', args = ["--parser", "scss"] }
+
 # Svelte
 
 [[language]]
