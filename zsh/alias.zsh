@@ -112,7 +112,8 @@ alias zbin="cd ~/bin"
 alias gin="git init"
 alias gbm="git branch -m"
 alias gmnf="git merge --no-ff"
-alias gcln="git clone"
+alias cln="git clone"
+alias clnr="git clone --recurse-submodules"
 alias grao="git remote add origin"
 
 ## push
