@@ -280,3 +280,9 @@ validation = true
 [[language]]
 name = "yaml"
 formatter = { command = 'prettier', args = ["--parser", "yaml"] }
+
+# Typst
+
+[[language]]
+name = "typst"
+formatter = { command = 'typstfmt' }
