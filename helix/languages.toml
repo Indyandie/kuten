@@ -24,6 +24,7 @@ formatter = { command = 'prettier', args = ["--parser", "html"] }
 name = "css"
 language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
 formatter = { command = 'prettier', args = ["--parser", "css"] }
+auto-format = false
 
 # tailwindcss formatter config
 
