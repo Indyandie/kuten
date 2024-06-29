@@ -164,7 +164,6 @@ export EZA_COLORS="lp=35;3;4:*.md=92;3:uu=33;1;3:ur=32;3:uw=33:ux=31;1;3:ue=31;3
 alias lz="eza"
 alias la="eza -la"
 alias l="eza -lah"
-alias l="eza -lah"
 alias lg="eza -lah --git"
 alias tree="eza --tree"
 
@@ -191,8 +190,8 @@ alias aic='ascii-image-converter'
 alias dn="deno"
 alias dnr="deno run"
 alias dnt="deno task"
-alias dnnt="deno run --allow-net --watch"
-alias dnrd="deno run --allow-net"
+alias dnnt="deno run --allow-net"
+alias dnrd="deno run --allow-read"
 
 # nix
 
