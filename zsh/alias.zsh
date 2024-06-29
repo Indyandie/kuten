@@ -4,6 +4,18 @@ alias hr='repeat `tput cols` echo -n —'
 
 if [[ $OSTYPE == darwin* ]]; then
 
+    # Brew
+    alias br="brew"
+    alias bri="brew install"
+    alias brik="brew install --cask"
+    alias brui="brew uninstall"
+    alias bruik="brew uninstall --cask"
+    alias brup="brew upgrade"
+    alias brupk="hr && echo '   start upgrade casks' && hr && brew upgrade --cask --greedy && hr && echo '   end cask upgrade' && hr"
+    alias bro="brew outdated --greedy"
+    alias brok="brew outdated --cask"
+    alias bub="bubu && brupk" # brew upgrade
+
     # date
     alias today="date -I date"
 
@@ -63,18 +75,6 @@ elif [[ $OSTYPE == linux* ]]; then
     alias flkl="flatpak list"
     alias flkup="flatpak upgrade"
 fi
-
-# Brew
-alias br="brew"
-alias bri="brew install"
-alias brik="brew install --cask"
-alias brui="brew uninstall"
-alias bruik="brew uninstall --cask"
-alias brup="brew upgrade"
-alias brupk="hr && echo '   start upgrade casks' && hr && brew upgrade --cask --greedy && hr && echo '   end cask upgrade' && hr"
-alias bro="brew outdated --greedy"
-alias brok="brew outdated --cask"
-alias bub="bubu && brupk" # brew upgrade
 
 # ## Aliases
 alias x="bc <<<"
