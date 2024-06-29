@@ -81,10 +81,10 @@ suggest = { completeFunctionCalls = false, imports = { hosts = { "https://deno.l
 # inlay hints
 inlayHints.parameterNames.enabled = "all"
 inlayHints.parameterTypes.enabled = true
-inlayHints.variableTypes.enabled = true
 inlayHints.propertyDeclarationTypes.enabled = true
-inlayHints.functionLikeReturnTypes.enabled = true
 inlayHints.enumMemberValues.enabled = true
+inlayHints.variableTypes.enabled = false
+inlayHints.functionLikeReturnTypes.enabled = false
 
 [[language]]
 name = "javascript"
