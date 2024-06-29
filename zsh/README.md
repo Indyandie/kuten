@@ -1,30 +1,40 @@
-# eza
+# Z Shell
 
-| styling     | description                 |
-| ----------- | --------------------------- |
-| di=35;4;1   | directories                 |
-| ex=33;1     | exec files                  |
-| fi=37;3     | regular files               |
-| lp=37;3     | regular files               |
-| ln=31;1;3;4 | regular files               |
-| *.md=32;3   | markdown files              |
-| ur=32;3     | usere read                  |
-| uw=33       | user write                  |
-| ux=31;1;3   | exec regular files          |
-| ue=91;1;3   | exec other files            |
-| gr=32;3     | group read                  |
-| gw=33       | group write                 |
-| gx=31;1;3   | group exec                  |
-| tr=32;3     | other read                  |
-| tw=33       | other write                 |
-| tx=31;1;3   | other exec                  |
-| da=90       | date                        |
-| nb=37;2;3   | number of file size (< 1KB) |
-| nk=37;2     | number of file size (< 1MB) |
-| nm=36;1     | number of file size (< 1GB) |
-| ng=31;1;3   | number of file size (< 1GB) |
-| im=95;3     | image file                  |
-| vi=95;3     | image file                  |
+- [zsh config](./.zshrc)
+- [alias](./alias.zsh)
+- [syntax highlighting](./zsh/syntax-highlighting.zsh)
+
+---
+
+## [eza](https://github.com/eza-community/eza)
+
+`ls` replacement
+
+| styling       | description                 |
+| ------------- | --------------------------- |
+| `di=35;4;1`   | directories                 |
+| `ex=33;1`     | exec files                  |
+| `fi=37;3`     | regular files               |
+| `lp=37;3`     | regular files               |
+| `ln=31;1;3;4` | regular files               |
+| `*.md=32;3`   | markdown files              |
+| `ur=32;3`     | usere read                  |
+| `uw=33`       | user write                  |
+| `ux=31;1;3`   | exec regular files          |
+| `ue=91;1;3`   | exec other files            |
+| `gr=32;3`     | group read                  |
+| `gw=33`       | group write                 |
+| `gx=31;1;3`   | group exec                  |
+| `tr=32;3`     | other read                  |
+| `tw=33`       | other write                 |
+| `tx=31;1;3`   | other exec                  |
+| `da=90`       | date                        |
+| `nb=37;2;3`   | number of file size (< 1KB) |
+| `nk=37;2`     | number of file size (< 1MB) |
+| `nm=36;1`     | number of file size (< 1GB) |
+| `ng=31;1;3`   | number of file size (< 1GB) |
+| `im=95;3`     | image file                  |
+| `vi=95;3`     | image file                  |
 
 ## Codes
 

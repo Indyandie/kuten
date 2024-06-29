@@ -10,7 +10,6 @@ My dotfiles for Linux and Darwin systems. This repo is intended for my personal 
 | ------------------------ | -------------------------- |
 | [alacritty](./alacritty) | Terminal emulator          |
 | [zsh](./zsh)             | Z-Shell config and aliases |
-| [eza](./eza)             | `ls` replacement           |
 | [starship](./starship)   | Shell prompt               |
 | [zellij](./zellij)       | Terminal multiplexer       |
 | [helix](./helix)         | Post-modern text editor    |
