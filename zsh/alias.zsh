@@ -1,10 +1,6 @@
-# printing
-
-alias hr='repeat `tput cols` echo -n —'
-
 if [[ $OSTYPE == darwin* ]]; then
 
-    # Brew
+    # brew
     alias br="brew"
     alias bri="brew install"
     alias brik="brew install --cask"
@@ -41,10 +37,6 @@ if [[ $OSTYPE == darwin* ]]; then
     alias pc8="cd ~/Library/Application\ Support/pico-8"
     alias pico8="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/pico-8"
 
-    # helix
-    alias vx="hx"
-    alias he="hx"
-
     # sqlite3
     alias sql="sqlite3"
 
@@ -52,8 +44,6 @@ if [[ $OSTYPE == darwin* ]]; then
     alias mlv-rs="mullvad && mullvad reconnect && sleep 1 && mullvad status"
 
 elif [[ $OSTYPE == linux* ]]; then
-
-    alias pacman="sudo pacman"
 
     # date
     alias today="date -I"
@@ -76,6 +66,9 @@ elif [[ $OSTYPE == linux* ]]; then
     alias flkup="flatpak upgrade"
 fi
 
+# printing
+alias hr='repeat `tput cols` echo -n —'
+
 # ## Aliases
 alias x="bc <<<"
 alias vomz="vim ~/.zshrc" # edit .zshrc
@@ -84,6 +77,7 @@ alias ..="cd .."  # go back up
 alias home="cd ~" # Go home
 alias cl="clear -x"
 alias clx="clear && clear"
+alias cll="cl && exit"
 alias src="omz reload" # reload zshrc
 alias pt="pwd"         # echo current working path
 alias zhe="chmod +x"   # make script executable
@@ -93,9 +87,6 @@ alias kan="taskell"    # Kanban board
 
 # vim
 alias v="vim"
-alias cll="cl && exit"
-
-# nvim
 alias nv="nvim"
 
 # py
@@ -142,9 +133,6 @@ alias co="code" # open in vs code (req shell command install)
 # NPM
 alias npr="npm run"
 alias nps="npm start"
-
-# Autojump
-alias aju="autojump"
 
 # Notes
 alias note="hx ~/notes/$(date "+%y-%m-%d").md"
