@@ -3,13 +3,7 @@ alias today="date -I date || date -I"
 
 # printing
 
-# horizontal line
-# alias hr="echo '\n' && printf %'$COLUMNS's | tr ' ' '—'"
-# alias hr="echo '\n' && printf %'`tput cols`'s | tr ' ' '—'"
-# alias hr="echo {1..$(tput cols)} | sed -E 's/[0-9]+ {0,1}/—/g'"
-# alias hr='echo {1..`tput cols`} | tr -s "[:digit:]" "—" | tr -d " "'
-# for som reason using echo require a src for the column to be caculated accurately
-alias hr='printf "%0.s—" {1..`tput cols`}'
+alias hr='repeat `tput cols` echo -n —'
 
 if [[ $OSTYPE == darwin* ]]; then
 
