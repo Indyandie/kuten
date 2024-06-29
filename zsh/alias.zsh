@@ -1,11 +1,11 @@
-# CL bro
-alias today="date -I date || date -I"
-
 # printing
 
 alias hr='repeat `tput cols` echo -n —'
 
 if [[ $OSTYPE == darwin* ]]; then
+
+    # date
+    alias today="date -I date"
 
     # macos
     alias mql="quick-look"
@@ -42,6 +42,9 @@ if [[ $OSTYPE == darwin* ]]; then
 elif [[ $OSTYPE == linux* ]]; then
 
     alias pacman="sudo pacman"
+
+    # date
+    alias today="date -I"
 
     # Hibernate
     alias sleepy="systemctl suspend"
