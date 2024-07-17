@@ -23,6 +23,7 @@
 | `Alt =`, `Alt +` | Resize "Increase"             |
 | `Alt -`          | Resize "Decrease"             |
 | `Ctrl l`         | locked mode                   |
+| `Ctrl u`         | normal mode (unlock)          |
 | `Alt q`          | Quit                          |
 
 ### Switch Mode
