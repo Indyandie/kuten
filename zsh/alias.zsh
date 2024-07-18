@@ -67,7 +67,7 @@ elif [[ $OSTYPE == linux* ]]; then
 fi
 
 # printing
-alias hr='repeat `tput cols` echo -n —'
+alias hr='printf "%0.s—" {1..$(tput cols)}'
 
 # ## Aliases
 alias x="bc <<<"
