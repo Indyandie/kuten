@@ -1,4 +1,5 @@
 if [[ $OSTYPE == darwin* ]]; then
+    unalias diff
 
     # brew
     alias br="brew"
