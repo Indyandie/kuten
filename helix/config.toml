@@ -73,7 +73,7 @@ separator = "▕ "
 mode.normal = "■"
 mode.insert = "◎"
 mode.select = "▼"
-left = ["mode", "selections", "spacer", "spinner",  "register", "separator" ]
+left = ["mode", "selections", "spacer", "spinner", "register", "separator"]
 center = [
   "version-control",
   "read-only-indicator",
@@ -102,6 +102,8 @@ select = "bar"
 
 [editor.file-picker]
 hidden = false
+git-ignore = false
+git-global = false
 
 # [editor.whitespace]
 # or control each character
