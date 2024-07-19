@@ -7,7 +7,13 @@ if [[ $OSTYPE == darwin* ]]; then
     alias brui="brew uninstall"
     alias bruik="brew uninstall --cask"
     alias brup="brew upgrade"
-    alias brupk="hr && echo '   start upgrade casks' && hr && brew upgrade --cask --greedy && hr && echo '   end cask upgrade' && hr"
+
+    alias brupk="hr && \
+    echo '   start upgrade casks' && hr && \
+    brew upgrade --cask --greedy && \
+    hr && echo '   end cask upgrade' && \
+    hr"
+
     alias bro="brew outdated --greedy"
     alias brok="brew outdated --cask"
     alias bub="bubu && brupk" # brew upgrade
