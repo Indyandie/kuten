@@ -107,9 +107,11 @@ keybinds clear-defaults=true { // clear all defaults
         bind "Alt {" { MoveTab "Left"; }
         bind "Alt }" { MoveTab "Right"; }
         bind "Alt 0" { ToggleFocusFullscreen; }
-        bind "Alt g" {
-            Run "zellij" "run" "-f" "--height" "100%" "--width" "100%" "-x" "0" "-y" "0" "--" "lazygit"
-        }
+        // bind "Alt g" {
+            // Run "zellij" "run" "exit" "&&" "-c" "-f" "--height" "100%" "--width" "100%" "-x" "0" "-y" "0" "--" "lazygit"
+            // Run "zellij" "run" "-c" "-f" "--height" "100%" "--width" "100%" "-x" "0" "-y" "0" "--" "lazygit"
+        //     Run "lazygit"
+        // }
         // bind "Alt 4" {
         //     LaunchPlugin "filepicker" {
         //         floating true;
@@ -221,6 +223,7 @@ default_layout "compact"
 ui {
     pane_frames {
         rounded_corners true
+        hide_session_name false
     }
 }
 
