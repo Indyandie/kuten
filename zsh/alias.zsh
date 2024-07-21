@@ -50,6 +50,9 @@ if [[ $OSTYPE == darwin* ]]; then
     # mullvad
     alias mlv-rs="mullvad && mullvad reconnect && sleep 1 && mullvad status"
 
+    ## lazygit
+    export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
+
 elif [[ $OSTYPE == linux* ]]; then
 
     # date
