@@ -62,7 +62,7 @@ elif [[ $OSTYPE == linux* ]]; then
 
     # linux  ------------------------------------------------------------------------------------------
 
-    export PATH=$HOME/.local/bin:$PATH
+    export PATH=$HOME/.local/bin:~/.cargo/bin:$PATH
 
     export ZSH="/home/$USER/.oh-my-zsh"
 
