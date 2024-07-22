@@ -177,6 +177,21 @@ alias zjr="zellij r"   # run a command in new panel
 alias zpipe="zellij pipe"
 alias zjp="zellij pipe -p filepicker" # open file picker
 
+# sudo
+alias su:z="zellij run -n '' -f --cwd '/' --height 100% --width 100% -x 0 -y 0 -- su"
+
+# list
+alias lz:z="zellij run -n '' -f --height 80% --width 50% -x 50% -y 0 -- eza -lah"
+alias tree:z="zellij run -n '' -f --height 80% --width 40% -x 60% -y 20% -- eza --tree"
+
+# git
+alias lzg:z="zellij run -n '' -c -f --height 100% --width 100% -x 0 -y 0 -- lazygit"
+alias gd:z="zellij run -n '' -f --height 90% --width 80% -x 0 -y 0 -- git diff"
+alias gdft:z="zellij run -n '' -f --height 90% --width 80% -x 0 -y 0 -- git difftool"
+
+# pomo
+alias pomo:z="zellij run -n '' -f --cwd '/' --height 40% --width 45% -x 2 -y 2 -- pomo"
+
 # BELL
 alias bell='echo "\a"'
 
