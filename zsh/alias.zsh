@@ -119,8 +119,8 @@ alias gpo="git push origin"
 alias gsoup="git rev-parse --abbrev-ref HEAD | git push --set-upstream origin"
 
 ## diff
-alias gdcw="git diff --color-words"
-alias gdf="git diff --color-words | diff-so-fancy"
+alias gdf="git diff --color-words"
+alias gdft="git difftool"
 
 ## switch
 alias gsm="git switch main"
