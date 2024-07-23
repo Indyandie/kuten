@@ -26,7 +26,7 @@ if [[ $OSTYPE == darwin* ]]; then
         # nix-zsh-completions
     )
 
-    source $ZSH/oh-my-zsh.sh
+    source "$ZSH/oh-my-zsh.sh"
 
     # pyenv
     export PYENV_ROOT="$HOME/.pyenv"
@@ -40,9 +40,13 @@ if [[ $OSTYPE == darwin* ]]; then
     if [[ $GPG_SSH_CONF ]]; then
         unset SSH_AGENT_PID
         if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-            export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+            SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+            export SSH_AUTH_SOCK
         fi
-        export GPG_TTY=$(tty)
+
+        GPG_TTY=$(tty)
+        export GPG_TTY
+
         gpg-connect-agent updatestartuptty /bye >/dev/null
         # export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
         # gpgconf --launch gpg-agent
@@ -83,15 +87,18 @@ elif [[ $OSTYPE == linux* ]]; then
     unset SSH_AGENT_PID
 
     if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-        export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+        SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+        export SSH_AUTH_SOCK
     fi
-    export GPG_TTY=$(tty)
+
+    GPG_TTY=$(tty)
+    export GPG_TTY
     gpg-connect-agent updatestartuptty /bye >/dev/null
 
     # Hyprland
-    if [[ $XDG_CURRENT_DESKTOP = Hyprland ]]; then
-        # stuff to do
-    fi
+    # if [[ $XDG_CURRENT_DESKTOP = Hyprland ]]; then
+    # stuff to do
+    # fi
 
     if [[ -f /etc/NIXOS ]]; then
         # https://matthewrhone.dev/nixos-npm-globally
@@ -121,34 +128,34 @@ HIST_STAMPS="yyyy-mm-dd"
 export EDITOR='hx' # helix editor
 
 # alias
-if [[ -f ~/.config/zsh/alias ]]; then
-    source ~/.config/zsh/alias
+if [[ -f "$HOME/.config/zsh/alias" ]]; then
+    source "$HOME/.config/zsh/alias"
 fi
 
 # md && cd
 mcd() {
-    md -p $1 && cd $1
+    md -p "$1" && cd "$1" || exit
 }
 
 # rustc
 rustbin() {
-    name=$(echo $1 | sd '\.rs' '')
+    name=$(echo "$1" | sd '\.rs' '')
     rustc --out-dir bin "$1" && "bin/$name"
 }
 
 # run in the background with logs
 bgpr() {
-    nohup $1 >"$HOME/.nohuplogs" &
+    nohup "$1" >"$HOME/.nohuplogs" &
 }
 
 # run in the background with no logs
 bgnl() {
-    nohup $1 >/dev/null 2>&1 &
+    nohup "$1" >/dev/null 2>&1 &
 }
 
 # vim shell env
 vim_prompt() {
-    if [ ! -z $VIMRUNTIME ]; then
+    if [ -n "$VIMRUNTIME" ]; then
         echo "▾ "
     fi
 }
@@ -158,7 +165,8 @@ xx() {
     bc <<<"$@"
 }
 
-export VIMSHELL=$(vim_prompt)
+VIMSHELL=$(vim_prompt)
+export VIMSHELL
 
 # Starship
 if command -v starship &>/dev/null; then
@@ -192,10 +200,11 @@ eval "$(atuin init zsh --disable-up-arrow)"
 # yazi
 
 function yaz {
-    local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+    local tmp
+    tmp="$(mktemp -t "yazi-cwd.XXXXX")"
     yazi "$@" --cwd-file="$tmp"
     if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-        cd -- "$cwd"
+        cd -- "$cwd" || exit
     fi
     rm -f -- "$tmp"
 }
