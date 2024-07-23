@@ -177,6 +177,10 @@ alias zjr="zellij r"   # run a command in new panel
 alias zpipe="zellij pipe"
 alias zjp="zellij pipe -p filepicker" # open file picker
 
+zr() {
+    zellij run -n '⭘' -f --cwd '/' --height 100% --width 100% -x 0 -y 0 -- $@
+}
+
 # sudo
 alias su:z="zellij run -n '' -f --cwd '/' --height 100% --width 100% -x 0 -y 0 -- su"
 
