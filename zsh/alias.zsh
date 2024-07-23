@@ -192,6 +192,12 @@ alias gdft:z="zellij run -n '' -f --height 90% --width 80% -x 0 -y 0 -- git d
 # pomo
 alias pomo:z="zellij run -n '' -f --cwd '/' --height 40% --width 45% -x 2 -y 2 -- pomo"
 
+# editors
+alias hx:z="zellij run -n '' -c -f --cwd '/' --height 100% --width 100% -x 0 -y 0 -- hx"
+alias nv:z="zellij run -n '' -c -f --cwd '/' --height 100% --width 100% -x 0 -y 0 -- nvim"
+alias v:z="zellij run -n '' -c -f --cwd '/' --height 100% --width 100% -x 0 -y 0 -- vim"
+alias nano:z="zellij run -n '' -c -f --cwd '/' --height 100% --width 100% -x 0 -y 0 -- nano"
+
 # BELL
 alias bell='echo "\a"'
 
