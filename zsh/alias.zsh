@@ -1,5 +1,5 @@
 if [[ $OSTYPE == darwin* ]]; then
-    alias diff && unalias diff 2> /dev/null
+    alias diff > /dev/null && unalias diff 2> /dev/null
 
     # brew
     alias br="brew"
