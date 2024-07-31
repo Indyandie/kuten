@@ -1,5 +1,5 @@
 if [[ $OSTYPE == darwin* ]]; then
-    alias diff > /dev/null && unalias diff 2> /dev/null
+    alias diff >/dev/null && unalias diff 2>/dev/null
 
     # brew
     alias br="brew"
@@ -74,6 +74,13 @@ elif [[ $OSTYPE == linux* ]]; then
     alias flks="flatpak search"
     alias flkl="flatpak list"
     alias flkup="flatpak upgrade"
+
+    # qsv
+    # Need to figure out how to cargo install or build
+    if command -v qsv &>/dev/null; then
+    else
+        alias qsv=qsvlite
+    fi
 fi
 
 # printing
