@@ -81,6 +81,8 @@ elif [[ $OSTYPE == linux* ]]; then
     else
         alias qsv=qsvlite
     fi
+
+    alias open="xdg-open"
 fi
 
 # printing
