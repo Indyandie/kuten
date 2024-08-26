@@ -1,5 +1,10 @@
 ---
-title: Book
+cover-image: cover.png
+title:
+    - type: main
+      text: Book Name
+    - type: subtitle
+      text: Book Subtitle
 creator:
 - role: author
   text: Some Dude
@@ -7,6 +12,10 @@ creator:
   text: Other Dude
 rights:  Creative Commons Non-Commercial Share Alike 4.0
 language: en-US
+date: 2022-06
+identifier:
+    scheme: ISSN
+    text: ABCDEFG
 ibooks:
   version: 1.3.4
 ---
