@@ -22,3 +22,4 @@ link,confdir,conf
 /deno/deno.json,/.config/deno/,deno.json
 /marksman/config.toml,/.config/marksman/,config.toml
 /lazygit/config.yml,/.config/lazygit/,config.yml
+/pandoc/epub/epub.css,/.config/pandoc/,epub.css
