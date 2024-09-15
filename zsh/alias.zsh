@@ -218,7 +218,6 @@ alias bell='echo "\a"'
 alias aic='ascii-image-converter'
 
 # deno
-
 alias dn="deno"
 alias dnr="deno run"
 alias dnt="deno task"
@@ -226,10 +225,15 @@ alias dnnt="deno run --allow-net"
 alias dnrd="deno run --allow-read"
 
 # nix
-
 alias nx="nix"
 alias nxr="nix repl"
 alias nsh="nix-shell"
+
+# pandoc
+alias pn="pandoc"
+
+# csvlens
+alias cvl="csvlens"
 
 # zsh-syntax-highlighting
 if [ -f ~/.config/zsh/syntax ]; then
