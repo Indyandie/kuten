@@ -145,6 +145,10 @@ formatter = { command = 'deno', args = [
   "-",
   "--ext",
   "js",
+  "--prose-wrap",
+  "preserve",
+  "--line-width",
+  "999999",
   "--no-semicolons",
   "--single-quote",
 ] }
@@ -161,6 +165,10 @@ formatter = { command = 'deno', args = [
   "jsx",
   "--no-semicolons",
   "--single-quote",
+  "--prose-wrap",
+  "preserve",
+  "--line-width",
+  "999999",
 ] }
 
 # typescript
@@ -170,14 +178,36 @@ name = "typescript"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
 language-servers = ["deno-lsp"]
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts"] }
+formatter = { command = 'deno', args = [
+  "fmt",
+  "-",
+  "--ext",
+  "ts",
+  "--prose-wrap",
+  "preserve",
+  "--line-width",
+  "999999",
+  "--no-semicolons",
+  "--single-quote",
+] }
 
 [[language]]
 name = "tsx"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
 language-servers = ["deno-lsp", "tailwindcss-ls"]
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx"] }
+formatter = { command = 'deno', args = [
+  "fmt",
+  "-",
+  "--ext",
+  "tsx",
+  "--prose-wrap",
+  "preserve",
+  "--line-width",
+  "999999",
+  "--no-semicolons",
+  "--single-quote",
+] }
 
 # Astro
 
@@ -265,7 +295,10 @@ formatter = { command = 'deno', args = [
   "-",
   "--ext",
   "md",
-  "--prose-wrap=never",
+  "--prose-wrap",
+  "preserve",
+  "--line-width",
+  "999999",
 ] }
 
 [language.auto-pairs]
@@ -327,7 +360,17 @@ formatter = { command = "black", args = ["--quiet", "-"] }
 
 [[language]]
 name = "json"
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json"] }
+auto-format = false
+formatter = { command = 'deno', args = [
+  "fmt",
+  "-",
+  "--ext",
+  "json",
+  "--prose-wrap",
+  "never",
+  "--line-width",
+  "999999",
+] }
 
 # nix
 
