@@ -77,35 +77,35 @@ hx --health
 
 ### LSP List
 
-| name                            | lang                     | type                    | package manager |
-| ------------------------------- | ------------------------ | ----------------------- | --------------- |
-| @astrojs/language-server        | astro                    | LSP                     | npm             |
-| prettier-plugin-astro           | astro                    | formatter               | npm             |
-| bash-language-server            | bash                     | LSP                     | npm             |
-| dot-language-server             | dot                      | LSP                     | npm             |
-| svelte-language-server          | svelte                   | LSP                     | npm             |
-| typescript-svelte-plugin        | svelte                   | LSP                     | npm             |
-| typescript                      | typescript               | LSP                     | npm             |
-| typescript-svelte-plugin        | typescript               | LSP                     | npm             |
-| vscode-langservers-extracted    | css                      | LSP                     | npm             |
-| emmet-ls                        | html                     | LSP, snippet            | npm             |
-| vscode-html-languageserver-bin  | html                     | LSP                     | npm             |
-| prettier                        | css, yaml, html          | formatter               | npm             |
-| @tailwindcss/language-server    | tailwindcss              | LSP                     | npm, nix        |
-| prettier-plugin-tailwindcss     | tailwindcss              | formatter               | npm             |
-| deno                            | markdown, html, js, json | lsp, formatter, snippet | deno            |
-| marksman                        | markdown                 | LSP                     | brew, cargo     |
-| lua-language-server             | lua                      | LSP                     | brew            |
-| python-lsp-server               | python                   | LSP                     | brew            |
-| black                           | python                   | formatter               | brew, pip       |
-| yaml-language-server            | yaml                     | LSP                     | brew            |
-| ansible-lint                    | yaml                     | LSP                     | brew            |
-| ansible/ansible-language-server | ansible                  | LSP                     | npm             |
-| taplo                           | toml                     | LSP                     | cargo           |
-| sqls                            | sql                      | LSP                     | nix, pip        |
-| sql-language-server             | sql                      | LSP                     | NPM             |
-| sql-formatter                   | sql                      | formatter               | NPM             |
-| nixpkgs-fmt                     | nix                      | fomatter                | nix             |
+| name                            | lang                                               | type                    | package manager |
+| ------------------------------- | -------------------------------------------------- | ----------------------- | --------------- |
+| @astrojs/language-server        | astro                                              | LSP                     | npm             |
+| prettier-plugin-astro           | astro                                              | formatter               | npm             |
+| bash-language-server            | bash                                               | LSP                     | npm             |
+| dot-language-server             | dot                                                | LSP                     | npm             |
+| svelte-language-server          | svelte                                             | LSP                     | npm             |
+| typescript-svelte-plugin        | svelte                                             | LSP                     | npm             |
+| typescript                      | typescript                                         | LSP                     | npm             |
+| typescript-svelte-plugin        | typescript                                         | LSP                     | npm             |
+| vscode-langservers-extracted    | css                                                | LSP                     | npm             |
+| emmet-ls                        | html                                               | LSP, snippet            | npm             |
+| vscode-html-languageserver-bin  | html                                               | LSP                     | npm             |
+| prettier                        | css, yaml, html                                    | formatter               | npm             |
+| @tailwindcss/language-server    | tailwindcss                                        | LSP                     | npm, nix        |
+| prettier-plugin-tailwindcss     | tailwindcss                                        | formatter               | npm             |
+| deno                            | markdown, html, js, json, yaml, css, astro, svelte | lsp, formatter, snippet | deno, nix       |
+| marksman                        | markdown                                           | LSP                     | brew, cargo     |
+| lua-language-server             | lua                                                | LSP                     | brew            |
+| python-lsp-server               | python                                             | LSP                     | brew            |
+| black                           | python                                             | formatter               | brew, pip       |
+| yaml-language-server            | yaml                                               | LSP                     | brew            |
+| ansible-lint                    | yaml                                               | LSP                     | brew            |
+| ansible/ansible-language-server | ansible                                            | LSP                     | npm             |
+| taplo                           | toml                                               | LSP                     | cargo           |
+| sqls                            | sql                                                | LSP                     | nix, pip        |
+| sql-language-server             | sql                                                | LSP                     | NPM             |
+| sql-formatter                   | sql                                                | formatter               | NPM             |
+| nixpkgs-fmt                     | nix                                                | fomatter                | nix             |
 
 ### Deno LSP
 
