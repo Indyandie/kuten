@@ -16,15 +16,39 @@ args = ["--stdio"]
 [[language]]
 name = "html"
 language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls"]
-formatter = { command = 'prettier', args = ["--parser", "html"] }
+auto-format = false
+# formatter = { command = 'prettier', args = ["--parser", "html"] }
+formatter = { command = 'deno', args = [
+  "fmt",
+  "-",
+  "--ext",
+  "html",
+  "--unstable-html",
+  "--prose-wrap",
+  "preserve",
+  "--line-width",
+  "999999",
+] }
+
 
 # CSS
 
 [[language]]
 name = "css"
 language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
-formatter = { command = 'prettier', args = ["--parser", "css"] }
 auto-format = false
+# formatter = { command = 'prettier', args = ["--parser", "css"] }
+formatter = { command = 'deno', args = [
+  "fmt",
+  "-",
+  "--ext",
+  "css",
+  "--unstable-css",
+  "--prose-wrap",
+  "preserve",
+  "--line-width",
+  "999999",
+] }
 
 # tailwindcss formatter config
 
@@ -40,20 +64,45 @@ auto-format = false
 [[language]]
 name = "scss"
 language-servers = ["vscode-css-language-server"]
-formatter = { command = 'prettier', args = ["--parser", "scss"] }
+auto-format = false
+# formatter = { command = 'prettier', args = ["--parser", "scss"] }
+formatter = { command = 'deno', args = [
+  "fmt",
+  "-",
+  "--ext",
+  "scss",
+  "--unstable-css",
+  "--prose-wrap",
+  "preserve",
+  "--line-width",
+  "999999",
+] }
 
 # Svelte
 
 [[language]]
 name = "svelte"
 language-servers = ["svelteserver", "tailwindcss-ls"]
-formatter = { command = 'prettier', args = [
-  "--parser",
+auto-format = false
+formatter = { command = 'deno', args = [
+  "fmt",
+  "-",
+  "--ext",
   "svelte",
-  "--no-semi",
-  "--single-quote",
-  "--bracket-same-line",
+  "--unstable-component",
+  "--prose-wrap",
+  "preserve",
+  "--line-width",
+  "999999",
 ] }
+
+# formatter = { command = 'prettier', args = [
+#   "--parser",
+#   "svelte",
+#   "--no-semi",
+#   "--single-quote",
+#   "--bracket-same-line",
+# ] }
 # formatter = { command = 'prettier'  }
 
 # formatter requires the following
@@ -142,17 +191,31 @@ config = { typescript = { tsdk = "##TSDK##" }, environment = "node" }
 
 [[language]]
 name = "astro"
-auto-format = true
 language-servers = ["astro-ls", "tailwindcss-ls"]
-formatter = { command = 'prettier', args = [
-  "--parser",
+auto-format = true
+formatter = { command = 'deno', args = [
+  "fmt",
+  "-",
+  "--ext",
   "astro",
-  "--print-width",
-  "100000000000000000000",
-  "--no-semi",
+  "--unstable-component",
+  "--prose-wrap",
+  "preserve",
+  "--line-width",
+  "999999",
+  "--no-semicolons",
   "--single-quote",
-  "--bracket-same-line",
 ] }
+
+# formatter = { command = 'prettier', args = [
+#   "--parser",
+#   "astro",
+#   "--print-width",
+#   "100000000000000000000",
+#   "--no-semi",
+#   "--single-quote",
+#   "--bracket-same-line",
+# ] }
 
 # formatter requires the following
 
@@ -280,7 +343,20 @@ validation = true
 
 [[language]]
 name = "yaml"
-formatter = { command = 'prettier', args = ["--parser", "yaml"] }
+# formatter = { command = 'prettier', args = ["--parser", "yaml"] }
+auto-format = false
+formatter = { command = 'deno', args = [
+  "fmt",
+  "-",
+  "--ext",
+  "yaml",
+  "unstable-yaml",
+  "--prose-wrap",
+  "never",
+  "--line-width",
+  "999999",
+] }
+
 
 # Typst
 
