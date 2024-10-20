@@ -17,17 +17,10 @@ args = ["--stdio"]
 name = "html"
 language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls"]
 auto-format = false
-formatter = { command = 'deno', args = [
-  "fmt",
-  "-",
-  "--ext",
-  "html",
-  "--unstable-html",
-  "--prose-wrap",
-  "preserve",
-  "--line-width",
-  "999999",
-] }
+formatter = { command = 'zsh', args = [
+  "-c",
+  "deno fmt - --ext html --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<br />' '<br>'"
+] } # multi formatter workaround https://github.com/helix-editor/helix/discussions/7749
 
 
 # CSS
@@ -81,16 +74,9 @@ formatter = { command = 'deno', args = [
 name = "svelte"
 language-servers = ["svelteserver", "tailwindcss-ls"]
 auto-format = false
-formatter = { command = 'deno', args = [
-  "fmt",
-  "-",
-  "--ext",
-  "svelte",
-  "--unstable-component",
-  "--prose-wrap",
-  "preserve",
-  "--line-width",
-  "999999",
+formatter = { command = 'zsh', args = [
+  "-c",
+  "deno fmt - --ext svelte --unstable-component --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<br />' '<br>'"
 ] }
 
 # formatter = { command = 'prettier', args = [
@@ -219,18 +205,9 @@ config = { typescript = { tsdk = "##TSDK##" }, environment = "node" }
 name = "astro"
 language-servers = ["astro-ls", "tailwindcss-ls"]
 auto-format = true
-formatter = { command = 'deno', args = [
-  "fmt",
-  "-",
-  "--ext",
-  "astro",
-  "--unstable-component",
-  "--prose-wrap",
-  "preserve",
-  "--line-width",
-  "999999",
-  "--no-semicolons",
-  "--single-quote",
+formatter = { command = 'zsh', args = [
+  "-c",
+  "deno fmt - --ext astro --unstable-component --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<br />' '<br>'"
 ] }
 
 # formatter = { command = 'prettier', args = [
