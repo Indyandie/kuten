@@ -17,7 +17,6 @@ args = ["--stdio"]
 name = "html"
 language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls"]
 auto-format = false
-# formatter = { command = 'prettier', args = ["--parser", "html"] }
 formatter = { command = 'deno', args = [
   "fmt",
   "-",
@@ -37,7 +36,6 @@ formatter = { command = 'deno', args = [
 name = "css"
 language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
 auto-format = false
-# formatter = { command = 'prettier', args = ["--parser", "css"] }
 formatter = { command = 'deno', args = [
   "fmt",
   "-",
@@ -65,7 +63,6 @@ formatter = { command = 'deno', args = [
 name = "scss"
 language-servers = ["vscode-css-language-server"]
 auto-format = false
-# formatter = { command = 'prettier', args = ["--parser", "scss"] }
 formatter = { command = 'deno', args = [
   "fmt",
   "-",
@@ -103,7 +100,6 @@ formatter = { command = 'deno', args = [
 #   "--single-quote",
 #   "--bracket-same-line",
 # ] }
-# formatter = { command = 'prettier'  }
 
 # formatter requires the following
 
@@ -386,7 +382,6 @@ validation = true
 
 [[language]]
 name = "yaml"
-# formatter = { command = 'prettier', args = ["--parser", "yaml"] }
 auto-format = false
 formatter = { command = 'deno', args = [
   "fmt",
