@@ -204,7 +204,7 @@ config = { typescript = { tsdk = "##TSDK##" }, environment = "node" }
 [[language]]
 name = "astro"
 language-servers = ["astro-ls", "tailwindcss-ls"]
-auto-format = true
+auto-format = false
 formatter = { command = 'zsh', args = [
   "-c",
   "deno fmt - --ext astro --unstable-component --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<br />' '<br>'"
