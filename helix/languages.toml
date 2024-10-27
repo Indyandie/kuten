@@ -365,11 +365,6 @@ formatter = { command = 'deno', args = [
   "-",
   "--ext",
   "yaml",
-  "unstable-yaml",
-  "--prose-wrap",
-  "never",
-  "--line-width",
-  "999999",
 ] }
 
 
