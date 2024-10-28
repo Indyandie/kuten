@@ -354,12 +354,7 @@ validation = true
 [[language]]
 name = "yaml"
 auto-format = false
-formatter = { command = 'deno', args = [
-  "fmt",
-  "-",
-  "--ext",
-  "yaml",
-] }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "yaml"] }
 
 
 # Typst
