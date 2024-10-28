@@ -19,7 +19,7 @@ language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls"]
 auto-format = false
 formatter = { command = 'zsh', args = [
   "-c",
-  "deno fmt - --ext html --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<br />' '<br>'"
+  "deno fmt - --ext html --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<(br|hr) />' '<$1>'",
 ] } # multi formatter workaround https://github.com/helix-editor/helix/discussions/7749
 
 
@@ -76,7 +76,7 @@ language-servers = ["svelteserver", "tailwindcss-ls"]
 auto-format = false
 formatter = { command = 'zsh', args = [
   "-c",
-  "deno fmt - --ext svelte --unstable-component --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<br />' '<br>'"
+  "deno fmt - --ext svelte --unstable-component --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<(br|hr) />' '<$1>'",
 ] }
 
 # formatter = { command = 'prettier', args = [
@@ -207,7 +207,7 @@ language-servers = ["astro-ls", "tailwindcss-ls"]
 auto-format = false
 formatter = { command = 'zsh', args = [
   "-c",
-  "deno fmt - --ext astro --unstable-component --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<br />' '<br>'"
+  "deno fmt - --ext astro --unstable-component --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<(br|hr) />' '<$1>'",
 ] }
 
 # formatter = { command = 'prettier', args = [
@@ -263,15 +263,9 @@ language-servers = [
   "markdown-oxide",
   "vscode-html-language-server",
 ]
-formatter = { command = 'deno', args = [
-  "fmt",
-  "-",
-  "--ext",
-  "md",
-  "--prose-wrap",
-  "preserve",
-  "--line-width",
-  "999999",
+formatter = { command = 'zsh', args = [
+  "-c",
+  "deno fmt - --ext md --prose-wrap preserve --line-width 999999 | sd '<(br|hr) />' '<$1>'",
 ] }
 
 [language.auto-pairs]
