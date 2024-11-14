@@ -75,13 +75,6 @@ elif [[ $OSTYPE == linux* ]]; then
     alias flkl="flatpak list"
     alias flkup="flatpak upgrade"
 
-    # qsv
-    # Need to figure out how to cargo install or build
-    if command -v qsv &>/dev/null; then
-    else
-        alias qsv=qsvlite
-    fi
-
     alias open="xdg-open"
 fi
 
