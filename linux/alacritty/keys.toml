@@ -23,3 +23,7 @@ bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
 italic = { family = "JetBrainsMono Nerd Font", style = "Light" }
 bold_italic = { family = "JetBrainsMono Nerd Font", style = "ExtraBold Italic" }
 builtin_box_drawing = false
+
+[terminal.shell]
+program = "zsh"
+args = ["-l"]

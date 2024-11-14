@@ -27,6 +27,6 @@ italic = { family = "JetBrainsMono Nerd Font", style = "Light" }
 bold_italic = { family = "JetBrainsMono Nerd Font", style = "ExtraBold Italic" }
 builtin_box_drawing = false
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 args = ["-l"]
