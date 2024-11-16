@@ -1,6 +1,8 @@
 # Config relating to the Lazygit UI
 gui:
   # The number of lines you scroll by when scrolling the main window
+  authorColors: {}
+  branchColors: {}
   scrollHeight: 2
 
   # If true, allow scrolling past the bottom of the content in the main window
@@ -76,7 +78,7 @@ gui:
 
     # Border color of non-focused windows
     inactiveBorderColor:
-      - '#777777'
+      - "#777777"
 
     # Border color of focused window when searching in that window
     searchingActiveBorderColor:
@@ -146,7 +148,7 @@ gui:
   showPanelJumps: true
 
   # Deprecated: use nerdFontsVersion instead
-  showIcons: false
+  showIcons: true
 
   # Nerd fonts version to use.
   # One of: '2' | '3' | empty string (default)
@@ -170,7 +172,7 @@ gui:
 
   # Whether to show the divergence from the base branch in the branches view.
   # One of: 'none' | 'onlyArrow'  | 'arrowAndNumber'
-  showDivergenceFromBaseBranch: none
+  showDivergenceFromBaseBranch: arrowAndNumber
 
   # Height of the command log view
   commandLogSize: 8
@@ -213,7 +215,7 @@ gui:
 
   # Status panel view.
   # One of 'dashboard' (default) | 'allBranchesLog'
-  statusPanelView: dashboard
+  statusPanelView: allBranchesLog
 
 # Config relating to git
 git:
@@ -226,7 +228,7 @@ git:
     # diff-so-fancy
     # delta --dark --paging=never
     # ydiff -p cat -s --wrap --width={{columnWidth}}
-    pager: ""
+    pager: diff-so-fancy
 
     # If true, Lazygit will use whatever pager is specified in `$GIT_PAGER`, `$PAGER`, or your *git config*.
     # If the pager ends with something like ` | less` we will strip that part out, because less doesn't play nice with our rendering approach. If the custom
@@ -292,10 +294,14 @@ git:
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#predefined-commit-message-prefix
   commitPrefix:
     # pattern to match on. E.g. for 'feature/AB-123' to match on the AB-123 use "^\\w+\\/(\\w+-\\w+).*"
-    pattern: ""
+    # pattern: ""
+    pattern: ".*"
 
     # Replace directive. E.g. for 'feature/AB-123' to start the commit message with 'AB-123 ' use "[$1] "
-    replace: ""
+    # replace: ""
+    replace: "type(scope): "
+
+  commitPrefixes: {}
 
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#predefined-branch-name-prefix
   branchPrefix: ""
@@ -581,3 +587,5 @@ keybinding:
     bulkMenu: b
   commitMessage:
     commitMenu: <c-o>
+customCommands: []
+services: {}
