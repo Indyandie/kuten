@@ -299,7 +299,7 @@ git:
 
     # Replace directive. E.g. for 'feature/AB-123' to start the commit message with 'AB-123 ' use "[$1] "
     # replace: ""
-    replace: "type(scope): "
+    replace: "(): "
 
   commitPrefixes: {}
 
