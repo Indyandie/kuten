@@ -44,5 +44,5 @@ show = [
   "Battery",
   "DiskSpace",
   # "Backlight",
-  "Resolution"
+  "Resolution",
 ]

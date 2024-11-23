@@ -1,11 +1,11 @@
 # kuruku
 
-spacing            = 0
-padding            = 0
-hide_ascii         = false
-separator          = ": "
-key_color          = "Magenta"
-separator_color    = "Blue"
+spacing = 0
+padding = 0
+hide_ascii = false
+separator = ": "
+key_color = "Magenta"
+separator_color = "Blue"
 prefer_small_ascii = true
 
 [palette]
@@ -14,42 +14,42 @@ glyph = "█ "
 visible = true
 
 [bar]
-glyph           = "●"
-symbol_open     = '⎪'
-symbol_close    = '⎪'
+glyph = "●"
+symbol_open = '⎪'
+symbol_close = '⎪'
 hide_delimiters = true
-visible         = true
+visible = true
 
 [box]
-border          = "rounded"
-visible         = true
+border = "rounded"
+visible = true
 
 [box.inner_margin]
-x               = 2
-y               = 1
+x = 2
+y = 1
 
 [randomize]
-key_color       = false
+key_color = false
 separator_color = false
 
 [keys]
-host            = "HOST"
-kernel          = " KRN"
-battery         = " BAT"
-os              = "  OS"
-de              = "  DE"
-wm              = "  WM"
-distro          = "DIST"
-terminal        = "TERM"
-shell           = "  SH"
-packages        = "PKGS"
-uptime          = "  UP"
-memory          = " MEM"
-machine         = "MACH"
-local_ip        = "  IP"
-backlight       = "  LT"
-resolution      = " RES"
-cpu             = " CPU"
-cpu_load        = "   %"
-gpu             = " GPU"
-disk_space      = "  DU"
+host = "HOST"
+kernel = " KRN"
+battery = " BAT"
+os = "  OS"
+de = "  DE"
+wm = "  WM"
+distro = "DIST"
+terminal = "TERM"
+shell = "  SH"
+packages = "PKGS"
+uptime = "  UP"
+memory = " MEM"
+machine = "MACH"
+local_ip = "  IP"
+backlight = "  LT"
+resolution = " RES"
+cpu = " CPU"
+cpu_load = "   %"
+gpu = " GPU"
+disk_space = "  DU"
