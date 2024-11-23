@@ -28,10 +28,10 @@ physical_cores = true
 #  if theme path is /home/foo/.config/macchina/themes/Sodium.toml
 #  theme should be uncommented and set to "Sodium"
 #
-theme = "kuroku"
 
 # Displays only the specified readouts.
 # Accepted values (case-sensitive):
+theme = "basic"
   show = [
     # "Host",
     # "Machine",

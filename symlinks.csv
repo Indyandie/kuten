@@ -23,5 +23,5 @@ link,confdir,conf
 /marksman/config.toml,/.config/marksman/,config.toml
 /lazygit/config.yml,/.config/lazygit/,config.yml
 /pandoc/epub/epub.css,/.config/pandoc/,epub.css
-/macchina/kuroku.toml,/.config/macchina/themes/,kuroku.toml
+/macchina/basic.toml,/.config/macchina/themes/,basic.toml
 /macchina/macchina.toml,/.config/macchina/,macchina.toml
