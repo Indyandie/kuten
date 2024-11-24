@@ -222,6 +222,13 @@ alias nx="nix"
 alias nxr="nix repl"
 alias nsh="nix-shell"
 
+## disk usage
+alias ndurr="nix path-info -Sh /run/current-system"
+
+## store
+alias nxtray='nix-store --gc --print-roots | rg "^(/nix/var|/run/\\w+-system|\\{memory|/proc)"'
+alias nxtrays="nxtray | sd '(.*) -> .*' '\$1'"
+
 # pandoc
 alias pn="pandoc"
 
