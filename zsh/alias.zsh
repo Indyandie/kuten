@@ -244,3 +244,7 @@ fi
 
 alias neo="macchina 2>/dev/null || neofetch 2>/dev/null"
 alias maki="macchina"
+
+# mermaid
+alias mer="mmdc -i"
+alias merd="mmdc -t dark -b transparent -i"
