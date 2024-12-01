@@ -105,17 +105,20 @@ command = "deno"
 args = ["lsp"]
 environment = { NO_COLOR = "1" }
 
+[language-server.deno-lsp.config]
+# inlay hints
+javascript = { inlayHints.parameterNames.enabled = "all", inlayHints.parameterTypes.enabled = true, inlayHints.propertyDeclarationTypes.enabled = true, inlayHints.enumMemberValues.enabled = true, inlayHints.variableTypes.enabled = false, inlayHints.functionLikeReturnTypes.enabled = false }
+typescript.inlayHints.parameterNames.enabled = "all"
+typescript.inlayHints.parameterTypes.enabled = true
+typescript.inlayHints.propertyDeclarationTypes.enabled = true
+typescript.inlayHints.enumMemberValues.enabled = true
+typescript.inlayHints.variableTypes.enabled = true
+typescript.inlayHints.functionLikeReturnTypes.enabled = false
+
 [language-server.deno-lsp.config.deno]
 enable = true
 unstable = true
 suggest = { completeFunctionCalls = false, imports = { hosts = { "https://deno.land" = true } } }
-# inlay hints
-inlayHints.parameterNames.enabled = "all"
-inlayHints.parameterTypes.enabled = true
-inlayHints.propertyDeclarationTypes.enabled = true
-inlayHints.enumMemberValues.enabled = true
-inlayHints.variableTypes.enabled = false
-inlayHints.functionLikeReturnTypes.enabled = false
 
 [[language]]
 name = "javascript"
