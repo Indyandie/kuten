@@ -25,3 +25,4 @@ link,confdir,conf
 /pandoc/epub/epub.css,/.config/pandoc/,epub.css
 /macchina/basic.toml,/.config/macchina/themes/,basic.toml
 /macchina/macchina.toml,/.config/macchina/,macchina.toml
+/eza/theme.yaml,/.config/eza/,theme.yml
