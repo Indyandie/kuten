@@ -1,0 +1,281 @@
+colorful: true
+
+filekinds:
+  directory:
+    foreground: White
+    background: Blue
+    is_reverse: false
+    is_bold: true
+    is_dimmed: false
+    is_italic: true
+    is_underline: false
+    is_blink: false
+    is_hidden: false
+    is_strikethrough: false
+    prefix_with_reset: false
+  normal:
+    foreground: White
+    background: null
+    is_bold: false
+    is_dimmed: false
+    is_italic: false
+    is_underline: false
+    is_blink: false
+    is_reverse: false
+    is_hidden: false
+    is_strikethrough: false
+    prefix_with_reset: true
+  executable:
+    foreground: Black
+    background: Yellow
+    is_bold: true
+    is_dimmed: false
+    is_italic: true
+    is_underline: true
+    is_blink: false
+    is_reverse: false
+    is_hidden: false
+    is_strikethrough: false
+    prefix_with_reset: true
+  symlink:
+    foreground: Black
+    background: LightBlue
+    is_bold: true
+    is_dimmed: false
+    is_italic: true
+    is_underline: true
+    is_blink: false
+    is_reverse: false
+    is_hidden: false
+    is_strikethrough: false
+    prefix_with_reset: true
+  pipe:
+    foreground: LightRed
+  block_device:
+    foreground: LightRed
+    is_bold: true
+  char_device:
+    foreground: LightYellow
+    is_bold: true
+  socket:
+    foreground: LightRed
+    is_bold: true
+  special:
+    foreground: LightYellow
+  mount_point:
+    foreground: LightRed
+    is_bold: true
+    is_underline: true
+perms:
+  user_read:
+    foreground: LightGreen
+    is_italic: true
+  user_write:
+    foreground: LightYellow
+    is_underline: true
+  user_executable_file:
+    foreground: DarkGray
+    background: Red
+    is_bold: true
+  user_execute_other:
+    foreground: LightRed
+    is_bold: true
+  group_read:
+    foreground: Green
+    is_italic: true
+  group_write:
+    foreground: Yellow
+    is_underline: true
+  group_execute:
+    foreground: Red
+    is_bold: true
+  other_read:
+    foreground: Green
+    is_dimmed: true
+  other_write:
+    foreground: Yellow
+    is_dimmed: true
+  other_execute:
+    foreground: Red
+    is_dimmed: true
+  special_user_file:
+    foreground: LightPurple
+  special_other:
+    foreground: Cyan
+    is_bold: true
+    is_underline: true
+    is_italic: true
+  attribute:
+size:
+  major:
+    is_bold: true
+  minor:
+    is_underline: true
+    is_italic: true
+  number_byte:
+    foreground: White
+    is_dimmed: true
+  number_kilo:
+    foreground: White
+  number_mega:
+    foreground: White
+  number_giga:
+    foreground: White
+  number_huge:
+    foreground: White
+  unit_byte:
+  unit_kilo:
+  unit_mega:
+  unit_giga:
+  unit_huge:
+
+users:
+  user_you:
+    foreground: Yellow
+    is_underline: true
+  user_root:
+    foreground: Red
+  user_other:
+  group_yours:
+    foreground: Yellow
+    is_underline: true
+  group_other:
+  group_root:
+    foreground: Red
+
+file_type:
+  image:
+    foreground: LightPurple
+    is_Bold: true
+  video:
+    foreground: White
+    background: LightPurple
+    is_underline: true
+  music:
+    foreground: LightYellow
+  crypto:
+  document:
+    foreground: LightGreen
+  compressed:
+    foreground: Red
+  temp:
+  compiled:
+  build:
+  source:
+
+links:
+  normal:
+  multi_link_file:
+
+git:
+  new:
+  modified:
+  deleted:
+  renamed:
+  ignored:
+  conflicted:
+
+git_repo:
+  branch_main:
+  branch_other:
+  git_clean:
+  git_dirty:
+
+security_context:
+  none:
+  selinux:
+    colon:
+    user:
+    role:
+    typ:
+    range:
+
+punctuation:
+  foreground: White
+  is_dimmed: true
+date:
+  foreground: White
+  is_dimmed: true
+inode:
+blocks:
+header:
+octal:
+flags:
+control_char:
+broken_symlink:
+  foreground: Red
+broken_path_overlay:
+  foreground: Red
+filenames:
+  symlinks.csv:
+    filename:
+      foreground: Black
+      background: LightRed
+      is_bold: true
+    icon:
+      glyph: 
+      style:
+        foreground: LightRed
+extensions:
+  md:
+    filename:
+      foreground: Green
+      is_italic: true
+    icon:
+      glyph: 
+      style:
+        foreground: Green
+  zsh:
+    filename:
+      foreground: Yellow
+    icon:
+      style:
+        foreground: Yellow
+  csv:
+    filename:
+      foreground: LightGreen
+      is_italic: true
+    icon:
+      glyph: 
+      style:
+        foreground: LightGreen
+  json:
+    filename:
+      foreground: LightGreen
+      is_italic: true
+    icon:
+      style:
+        foreground: LightGreen
+  yaml:
+    filename:
+      foreground: LightGreen
+      is_italic: true
+    icon:
+      style:
+        foreground: LightGreen
+  yml:
+    filename:
+      foreground: LightGreen
+      is_italic: true
+    icon:
+      style:
+        foreground: LightGreen
+  html:
+    filename:
+      foreground: LightRed
+    icon:
+      style:
+        foreground: LightRed
+  odin:
+    filename:
+      foreground: LightBlue
+    icon:
+      glyph: ◯
+      style:
+        foreground: LightBlue
+  nix:
+    filename:
+      foreground: LightCyan
+    icon:
+      style:
+        foreground: LightCyan
