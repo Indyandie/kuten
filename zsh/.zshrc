@@ -209,3 +209,8 @@ function yaz {
     fi
     rm -f -- "$tmp"
 }
+
+# taskwarrior
+
+export TASKRC=~/.config/task/taskrc
+export TASKDATA=~/.config/task/task

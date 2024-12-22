@@ -76,6 +76,9 @@ elif [[ $OSTYPE == linux* ]]; then
     alias flkup="flatpak upgrade"
 
     alias open="xdg-open"
+
+    # thunar
+    alias tuna="nohup thunar >> ~/.thunar-logs &"
 fi
 
 # printing
@@ -247,3 +250,10 @@ alias maki="clear && macchina"
 # mermaid
 alias mer="mmdc -i"
 alias merd="mmdc -t dark -b transparent -i"
+
+# taskwarrior
+if command -v task &>/dev/null; then
+    alias tw="task"
+    alias twl="task list"
+    alias twa="task add"
+fi

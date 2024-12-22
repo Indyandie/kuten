@@ -1,0 +1,7 @@
+# XDG Location
+data.location=~/.config/task/task
+hooks.location=~/.config/task/hooks
+news.version=3.1.0
+
+# Color theme (uncomment one to use)
+include solarized-dark-256.theme
