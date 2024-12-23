@@ -257,3 +257,11 @@ if command -v task &>/dev/null; then
     alias twl="task list"
     alias twa="task add"
 fi
+
+# imagemagick
+
+alias mgk="magick"
+alias mgkid="magick identify"
+alias mgkidv="magick identify -verbose"
+alias mgknv="magick convert"
+alias mgkmog="magick mogrify"
