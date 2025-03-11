@@ -1,0 +1,41 @@
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+# Config syntax crash course
+# ==========================
+
+config-file = ?os/config
+
+shell-integration = zsh
+
+font-family = "JetBrains Mono"
+font-size = 12
+window-padding-x = 20
+
+resize-overlay-duration = 4s 200ms
+
+background-opacity=0.5
+background-blur=true
+
+gtk-titlebar-hide-when-maximized = true
+adw-toolbar-style = raised
+
+copy-on-select = true
+
+desktop-notifications = true
+
+window-decoration = false
+
+# zellij
+keybind = alt+1=unbind
+keybind = alt+2=unbind
+keybind = alt+9=unbind
+keybind = alt+8=unbind 
+keybind = alt+7=unbind 
+
+# keybind = 
+# keybind = 
+# keybind = 

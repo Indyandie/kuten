@@ -1,2 +1,3 @@
 link,confdir,conf
 /linux/alacritty/keys.toml,/.config/alacritty/,keys.toml
+/linux/ghostty/config,/.config/ghostty/os/,config

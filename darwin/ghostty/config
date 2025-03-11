@@ -1,0 +1,20 @@
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
+
+keybind = super+t=new_tab
+keybind = super+w=close_tab
+keybind = super+tab=next_tab
+keybind = super+shift+tab=previous_tab
+
+keybind = super+n=new_window
+
+# unbind select_all (conflict helix)
+keybind = super+a=unbind
+
+keybind = super+0=reset_font_size
+
+# helix
+keybind = super+g>super+g=scroll_to_top
+keybind = super+g>super+e=scroll_to_bottom
+
+keybind = super+q=quit

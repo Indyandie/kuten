@@ -27,3 +27,4 @@ link,confdir,conf
 /macchina/macchina.toml,/.config/macchina/,macchina.toml
 /eza/theme.yaml,/.config/eza/,theme.yml
 /taskwarrior/taskrc,/.config/task/,taskrc
+/ghostty/config,/.config/ghostty/,config

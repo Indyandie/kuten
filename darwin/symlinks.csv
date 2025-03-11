@@ -1,3 +1,4 @@
 link,confdir,conf
 /darwin/alacritty/keys.toml,/.config/alacritty/,keys.toml
 /darwin/amethyst/amethyst.yml,/.config/amethyst/,amethyst.yml
+/darwin/ghostty/config,/.config/ghostty/os/,config
