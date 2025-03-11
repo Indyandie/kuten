@@ -12,8 +12,8 @@ config-file = ?os/config
 shell-integration = zsh
 
 font-family = "JetBrains Mono"
-font-size = 12
-window-padding-x = 20
+font-size = 14
+window-padding-x = 8
 
 resize-overlay-duration = 4s 200ms
 
