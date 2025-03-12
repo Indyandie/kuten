@@ -17,4 +17,8 @@ keybind = super+0=reset_font_size
 keybind = super+g>super+g=scroll_to_top
 keybind = super+g>super+e=scroll_to_bottom
 
+# zellij
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+
 keybind = super+q=quit
