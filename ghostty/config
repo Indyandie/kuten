@@ -12,8 +12,11 @@ config-file = ?os/config
 shell-integration = zsh
 
 font-family = "JetBrains Mono"
-font-size = 14
 window-padding-x = 8
+
+# cursor
+cursor-style = block
+cursor-style-blink = true
 
 resize-overlay-duration = 4s 200ms
 
@@ -27,7 +30,6 @@ copy-on-select = true
 
 desktop-notifications = true
 
-window-decoration = false
 
 # zellij
 keybind = alt+1=unbind
