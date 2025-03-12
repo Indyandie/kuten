@@ -30,7 +30,6 @@ copy-on-select = true
 
 desktop-notifications = true
 
-
 # zellij
 keybind = alt+1=unbind
 keybind = alt+2=unbind

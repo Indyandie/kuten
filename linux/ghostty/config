@@ -22,3 +22,6 @@ keybind = ctrl+g>ctrl+g=scroll_to_top
 keybind = ctrl+g>ctrl+e=scroll_to_bottom
 
 keybind = ctrl+q=quit
+
+gtk-tabs-location = bottom
+gtk-titlebar-hide-when-maximized = true
