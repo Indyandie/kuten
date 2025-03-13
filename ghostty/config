@@ -14,14 +14,24 @@ shell-integration = zsh
 font-family = "JetBrains Mono"
 window-padding-x = 8
 
-# cursor
+theme = kurokula
+
+background-opacity=0.65
+background-blur=true
+
+selection-background = 515151
+selection-foreground = ffc663
+
 cursor-style = block
 cursor-style-blink = true
 
-resize-overlay-duration = 4s 200ms
+# cursor
+cursor-color = #ffc663
+cursor-style = block
+cursor-style-blink = true
+cursor-text = #141515
 
-background-opacity=0.5
-background-blur=true
+resize-overlay-duration = 4s 200ms
 
 gtk-titlebar-hide-when-maximized = true
 adw-toolbar-style = raised
@@ -36,7 +46,3 @@ keybind = alt+2=unbind
 keybind = alt+9=unbind
 keybind = alt+8=unbind 
 keybind = alt+7=unbind 
-
-# keybind = 
-# keybind = 
-# keybind = 
