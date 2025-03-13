@@ -10,6 +10,7 @@
 config-file = ?os/config
 
 shell-integration = zsh
+shell-integration-features = cursor, sudo, title
 
 font-family = "JetBrains Mono"
 window-padding-x = 8
