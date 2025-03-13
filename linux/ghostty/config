@@ -25,3 +25,5 @@ keybind = ctrl+q=quit
 
 gtk-tabs-location = bottom
 gtk-titlebar-hide-when-maximized = true
+
+# linux-cgroup = always
