@@ -53,6 +53,8 @@ if [[ $OSTYPE == darwin* ]]; then
     ## lazygit
     export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 
+    alias tac="tail -r" # print lines reversed
+
 elif [[ $OSTYPE == linux* ]]; then
 
     # date
