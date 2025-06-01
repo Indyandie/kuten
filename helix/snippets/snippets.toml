@@ -1,0 +1,14 @@
+[[snippets]]
+prefix = "pang"
+body = 'The quick brown fox jumped over the lazy dog.'
+description = "panagram"
+
+[[snippets]]
+prefix = "lorem"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+description = "Lorem ipsum placeholder"
+
+[[snippets]]
+prefix = "email"
+body = "user@example.com"
+description = "Placeholder email"
