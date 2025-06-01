@@ -1,3 +1,23 @@
+# snippets
+[language-server.scls]
+command = "simple-completion-language-server"
+
+[language-server.scls.config]
+max_completion_items = 100           # set max completion results len for each group: words, snippets, unicode-input
+feature_words = true                 # enable completion by word
+feature_snippets = true              # enable snippets
+snippets_first = true                # completions will return before snippets by default
+snippets_inline_by_word_tail = false # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
+feature_unicode_input = false        # enable "unicode input"
+feature_paths = false                # enable path completion
+feature_citations = false            # enable citation completion (only on `citation` feature enabled)
+
+
+# write logs to /tmp/completion.log
+[language-server.scls.environment]
+RUST_LOG = "info,simple-completion-language-server=info"
+LOG_FILE = "/tmp/completion.log"
+
 [[language]]
 name = "bash"
 indent = { tab-width = 4, unit = "    " }
@@ -15,7 +35,7 @@ args = ["--stdio"]
 
 [[language]]
 name = "html"
-language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls"]
+language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls", "scls"]
 auto-format = false
 formatter = { command = 'zsh', args = [
   "-c",
@@ -27,7 +47,7 @@ formatter = { command = 'zsh', args = [
 
 [[language]]
 name = "css"
-language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
+language-servers = ["vscode-css-language-server", "tailwindcss-ls", "scls"]
 auto-format = false
 formatter = { command = 'deno', args = [
   "fmt",
@@ -54,7 +74,7 @@ formatter = { command = 'deno', args = [
 
 [[language]]
 name = "scss"
-language-servers = ["vscode-css-language-server"]
+language-servers = ["vscode-css-language-server", "scls"]
 auto-format = false
 formatter = { command = 'deno', args = [
   "fmt",
@@ -72,7 +92,7 @@ formatter = { command = 'deno', args = [
 
 [[language]]
 name = "svelte"
-language-servers = ["svelteserver", "tailwindcss-ls"]
+language-servers = ["svelteserver", "tailwindcss-ls", "scls"]
 auto-format = false
 formatter = { command = 'zsh', args = [
   "-c",
@@ -124,7 +144,7 @@ suggest = { completeFunctionCalls = false, imports = { hosts = { "https://deno.l
 name = "javascript"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
-language-servers = ["deno-lsp"]
+language-servers = ["deno-lsp", "scls"]
 formatter = { command = 'deno', args = [
   "fmt",
   "-",
@@ -142,7 +162,7 @@ formatter = { command = 'deno', args = [
 name = "jsx"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
-language-servers = ["deno-lsp", "tailwindcss-ls"]
+language-servers = ["deno-lsp", "tailwindcss-ls", "scls"]
 formatter = { command = 'deno', args = [
   "fmt",
   "-",
@@ -162,7 +182,7 @@ formatter = { command = 'deno', args = [
 name = "typescript"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
-language-servers = ["deno-lsp"]
+language-servers = ["deno-lsp", "scls"]
 formatter = { command = 'deno', args = [
   "fmt",
   "-",
@@ -180,7 +200,7 @@ formatter = { command = 'deno', args = [
 name = "tsx"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
-language-servers = ["deno-lsp", "tailwindcss-ls"]
+language-servers = ["deno-lsp", "tailwindcss-ls", "scls"]
 formatter = { command = 'deno', args = [
   "fmt",
   "-",
@@ -206,7 +226,7 @@ config = { typescript = { tsdk = "##TSDK##" }, environment = "node" }
 
 [[language]]
 name = "astro"
-language-servers = ["astro-ls", "tailwindcss-ls"]
+language-servers = ["astro-ls", "tailwindcss-ls", "scls"]
 auto-format = false
 formatter = { command = 'zsh', args = [
   "-c",
@@ -265,6 +285,7 @@ language-servers = [
   "ltex-ls",
   "markdown-oxide",
   "vscode-html-language-server",
+  "scls",
 ]
 formatter = { command = 'zsh', args = [
   "-c",
@@ -286,11 +307,12 @@ formatter = { command = 'zsh', args = [
 # ```sh
 # cargo install taplo-cli --locked --features lsp
 # ```
-# sudo ln -s ~/.cargo/bin/taplo /bin
+# sudo ln -s ~/.cargo/bin/taplo /bin ls
 
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["format", "-"] }
+language-servers = ["scls"]
 
 # SQL
 
@@ -303,7 +325,7 @@ command = "sqls"
 
 [[language]]
 name = "sql"
-language-servers = ["sql-language-server", "sqls"]
+language-servers = ["sql-language-server", "sqls", "scls"]
 formatter = { command = "sqlformat", args = [
   "--reindent",
   "--indent_width",
@@ -365,3 +387,7 @@ formatter = { command = 'deno', args = ["fmt", "-", "--ext", "yaml"] }
 [[language]]
 name = "typst"
 formatter = { command = 'typstfmt' }
+
+[[language]]
+name = "git-commit"
+language-servers = ["scls"]

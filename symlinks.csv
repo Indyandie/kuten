@@ -4,6 +4,7 @@ link,confdir,conf
 /helix/languages.toml,/.config/helix/,languages.toml
 /helix/ignore,/.config/helix/,ignore
 /helix/kurokula.toml,/.config/helix/themes/,kurokula.toml
+/helix/snippets/snippets.toml,/.config/helix/snippets/,snippets.toml
 /nvim/nvchad/chadrc.lua,/.config/nvim/lua/custom/,chadrc.lua
 /nvim/nvchad/init.lua,/.config/nvim/lua/custom/,init.lua
 /nvim/nvchad/highlights.lua,/.config/nvim/lua/custom/,highlights.lua
