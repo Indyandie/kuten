@@ -126,8 +126,15 @@ args = ["lsp"]
 environment = { NO_COLOR = "1" }
 
 [language-server.deno-lsp.config]
+
 # inlay hints
-javascript = { inlayHints.parameterNames.enabled = "all", inlayHints.parameterTypes.enabled = true, inlayHints.propertyDeclarationTypes.enabled = true, inlayHints.enumMemberValues.enabled = true, inlayHints.variableTypes.enabled = false, inlayHints.functionLikeReturnTypes.enabled = false }
+javascript.inlayHints.parameterNames.enabled = "all"
+javascript.inlayHints.propertyDeclarationTypes.enabled = true
+javascript.inlayHints.enumMemberValues.enabled = true
+javascript.inlayHints.parameterTypes.enabled = false # overkill
+javascript.inlayHints.variableTypes.enabled = false # overkill
+javascript.inlayHints.functionLikeReturnTypes.enabled = false
+
 typescript.inlayHints.parameterNames.enabled = "all"
 typescript.inlayHints.parameterTypes.enabled = true
 typescript.inlayHints.propertyDeclarationTypes.enabled = true
