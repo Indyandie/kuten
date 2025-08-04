@@ -131,8 +131,8 @@ environment = { NO_COLOR = "1" }
 javascript.inlayHints.parameterNames.enabled = "all"
 javascript.inlayHints.propertyDeclarationTypes.enabled = true
 javascript.inlayHints.enumMemberValues.enabled = true
-javascript.inlayHints.parameterTypes.enabled = false # overkill
-javascript.inlayHints.variableTypes.enabled = false # overkill
+javascript.inlayHints.parameterTypes.enabled = false          # overkill
+javascript.inlayHints.variableTypes.enabled = false           # overkill
 javascript.inlayHints.functionLikeReturnTypes.enabled = false
 
 typescript.inlayHints.parameterNames.enabled = "all"
@@ -398,3 +398,17 @@ formatter = { command = 'typstfmt' }
 [[language]]
 name = "git-commit"
 language-servers = ["scls"]
+
+# vento
+
+[[grammar]]
+name = "vento"
+source = { git = "https://github.com/ventojs/tree-sitter-vento", rev = "main" }
+
+[[language]]
+name = "vento"
+grammar = "vento"
+scope = "source.vento"
+injection-regex = "vento"
+file-types = ["vto"]
+language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls", "scls"]
