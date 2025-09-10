@@ -1,3 +1,132 @@
+use-grammars = { only = [
+  "astro",                # a web framework for building fast, content-focused websites using components and islands architecture.
+  "awk",                  # a scripting language for text processing and data extraction, commonly used for pattern matching and manipulation.
+  "bash",                 # a unix shell and command language for scripting and automating system tasks.
+  "bibtex",               # a file format for managing bibliographic references in latex documents.
+  "bitbake",              # a build tool used in embedded linux systems like yocto project.
+  "c",                    # a general-purpose programming language known for its efficiency and low-level control.
+  "caddyfile",            # configuration file format for the caddy web server.
+  "clojure",              # a functional programming language on the jvm for concurrent applications.
+  "cmake",                # a build system generator for cross-platform software compilation.
+  "comment",              # syntax for inline comments in various programming languages.
+  "common-lisp",          # a dialect of lisp for general-purpose programming with macros.
+  "css",                  # stylesheet language for describing the presentation of web documents.
+  "csv",                  # comma-separated values format for tabular data exchange.
+  "dhall",                # a programmable configuration language for generating json/yaml.
+  "diff",                 # format for showing differences between files or versions.
+  "docker-compose",       # yaml format for defining multi-container docker applications.
+  "dockerfile",           # script for building docker container images.
+  "dot",                  # graph description language for visualizing relationships.
+  "dunstrc",              # configuration file for the dunst notification daemon.
+  "env",                  # environment variable file format for configuration.
+  "fish",                 # friendly interactive shell, a command-line shell with syntax highlighting.
+  "ghostty",              # configuration for ghostty terminal emulator.
+  "git-attributes",       # git file for defining attributes like merge strategies.
+  "git-commit",           # format for git commit messages.
+  "git-config",           # configuration file for git settings.
+  "git-ignore",           # file specifying patterns for git to ignore.
+  "git-notes",            # git feature for attaching notes to commits.
+  "git-rebase",           # git command for rebasing commit history.
+  "glsl",                 # opengl shading language for gpu programming.
+  "go",                   # a statically typed, compiled programming language by google.
+  "haskell",              # a purely functional programming language with strong typing.
+  "haskell-persistent",   # orm library for haskell database interactions.
+  "hosts",                # system file for mapping hostnames to ip addresses.
+  "html",                 # hypertext markup language for structuring web pages.
+  "hyprlang",             # configuration language for hyprland window manager.
+  "ini",                  # simple configuration file format with sections and keys.
+  "javascript",           # scripting language for web development and interactivity.
+  "jjdescription",        # description format for jujutsu version control.
+  "jq",                   # command-line json processor for querying and transforming data.
+  "jsdoc",                # documentation syntax for javascript code.
+  "json",                 # javascript object notation for data interchange.
+  "json-ld",              # json for linking data, extending json with linked data.
+  "json5",                # relaxed json format allowing comments and unquoted keys.
+  "jsonc",                # json with comments for configuration files.
+  "jsx",                  # syntax extension for javascript in react components.
+  "just",                 # command runner for defining project tasks.
+  "kdl",                  # kdl document language for configuration and data.
+  "kotlin",               # modern jvm language for android and server-side development.
+  "latex",                # document preparation system for typesetting.
+  "ld",                   # linker script language for gnu ld.
+  "ldif",                 # ldap data interchange format for directory data.
+  "llvm",                 # intermediate representation for compiler optimizations.
+  "llvm-mir",             # llvm machine ir for low-level code representation.
+  "llvm-mir-yaml",        # yaml format for llvm mir.
+  "log",                  # generic format for application logs.
+  "lua",                  # lightweight scripting language for embedded systems.
+  "luau",                 # lua variant used in roblox for game scripting.
+  "mail",                 # format for email messages.
+  "make",                 # build automation tool using makefiles.
+  "markdoc",              # markdown-based documentation format.
+  "markdown",             # lightweight markup language for formatting text.
+  "markdown-rustdoc",     # markdown for rust documentation comments.
+  "markdown.inline",      # inline markdown syntax.
+  "mermaid",              # text-based diagramming tool for flowcharts.
+  "meson",                # build system for cross-platform compilation.
+  "move",                 # smart contract language for blockchain.
+  "nasm",                 # assembler for x86 architecture.
+  "nestedtext",           # human-readable data format.
+  "nginx",                # configuration language for nginx web server.
+  "nix",                  # functional language for package management.
+  "nu",                   # shell and scripting language for data manipulation.
+  "ocaml",                # functional programming language with strong typing.
+  "ocaml-interface",      # interface files for ocaml modules.
+  "odin",                 # systems programming language inspired by c.
+  "ohm",                  # parsing expression grammar language.
+  "opencl",               # language for parallel programming on gpus.
+  "openscad",             # script-based 3d modeling language.
+  "org",                  # markup language for emacs org mode.
+  "passwd",               # system file for user account information.
+  "pem",                  # format for storing cryptographic keys.
+  "pest",                 # parser generator for rust.
+  "pkgbuild",             # build script for arch linux packages.
+  "pkl",                  # configuration language for data validation.
+  "po",                   # format for internationalization and localization.
+  "properties",           # key-value configuration format.
+  "protobuf",             # protocol buffers for serializing structured data.
+  "prql",                 # query language compiling to sql.
+  "python",               # high-level programming language for general-purpose use.
+  "regex",                # regular expression syntax for pattern matching.
+  "rego",                 # policy language for open policy agent.
+  "robot",                # test automation framework syntax.
+  "ruby",                 # dynamic programming language for web apps.
+  "rust",                 # systems programming language with memory safety.
+  "rust-format-args",     # formatting macros in rust.
+  "rust-format-args-ma…", # abbreviated rust formatting.
+  "scheme",               # dialect of lisp for functional programming.
+  "scss",                 # syntactically awesome stylesheets for css.
+  "smali",                # assembly language for android apks.
+  "sml",                  # standard ml, functional programming language.
+  "snakemake",            # workflow management for bioinformatics.
+  "sql",                  # structured query language for databases.
+  "sshclientconfig",      # ssh client configuration format.
+  "svelte",               # framework for building web uis.
+  "systemd",              # configuration for systemd services.
+  "task",                 # task runner configuration.
+  "tcl",                  # tool command language for scripting.
+  "templ",                # template language for go.
+  "tera",                 # template engine for rust.
+  "textproto",            # text format for protocol buffers.
+  "todotxt",              # plain text todo list format.
+  "toml",                 # configuration file format.
+  "tsq",                  # tree-sitter query language.
+  "tsx",                  # typescript with jsx.
+  "typescript",           # typed superset of javascript.
+  "typst",                # markup language for typesetting.
+  "ungrammar",            # grammar definition for rust analyzer.
+  "unison",               # functional programming language with code sharing.
+  "vento",                # template engine for deno.
+  "wast",                 # webassembly text format.
+  "wat",                  # webassembly text representation.
+  "webc",                 # web component format.
+  "werk",                 # workflow language.
+  "wit",                  # webassembly interface types.
+  "xml",                  # extensible markup language for data.
+  "yaml",                 # human-readable data serialization.
+  "yuck",                 # configuration language for yuck.
+] }
+
 # snippets
 [language-server.scls]
 command = "simple-completion-language-server"
