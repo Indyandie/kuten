@@ -165,6 +165,8 @@ alias man="batman"
 export EZA_ICONS_AUTO=true
 export LS_COLORS="" # reset colors, conflicts with EZA theme.yml
 
+alias ls="eza || ls"
+alias ll="eza -l"
 alias lz="eza"
 alias la="eza -la"
 alias l="eza -lah"
