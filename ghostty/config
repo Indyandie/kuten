@@ -9,8 +9,8 @@
 
 config-file = ?os/config
 
-shell-integration = zsh
-shell-integration-features = cursor, sudo, title
+shell-integration = detect
+shell-integration-features = cursor, sudo, title, ssh-env, ssh-terminfo
 
 font-family = "JetBrains Mono"
 window-padding-x = 8
