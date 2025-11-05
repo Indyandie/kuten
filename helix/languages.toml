@@ -541,3 +541,9 @@ scope = "source.vento"
 injection-regex = "vento"
 file-types = ["vto"]
 language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls", "scls"]
+
+# QT (Quickshell)
+
+[language-server.qmlls]
+args = ["-E"]
+command = "qmlls"
