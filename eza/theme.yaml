@@ -2,8 +2,7 @@ colorful: true
 
 filekinds:
   directory:
-    foreground: White
-    background: Blue
+    foreground: Blue
     is_reverse: false
     is_bold: true
     is_dimmed: false
