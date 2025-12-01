@@ -541,6 +541,17 @@ scope = "source.vento"
 injection-regex = "vento"
 file-types = ["vto"]
 language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls", "scls"]
+# formatter = { command = 'dprint', args = ["fmt", "--stdin", "vto"] }
+formatter = { command = 'deno', args = [
+  "fmt",
+  "-",
+  "--ext",
+  "vto",
+  "--prose-wrap",
+  "preserve",
+  "--line-width",
+  "999999",
+] }
 
 # QT (Quickshell)
 
