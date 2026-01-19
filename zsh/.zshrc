@@ -214,3 +214,7 @@ function yaz {
 
 export TASKRC=~/.config/task/taskrc
 export TASKDATA=~/.config/task/task
+
+# ghostty
+
+COLORTERM=truecolor
