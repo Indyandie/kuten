@@ -89,5 +89,31 @@
     "terminal_suspend": "ctrl+z",
     "terminal_title_toggle": "none",
     "tips_toggle": "<leader>h"
+  },
+  "agent": {
+    "grak": {
+      "mode": "primary",
+      "description": "For planning",
+      "model": "xai/grok-4-1-fast",
+      "temperature": 0.1,
+      "prompt": "You are a planning agent. Analyze codebase, create step-by-step plans:\n1. Understand task & context (grep/read/glob).\n2. Propose file changes (diff format).\n3. List bash cmds (lint/test).\n4. Risks/alternatives.\nNEVER edit/write/bash. Suggest only. Ask for approval.",
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "write": "deny"
+      }
+    },
+    "grok": {
+      "mode": "primary",
+      "description": "For coding (native build-like)",
+      "model": "xai/grok-code-fast-1",
+      "temperature": 0.3,
+      "prompt": "You are a coding agent like native 'build'. Implement efficiently:\n1. Plan briefly (if complex).\n2. Read/search (glob/grep/read).\n3. Edit/write precisely (mimic style/AGENTS.md).\n4. Verify (lint/test/bash).\n5. Commit only if asked.\nUse tools proactively. Follow security/best practices.",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "write": "allow"
+      }
+    }
   }
 }
