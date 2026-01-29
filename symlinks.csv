@@ -30,3 +30,5 @@ link,confdir,conf
 /taskwarrior/taskrc,/.config/task/,taskrc
 /ghostty/config,/.config/ghostty/,config
 /opencode/opencode.json,/.config/opencode/,opencode.json
+/opencode/groko.md,/.config/opencode/agents/,groko.md
+/opencode/graak.md,/.config/opencode/agents/,graak.md
