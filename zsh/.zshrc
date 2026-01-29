@@ -97,8 +97,12 @@ elif [[ $OSTYPE == linux* ]]; then
     gpg-connect-agent updatestartuptty /bye >/dev/null
 
     # Hyprland
-    # if [[ $XDG_CURRENT_DESKTOP = Hyprland ]]; then
-    # stuff to do
+    if [[ -f "$HOME/.config/hypr/hypralias.zsh" ]]; then
+        source "$HOME/.config/hypr/hypralias.zsh"
+    fi
+
+    # if [[ $XDG_CURRENT_DESKTOP = "Hyprland" ]]; then
+    #     figlet "hyprland"
     # fi
 
     if [[ -f /etc/NIXOS ]]; then
