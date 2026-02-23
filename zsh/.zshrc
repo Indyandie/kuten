@@ -11,19 +11,19 @@ if [[ $OSTYPE == darwin* ]]; then
 
     # plugins
     plugins=(
-        git
-        zsh-autosuggestions
-        zsh-syntax-highlighting
-        deno
-        macos
-        sudo
         brew
-        vi-mode
-        rust
+        deno
+        direnv
+        git
+        macos
         ripgrep
+        rust
+        sudo
+        vi-mode
         yarn
         zoxide
-        # nix-zsh-completions
+        zsh-autosuggestions
+        zsh-syntax-highlighting
     )
 
     source "$ZSH/oh-my-zsh.sh"
