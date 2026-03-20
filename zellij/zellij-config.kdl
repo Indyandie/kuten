@@ -160,7 +160,7 @@ plugins {
 on_force_close "quit"
 
 //  Send a request for a simplified ui (without arrow fonts) to plugins
-simplified_ui false
+simplified_ui true
 
 default_shell "zsh"
 
