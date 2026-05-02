@@ -31,7 +31,16 @@
   },
   "markdown": {
     "lineWidth": 999999,
-    "textWrap": "maintain"
+    "textWrap": "always",
+    "newLineKind": "lf",
+    "emphasisKind": "underscores",
+    "strongKind": "asterisks",
+    "unorderedListKind": "dashes",
+    "headingKind": "atx",
+    "ignoreDirective": "formatter-ignore",
+    "ignoreFileDirective": "formatter-ignore-file",
+    "ignoreStartDirective": "formatter-ignore-start",
+    "ignoreEndDirective": "formatter-ignore-end"
   },
   "pretty_yaml": {},
   "malva": {},
