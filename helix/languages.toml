@@ -170,11 +170,9 @@ auto-format = false
 #   "-c",
 #   "deno fmt - --ext html --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<(br|hr) />' '<$1>'",
 # ] } # multi formatter workaround https://github.com/helix-editor/helix/discussions/7749
-formatter = { command = 'dprint', args = [
-  "fmt",
-  "--stdin",
-  "html",
-  "--config-discovery=global",
+formatter = { command = 'zsh', args = [
+  "-c",
+  "dprint fmt --stdin html --config-discovery=global | sd '<(br|hr) />' '<$1>'",
 ] }
 
 
@@ -219,11 +217,9 @@ formatter = { command = 'dprint', args = [
 name = "svelte"
 language-servers = ["svelteserver", "tailwindcss-ls", "scls"]
 auto-format = false
-formatter = { command = 'dprint', args = [
-  "fmt",
-  "--stdin",
-  "svelte",
-  "--config-discovery=global",
+formatter = { command = 'zsh', args = [
+  "-c",
+  "dprint fmt --stdin svelte --config-discovery=global | sd '<(br|hr) />' '<$1>'",
 ] }
 
 # formatter = { command = 'prettier', args = [
@@ -338,11 +334,9 @@ config = { typescript = { tsdk = "##TSDK##" }, environment = "node" }
 name = "astro"
 language-servers = ["astro-ls", "tailwindcss-ls", "scls"]
 auto-format = false
-formatter = { command = 'dprint', args = [
-  "fmt",
-  "--stdin",
-  "astro",
-  "--config-discovery=global",
+formatter = { command = 'zsh', args = [
+  "-c",
+  "dprint fmt --stdin astro --config-discovery=global | sd '<(br|hr) />' '<$1>'",
 ] }
 
 # formatter = { command = 'prettier', args = [
@@ -399,11 +393,9 @@ language-servers = [
   "vscode-html-language-server",
   "scls",
 ]
-formatter = { command = 'dprint', args = [
-  "fmt",
-  "--stdin",
-  "md",
-  "--config-discovery=global",
+formatter = { command = 'zsh', args = [
+  "-c",
+  "dprint fmt --stdin md --config-discovery=global | sd '<(br|hr) />' '<$1>'",
 ] }
 
 [language.auto-pairs]
@@ -520,12 +512,6 @@ scope = "source.vento"
 injection-regex = "vento"
 file-types = ["vto"]
 language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls", "scls"]
-formatter = { command = 'dprint', args = [
-  "fmt",
-  "--stdin",
-  "vto",
-  "--config-discovery=global",
-] }
 
 # QT (Quickshell)
 

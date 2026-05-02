@@ -18,8 +18,8 @@
     "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.6.0.wasm"
   ],
   "typescript": {
-    "semiColons": "prefer",
-    "quoteStyle": "preferSingle",
+    "semiColons": "asi",
+    "quoteStyle": "alwaysSingle",
     "lineWidth": 999999,
     "indentWidth": 2,
     "useTabs": false
