@@ -22,6 +22,7 @@ link,confdir,conf
 /atuin/config.toml,/.config/atuin/,config.toml
 /zellij/zellij-config.kdl,/.config/zellij/,config.kdl
 /deno/deno.json,/.config/deno/,deno.json
+/dprint/dprint.json,/.config/dprint/,dprint.json
 /marksman/config.toml,/.config/marksman/,config.toml
 /lazygit/config.yml,/.config/lazygit/,config.yml
 /pandoc/epub/epub.css,/.config/pandoc/,epub.css

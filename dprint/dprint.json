@@ -1,0 +1,42 @@
+{
+  "includes": [
+    "**/*.{js,jsx,ts,tsx,json,md,mdx,css,scss,yaml,yml,html,svelte,astro,vto}"
+  ],
+  "excludes": [
+    "**/node_modules",
+    "**/dist",
+    "**/build",
+    "**/target",
+    "**/.git"
+  ],
+  "plugins": [
+    "https://plugins.dprint.dev/typescript-0.95.15.wasm",
+    "https://plugins.dprint.dev/json-0.21.3.wasm",
+    "https://plugins.dprint.dev/markdown-0.21.1.wasm",
+    "https://plugins.dprint.dev/g-plane/malva-v0.15.3.wasm",
+    "https://plugins.dprint.dev/g-plane/markup_fmt-v0.27.0.wasm",
+    "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.6.0.wasm"
+  ],
+  "typescript": {
+    "semiColons": "prefer",
+    "quoteStyle": "preferSingle",
+    "lineWidth": 999999,
+    "indentWidth": 2,
+    "useTabs": false
+  },
+  "json": {
+    "lineWidth": 999999,
+    "indentWidth": 2,
+    "useTabs": false
+  },
+  "markdown": {
+    "lineWidth": 999999,
+    "textWrap": "maintain"
+  },
+  "pretty_yaml": {},
+  "malva": {},
+  "markup_fmt": {
+    "print_width": 999999,
+    "indent_width": 2
+  }
+}

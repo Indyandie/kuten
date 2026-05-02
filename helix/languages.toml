@@ -166,10 +166,16 @@ args = ["--stdio"]
 name = "html"
 language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls", "scls"]
 auto-format = false
-formatter = { command = 'zsh', args = [
-  "-c",
-  "deno fmt - --ext html --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<(br|hr) />' '<$1>'",
-] } # multi formatter workaround https://github.com/helix-editor/helix/discussions/7749
+# formatter = { command = 'zsh', args = [
+#   "-c",
+#   "deno fmt - --ext html --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<(br|hr) />' '<$1>'",
+# ] } # multi formatter workaround https://github.com/helix-editor/helix/discussions/7749
+formatter = { command = 'dprint', args = [
+  "fmt",
+  "--stdin",
+  "html",
+  "--config-discovery=global",
+] }
 
 
 # CSS
@@ -178,16 +184,11 @@ formatter = { command = 'zsh', args = [
 name = "css"
 language-servers = ["vscode-css-language-server", "tailwindcss-ls", "scls"]
 auto-format = false
-formatter = { command = 'deno', args = [
+formatter = { command = 'dprint', args = [
   "fmt",
-  "-",
-  "--ext",
+  "--stdin",
   "css",
-  "--unstable-css",
-  "--prose-wrap",
-  "preserve",
-  "--line-width",
-  "999999",
+  "--config-discovery=global",
 ] }
 
 # tailwindcss formatter config
@@ -205,16 +206,11 @@ formatter = { command = 'deno', args = [
 name = "scss"
 language-servers = ["vscode-css-language-server", "scls"]
 auto-format = false
-formatter = { command = 'deno', args = [
+formatter = { command = 'dprint', args = [
   "fmt",
-  "-",
-  "--ext",
+  "--stdin",
   "scss",
-  "--unstable-css",
-  "--prose-wrap",
-  "preserve",
-  "--line-width",
-  "999999",
+  "--config-discovery=global",
 ] }
 
 # Svelte
@@ -223,9 +219,11 @@ formatter = { command = 'deno', args = [
 name = "svelte"
 language-servers = ["svelteserver", "tailwindcss-ls", "scls"]
 auto-format = false
-formatter = { command = 'zsh', args = [
-  "-c",
-  "deno fmt - --ext svelte --unstable-component --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<(br|hr) />' '<$1>'",
+formatter = { command = 'dprint', args = [
+  "fmt",
+  "--stdin",
+  "svelte",
+  "--config-discovery=global",
 ] }
 
 # formatter = { command = 'prettier', args = [
@@ -281,17 +279,11 @@ name = "javascript"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
 language-servers = ["deno-lsp", "scls"]
-formatter = { command = 'deno', args = [
+formatter = { command = 'dprint', args = [
   "fmt",
-  "-",
-  "--ext",
+  "--stdin",
   "js",
-  "--prose-wrap",
-  "preserve",
-  "--line-width",
-  "999999",
-  "--no-semicolons",
-  "--single-quote",
+  "--config-discovery=global",
 ] }
 
 [[language]]
@@ -299,17 +291,11 @@ name = "jsx"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
 language-servers = ["deno-lsp", "tailwindcss-ls", "scls"]
-formatter = { command = 'deno', args = [
+formatter = { command = 'dprint', args = [
   "fmt",
-  "-",
-  "--ext",
+  "--stdin",
   "jsx",
-  "--no-semicolons",
-  "--single-quote",
-  "--prose-wrap",
-  "preserve",
-  "--line-width",
-  "999999",
+  "--config-discovery=global",
 ] }
 
 # typescript
@@ -319,17 +305,11 @@ name = "typescript"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
 language-servers = ["deno-lsp", "scls"]
-formatter = { command = 'deno', args = [
+formatter = { command = 'dprint', args = [
   "fmt",
-  "-",
-  "--ext",
+  "--stdin",
   "ts",
-  "--prose-wrap",
-  "preserve",
-  "--line-width",
-  "999999",
-  "--no-semicolons",
-  "--single-quote",
+  "--config-discovery=global",
 ] }
 
 [[language]]
@@ -337,17 +317,11 @@ name = "tsx"
 shebangs = ["deno"]
 roots = ["deno.json", "deno.jsonc"]
 language-servers = ["deno-lsp", "tailwindcss-ls", "scls"]
-formatter = { command = 'deno', args = [
+formatter = { command = 'dprint', args = [
   "fmt",
-  "-",
-  "--ext",
+  "--stdin",
   "tsx",
-  "--prose-wrap",
-  "preserve",
-  "--line-width",
-  "999999",
-  "--no-semicolons",
-  "--single-quote",
+  "--config-discovery=global",
 ] }
 
 # Astro
@@ -364,9 +338,11 @@ config = { typescript = { tsdk = "##TSDK##" }, environment = "node" }
 name = "astro"
 language-servers = ["astro-ls", "tailwindcss-ls", "scls"]
 auto-format = false
-formatter = { command = 'zsh', args = [
-  "-c",
-  "deno fmt - --ext astro --unstable-component --prose-wrap preserve --line-width 128 --no-semicolons --single-quote | sd '<(br|hr) />' '<$1>'",
+formatter = { command = 'dprint', args = [
+  "fmt",
+  "--stdin",
+  "astro",
+  "--config-discovery=global",
 ] }
 
 # formatter = { command = 'prettier', args = [
@@ -423,9 +399,11 @@ language-servers = [
   "vscode-html-language-server",
   "scls",
 ]
-formatter = { command = 'zsh', args = [
-  "-c",
-  "deno fmt - --ext md --prose-wrap preserve --line-width 999999 | sd '<(br|hr) />' '<$1>'",
+formatter = { command = 'dprint', args = [
+  "fmt",
+  "--stdin",
+  "md",
+  "--config-discovery=global",
 ] }
 
 [language.auto-pairs]
@@ -489,15 +467,11 @@ formatter = { command = "black", args = ["--quiet", "-"] }
 [[language]]
 name = "json"
 auto-format = false
-formatter = { command = 'deno', args = [
+formatter = { command = 'dprint', args = [
   "fmt",
-  "-",
-  "--ext",
+  "--stdin",
   "json",
-  "--prose-wrap",
-  "never",
-  "--line-width",
-  "999999",
+  "--config-discovery=global",
 ] }
 
 # nix
@@ -515,7 +489,12 @@ validation = true
 [[language]]
 name = "yaml"
 auto-format = false
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "yaml"] }
+formatter = { command = 'dprint', args = [
+  "fmt",
+  "--stdin",
+  "yaml",
+  "--config-discovery=global",
+] }
 
 
 # Typst
@@ -541,16 +520,11 @@ scope = "source.vento"
 injection-regex = "vento"
 file-types = ["vto"]
 language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls", "scls"]
-# formatter = { command = 'dprint', args = ["fmt", "--stdin", "vto"] }
-formatter = { command = 'deno', args = [
+formatter = { command = 'dprint', args = [
   "fmt",
-  "-",
-  "--ext",
+  "--stdin",
   "vto",
-  "--prose-wrap",
-  "preserve",
-  "--line-width",
-  "999999",
+  "--config-discovery=global",
 ] }
 
 # QT (Quickshell)
