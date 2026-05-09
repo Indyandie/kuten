@@ -101,6 +101,9 @@ elif [[ $OSTYPE == linux* ]]; then
         source "$HOME/.config/hypr/hypralias.zsh"
     fi
 
+    if [[ $TTY = "/dev/tty1" ]]; then
+        Hyprland
+    fi
     # if [[ $XDG_CURRENT_DESKTOP = "Hyprland" ]]; then
     #     figlet "hyprland"
     # fi
