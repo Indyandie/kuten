@@ -245,7 +245,7 @@ mouse_mode true
 // the stdin of the program to perform the copy. This can be used with
 // terminal emulators which do not support the OSC 52 ANSI control sequence
 // that will be used by default if this option is not set.
-copy_command "wl-copy || pbcopy"
+copy_command "wl-copy"
 
 // Choose the destination for copied text
 // Allows using the primary selection buffer (on x11/wayland) instead of the system clipboard.
