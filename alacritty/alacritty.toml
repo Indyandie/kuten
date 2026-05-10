@@ -6,6 +6,7 @@ import = ["~/.config/alacritty/keys.toml"]
 
 [env]
 TERM = "xterm-256color"
+TERMINAL = "alacritty"
 
 [window]
 dimensions = { columns = 100, lines = 30 }

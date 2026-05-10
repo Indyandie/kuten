@@ -12,6 +12,8 @@ config-file = ?os/config
 shell-integration = detect
 shell-integration-features = cursor, sudo, title, ssh-env, ssh-terminfo
 
+env = TERMINAL=ghostty
+
 font-family = "JetBrains Mono"
 window-padding-x = 8
 
