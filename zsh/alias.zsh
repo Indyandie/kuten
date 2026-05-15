@@ -102,9 +102,9 @@ alias :x="bc <<<"
 alias ~apps="cd /Applications"
 alias ..="cd .."  # go back up
 alias ~home="cd ~" # Go home
-alias :cl="clear -x"
-alias :clx="tput reset"
-alias :cll="clear && exit"
+alias :c="clear -x"
+alias :cx="tput reset"
+alias :q="clear && exit"
 alias :src="omz reload" # reload zshrc
 alias :where="pwd"         # echo current working path
 alias :mod-x="chmod +x"   # make script executable
@@ -217,16 +217,16 @@ fi
 
 # zellij
 if [[ ${commands[zellij]} ]]; then
-    alias :zj="zellij"
-    alias :zja="zellij a"   # attach session
-    alias :zjd="zellij d"   # delete session
-    alias :zjk="zellij k"   # kill session
-    alias :zjs="zellij -s"  # new session with custom name
-    alias :zjl="zellij ls"  # list sessions
-    alias :zjac="zellij ac" # action
-    alias :zjr="zellij r"   # run a command in new panel
-    alias :zpipe="zellij pipe"
-    alias :zjp="zellij pipe -p filepicker" # open file picker
+    alias :z="zellij"
+    alias :z-a="zellij a"   # attach session
+    alias :z-d="zellij d"   # delete session
+    alias :z-k="zellij k"   # kill session
+    alias :z-s="zellij -s"  # new session with custom name
+    alias :z-l="zellij ls"  # list sessions
+    alias :z-ac="zellij ac" # action
+    alias :z-r="zellij r"   # run a command in new panel
+    alias :z-p="zellij pipe"
+    alias :z-fp="zellij pipe -p filepicker" # open file picker
 
     @zr() {
         zellij run -n '⭘' -f --height 100% --width 100% -x 0 -y 0 -- $@
@@ -240,7 +240,7 @@ if [[ ${commands[zellij]} ]]; then
     alias :z-tree="zellij run -n '' -f --height 80% --width 40% -x 60% -y 20% -- eza --tree"
 
     # git
-    alias :z-lzg="zellij run -n '' -c -f --height 100% --width 100% -x 0 -y 0 -- lazygit"
+    alias :z-lz="zellij run -n '' -c -f --height 100% --width 100% -x 0 -y 0 -- lazygit"
     alias :z-gd="zellij run -n '' -f --height 90% --width 80% -x 0 -y 0 -- git diff"
     alias :z-gdft="zellij run -n '' -f --height 90% --width 80% -x 0 -y 0 -- git difftool"
 
@@ -255,7 +255,7 @@ if [[ ${commands[zellij]} ]]; then
 fi
 
 # BELL
-alias :bell='echo "\a"'
+alias :bel='echo "\a"'
 
 # ASCII
 if [[ ${commands[ascii - image - converter]} ]]; then
@@ -265,17 +265,17 @@ fi
 # deno
 if [[ ${commands[deno]} ]]; then
     alias :dn="deno"
-    alias :dnr="deno run"
-    alias :dnt="deno task"
-    alias :dnnt="deno run --allow-net"
-    alias :dnrd="deno run --allow-read"
+    alias :dn-r="deno run"
+    alias :dn-t="deno task"
+    alias :dn-nt="deno run --allow-net"
+    alias :dn-rd="deno run --allow-read"
 fi
 
 # nix
 if [[ ${commands[nix]} ]]; then
     alias :nx="nix"
-    alias :nxr="nix repl"
-    alias :nsh="nix-shell"
+    alias :nx-rp="nix repl"
+    alias :nx-sh="nix-shell"
 
     ## disk usage
     alias :ndu="nix path-info -Sh /run/current-system"
@@ -283,7 +283,7 @@ fi
 
 ## store
 if [[ ${commands["nix-store"]} ]]; then
-    alias nxsto='nix-store --gc --print-roots | rg "^(/nix/var|/run/\\w+-system|\\{memory|/proc)"'
+    alias nx-sto='nix-store --gc --print-roots | rg "^(/nix/var|/run/\\w+-system|\\{memory|/proc)"'
 fi
 
 if [[ ${commands[nxtray]} ]]; then
@@ -309,31 +309,31 @@ fi
 
 if [[ ${commands[macchina]} ]]; then
     alias :neo="clear && macchina"
-    alias :maki="clear && macchina"
+    alias :mak="clear && macchina"
 fi
 
 # mermaid
 if [[ ${commands[mmdc]} ]]; then
     alias :mr="mmdc -i"
-    alias :mri="mmdc -i"
-    alias :mrd="mmdc -t dark -b transparent -i"
+    alias :mr-i="mmdc -i"
+    alias :mr-d="mmdc -t dark -b transparent -i"
 fi
 
 # taskwarrior
 if command -v task &>/dev/null; then
     alias :tw="task"
-    alias :twl="task list"
-    alias :twa="task add"
+    alias :tw-l="task list"
+    alias :tw-a="task add"
 fi
 
 # imagemagick
 
 if [[ ${commands[magick]} ]]; then
     alias :mg="magick"
-    alias :mgid="magick identify"
-    alias :mgidv="magick identify -verbose"
-    alias :mgnv="magick convert"
-    alias :mgmog="magick mogrify"
+    alias :mg-id="magick identify"
+    alias :mg-idv="magick identify -verbose"
+    alias :mg-con="magick convert"
+    alias :mg-mog="magick mogrify"
 fi
 
 # odin lang
