@@ -11,16 +11,14 @@ if [[ $OSTYPE == darwin* ]]; then
 
     # plugins
     plugins=(
+        alias-tips
         brew
-        deno
         direnv
         git
         macos
         ripgrep
-        rust
         sudo
         vi-mode
-        yarn
         zoxide
         zsh-autosuggestions
         zsh-syntax-highlighting
@@ -81,13 +79,13 @@ elif [[ $OSTYPE == linux* ]]; then
     export ZSH="/home/$USER/.oh-my-zsh"
 
     plugins=(
+        alias-tips
         git
-        zsh-autosuggestions
-        zsh-syntax-highlighting
-        deno
+        ssh-agent
         sudo
         vi-mode
-        ssh-agent
+        zsh-autosuggestions
+        zsh-syntax-highlighting
     )
 
     export LANG=en_US.UTF-8
