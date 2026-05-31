@@ -31,7 +31,7 @@
   },
   "markdown": {
     "lineWidth": 999999,
-    "textWrap": "always",
+    "textWrap": "maintain",
     "newLineKind": "lf",
     "emphasisKind": "underscores",
     "strongKind": "asterisks",
