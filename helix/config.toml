@@ -103,7 +103,7 @@ select = "bar"
 
 [editor.file-picker]
 hidden = false
-git-ignore = false
+# git-ignore = false
 git-global = false
 
 # [editor.whitespace]
