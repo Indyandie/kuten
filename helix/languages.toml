@@ -518,3 +518,31 @@ language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls", "scls"]
 [language-server.qmlls]
 args = ["-E"]
 command = "qmlls"
+
+# C/C++
+
+[language-server.clangd]
+args = [
+  "--background-index=false",    # Disable heavy background indexing
+  "--clang-tidy=false",          # Disable clang-tidy (biggest resource saver)
+  "--completion-style=detailed",
+  "--header-insertion=never",
+  "--pch-storage=memory",
+  "--log=error",
+]
+
+[[language]]
+name = "c"
+language-servers = ["clangd"]
+formatter = { command = "clang-format" }
+auto-format = false
+
+
+# Use Tabs for indentation
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "cpp"
+language-servers = ["clangd"]
+formatter = { command = "clang-format" }
+auto-format = false
