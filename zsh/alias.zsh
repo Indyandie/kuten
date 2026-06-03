@@ -1,38 +1,6 @@
-if [[ $OSTYPE == linux* ]]; then
-
-    # date
-    alias :today="date -I"
-
-    # Hibernate
-    alias :sleep="systemctl suspend"
-
-    # Hyprland
-    if [[ $XDG_CURRENT_DESKTOP = Hyprland ]]; then
-        # stuff to do
-        alias :reload-dunst="killall dunst && nohup dunst >& /dev/null &"
-    fi
-
-    # flatpak
-    if [[ ${commands[flatpak]} ]]; then
-        alias :flk="flatpak"
-        alias :flki="flatpak install"
-        alias :flkun="flatpak uhinstall"
-        alias :flks="flatpak search"
-        alias :flkl="flatpak list"
-        alias :flkup="flatpak upgrade"
-    fi
-
-    alias open="xdg-open"
-
-    # thunar
-    if [[ ${commands[thunar]} ]]; then
-        alias :tuna="nohup thunar >> ~/.thunar-logs &"
-    fi
-fi
-
 # sqlite3
 if [[ ${commands[sqlite3]} ]]; then
-    alias :sql="sqlite3"
+    alias @sql="sqlite3"
 fi
 
 if [[ ${commands[bc]} ]]; then
@@ -46,23 +14,23 @@ fi
 alias hr='printf "%0.s—" {1..$(tput cols)}'
 
 # ## Aliases
-alias :x="bc <<<"
+alias @x="bc <<<"
 alias ~apps="cd /Applications"
 alias ..="cd .."  # go back up
 alias ~home="cd ~" # Go home
-alias :c="clear -x"
-alias :cx="tput reset"
-alias :q="clear && exit"
-alias :src="omz reload" # reload zshrc
-alias :where="pwd"         # echo current working path
-alias :mod-x="chmod +x"   # make script executable
+alias @c="clear -x"
+alias @cx="tput reset"
+alias @q="clear && exit"
+alias @src="omz reload" # reload zshrc
+alias @where="pwd"         # echo current working path
+alias @mod-x="chmod +x"   # make script executable
 alias %=""             # ignore %
-alias :tc="touch"       # Create a file `tc new.txt`
+alias @tc="touch"       # Create a file `tc new.txt`
 
 # vim
 if [[ ${commands[vim]} ]]; then
-    alias :v="vim"
-    alias :vomz="vim ~/.zshrc" # edit .zshrc
+    alias @v="vim"
+    alias @vomz="vim ~/.zshrc" # edit .zshrc
 
     # vim shell env
     vim_prompt() {
@@ -77,47 +45,47 @@ if [[ ${commands[vim]} ]]; then
 fi
 
 if [[ ${commands[nvim]} ]]; then
-    alias :nv="nvim"
+    alias @nv="nvim"
 fi
 
 # py
 if [[ ${commands[python3]} ]]; then
-    alias :py="python3"
-    alias :pyp="python -m pip"
+    alias @py="python3"
+    alias @pyp="python -m pip"
 fi
 
 ## Zsh
-alias zbin="cd ~/bin"
+alias ~zbin="cd ~/bin"
 
 # Git
 if [[ ${commands[git]} ]]; then
-    alias :gin="git init"
-    alias :gbm="git branch -m"
-    alias :gmnf="git merge --no-ff"
-    alias :cln="git clone"
-    alias :clnr="git clone --recurse-submodules"
-    alias :grao="git remote add origin"
+    alias @g:in="git init"
+    alias @gb:m="git branch -m"
+    alias @gm:nf="git merge --no-ff"
+    alias @gcln="git clone"
+    alias @gcln:r="git clone --recurse-submodules"
+    alias @gr:ao="git remote add origin"
 
     ## push
-    alias :gpo="git push origin"
-    alias :gsoup="git rev-parse --abbrev-ref HEAD | git push --set-upstream origin"
+    alias @gpo="git push origin"
+    alias @gsoup="git rev-parse --abbrev-ref HEAD | git push --set-upstream origin"
 
     ## diff
-    alias :gdf="git diff --color-words"
-    alias :gdft="git difftool"
+    alias @gdf="git diff --color-words"
+    alias @gdft="git difftool"
 
     ## switch
-    alias :gsm="git switch main"
-    alias :gsmm="git switch -m main"
-    alias :gs-="git switch main"
-    alias :gsm-..="git switch -m main"
-    alias :gsc="git switch -c"
+    alias @gs:m="git switch main"
+    alias @gs:mm="git switch -m main"
+    alias @gs:="git switch main"
+    alias @gs:m-..="git switch -m main"
+    alias @gs:c="git switch -c"
 fi
 
 ## Lazygit
 
 if [[ ${commands[lazygit]} ]]; then
-    alias :lz="lazygit"
+    alias @lz="lazygit"
 
     export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 fi
@@ -125,27 +93,27 @@ fi
 # alacritty
 if [[ $TERMINAL = "alacritty" ]]; then
     if [[ ${commands[alacritty]} ]]; then
-        alias :dtt="alacritty msg create-window --working-directory=\"$(pwd)\""
+        alias @dtt="alacritty msg create-window --working-directory=\"$(pwd)\""
     fi
 fi
 
 # NPM
 if [[ ${commands[npm]} ]]; then
-    alias :npr="npm run"
-    alias :nps="npm start"
+    alias @np:r="npm run"
+    alias @np:s="npm start"
 fi
 
 # Notes
 if [[ ${commands[hx]} ]]; then
-    alias :note="hx ~/notes/$(date "+%y-%m-%d").md"
+    alias @note="hx ~/notes/$(date "+%y-%m-%d").md"
 fi
 
 # sudo
-alias visudo="sudo EDITOR=vim visudo"
+alias @v:su="sudo EDITOR=vim visudo"
 
 # batman
 if [[ ${commands[batman]} ]]; then
-    alias man="batman"
+    alias @man="batman"
 fi
 
 ## eza
@@ -154,84 +122,84 @@ if [[ ${commands[eza]} ]]; then
     export EZA_ICONS_AUTO=true
     export LS_COLORS="" # reset colors, conflicts with EZA theme.yml
 
-    alias ls="lz"
+    alias ls="eza"
     alias ll="eza -l"
     alias lz="eza"
     alias la="eza -la"
     alias l="eza -lah"
     alias lg="eza -lah --git"
-    alias :tree="eza --tree"
+    alias @tree="eza --tree"
 fi
 
 # zellij
 if [[ ${commands[zellij]} ]]; then
-    alias :z="zellij"
-    alias :z-a="zellij a"   # attach session
-    alias :z-d="zellij d"   # delete session
-    alias :z-k="zellij k"   # kill session
-    alias :z-s="zellij -s"  # new session with custom name
-    alias :z-l="zellij ls"  # list sessions
-    alias :z-ac="zellij ac" # action
-    alias :z-r="zellij r"   # run a command in new panel
-    alias :z-p="zellij pipe"
-    alias :z-fp="zellij pipe -p filepicker" # open file picker
+    alias @z="zellij"
+    alias @z:a="zellij a"   # attach session
+    alias @z:d="zellij d"   # delete session
+    alias @z:k="zellij k"   # kill session
+    alias @z:s="zellij -s"  # new session with custom name
+    alias @z:l="zellij ls"  # list sessions
+    alias @z:ac="zellij ac" # action
+    alias @z:r="zellij r"   # run a command in new panel
+    alias @z:p="zellij pipe"
+    alias @z:fp="zellij pipe -p filepicker" # open file picker
 
     @zr() {
         zellij run -n '⭘' -f --height 100% --width 100% -x 0 -y 0 -- $@
     }
 
     # sudo
-    alias :z-su="zellij run -n '' -f --cwd '/' --height 100% --width 100% -x 0 -y 0 -- su"
+    alias @z:su="zellij run -n '' -f --cwd '/' --height 100% --width 100% -x 0 -y 0 -- su"
 
     # list
-    alias :z-ls="zellij run -n '' -f --height 80% --width 50% -x 50% -y 0 -- eza -lah"
-    alias :z-tree="zellij run -n '' -f --height 80% --width 40% -x 60% -y 20% -- eza --tree"
+    alias @z:ls="zellij run -n '' -f --height 80% --width 50% -x 50% -y 0 -- eza -lah"
+    alias @z:tree="zellij run -n '' -f --height 80% --width 40% -x 60% -y 20% -- eza --tree"
 
     # git
-    alias :z-lz="zellij run -n '' -c -f --height 100% --width 100% -x 0 -y 0 -- lazygit"
-    alias :z-gd="zellij run -n '' -f --height 90% --width 80% -x 0 -y 0 -- git diff"
-    alias :z-gdft="zellij run -n '' -f --height 90% --width 80% -x 0 -y 0 -- git difftool"
+    alias @z:lz="zellij run -n '' -c -f --height 100% --width 100% -x 0 -y 0 -- lazygit"
+    alias @z:gd="zellij run -n '' -f --height 90% --width 80% -x 0 -y 0 -- git diff"
+    alias @z:gdft="zellij run -n '' -f --height 90% --width 80% -x 0 -y 0 -- git difftool"
 
     # pomo
-    alias :z-pomo="zellij run -n '' -f --cwd '$HOME' --height 40% --width 45% -x 2 -y 2 -- pomo"
+    alias @z:pomo="zellij run -n '' -f --cwd '$HOME' --height 40% --width 45% -x 2 -y 2 -- pomo"
 
     # editors
-    alias :z-hx="zellij run -n '' -c -f --height 100% --width 100% -x 0 -y 0 -- hx"
-    alias :z-nv="zellij run -n '' -c -f --height 100% --width 100% -x 0 -y 0 -- nvim"
-    alias :z-v="zellij run -n '' -c -f --height 100% --width 100% -x 0 -y 0 -- vim"
-    alias :z-nano="zellij run -n '' -c -f --height 100% --width 100% -x 0 -y 0 -- nano"
+    alias @z:hx="zellij run -n '' -c -f --height 100% --width 100% -x 0 -y 0 -- hx"
+    alias @z:nv="zellij run -n '' -c -f --height 100% --width 100% -x 0 -y 0 -- nvim"
+    alias @z:v="zellij run -n '' -c -f --height 100% --width 100% -x 0 -y 0 -- vim"
+    alias @z:nano="zellij run -n '' -c -f --height 100% --width 100% -x 0 -y 0 -- nano"
 fi
 
 # BELL
-alias :bel='echo "\a"'
+alias @bel='echo "\a"'
 
 # ASCII
 if [[ ${commands[ascii - image - converter]} ]]; then
-    alias :asc='ascii-image-converter'
+    alias @asc='ascii-image-converter'
 fi
 
 # deno
 if [[ ${commands[deno]} ]]; then
-    alias :dn="deno"
-    alias :dn-r="deno run"
-    alias :dn-t="deno task"
-    alias :dn-nt="deno run --allow-net"
-    alias :dn-rd="deno run --allow-read"
+    alias @dn="deno"
+    alias @dn:r="deno run"
+    alias @dn:t="deno task"
+    alias @dn:nt="deno run --allow-net"
+    alias @dn:rd="deno run --allow-read"
 fi
 
 # nix
 if [[ ${commands[nix]} ]]; then
-    alias :nx="nix"
-    alias :nx-rp="nix repl"
-    alias :nx-sh="nix-shell"
+    alias @nx="nix"
+    alias @nx:rp="nix repl"
+    alias @nx:sh="nix-shell"
 
     ## disk usage
-    alias :ndu="nix path-info -Sh /run/current-system"
+    alias @ndu="nix path-info -Sh /run/current-system"
 fi
 
 ## store
 if [[ ${commands["nix-store"]} ]]; then
-    alias nx-sto='nix-store --gc --print-roots | rg "^(/nix/var|/run/\\w+-system|\\{memory|/proc)"'
+    alias nx:sto='nix-store --gc --print-roots | rg "^(/nix/var|/run/\\w+-system|\\{memory|/proc)"'
 fi
 
 if [[ ${commands[nxtray]} ]]; then
@@ -240,12 +208,12 @@ fi
 
 # pandoc
 if [[ ${commands[pandoc]} ]]; then
-    alias :pn="pandoc"
+    alias @pn="pandoc"
 fi
 
 # csvlens
 if [[ ${commands[csvlens]} ]]; then
-    alias :cv="csvlens"
+    alias @cv="csvlens"
 fi
 
 # zsh-syntax-highlighting
@@ -256,41 +224,41 @@ fi
 # system
 
 if [[ ${commands[macchina]} ]]; then
-    alias :neo="clear && macchina"
-    alias :mak="clear && macchina"
+    alias @neo="clear && macchina"
+    alias @mak="clear && macchina"
 fi
 
 # mermaid
 if [[ ${commands[mmdc]} ]]; then
-    alias :mr="mmdc -i"
-    alias :mr-i="mmdc -i"
-    alias :mr-d="mmdc -t dark -b transparent -i"
+    alias @mr="mmdc -i"
+    alias @mr:i="mmdc -i"
+    alias @mr:d="mmdc -t dark -b transparent -i"
 fi
 
 # taskwarrior
 if command -v task &>/dev/null; then
-    alias :tw="task"
-    alias :tw-l="task list"
-    alias :tw-a="task add"
+    alias @tw="task"
+    alias @tw:l="task list"
+    alias @tw:a="task add"
 fi
 
 # imagemagick
 
 if [[ ${commands[magick]} ]]; then
-    alias :mg="magick"
-    alias :mg-id="magick identify"
-    alias :mg-idv="magick identify -verbose"
-    alias :mg-con="magick convert"
-    alias :mg-mog="magick mogrify"
+    alias @mg="magick"
+    alias @mg:id="magick identify"
+    alias @mg:idv="magick identify -verbose"
+    alias @mg:con="magick convert"
+    alias @mg:mog="magick mogrify"
 fi
 
 # odin lang
 if [[ ${commands[odin]} ]]; then
-    alias :od="odin"
-    alias :od-r="odin run ."
-    alias :od-r-="odin run"
-    alias :od-b="odin build ."
-    alias :od-t="odin test ."
-    alias :od-td="odin test . --debug"
-    alias :od-t-="odin test"
+    alias @od="odin"
+    alias @o:r="odin run ."
+    alias @o:r-="odin run"
+    alias @o:b="odin build ."
+    alias @o:t="odin test ."
+    alias @o:td="odin test . --debug"
+    alias @o:t-="odin test"
 fi

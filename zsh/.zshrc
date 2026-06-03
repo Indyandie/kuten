@@ -61,6 +61,11 @@ if [[ $OSTYPE == linux* ]]; then
         bindkey '^[[1;5A' _atuin_search_widget
     fi
 
+    # alias
+    if [[ -f "$HOME/.config/zsh/linux-alias" ]]; then
+        source "$HOME/.config/zsh/linux-alias"
+    fi
+
 # linux-end  ------------------------------------------------------------------------------------------
 
 fi

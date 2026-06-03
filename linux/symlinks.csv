@@ -1,3 +1,4 @@
 link,confdir,conf
 /linux/alacritty/keys.toml,/.config/alacritty/,keys.toml
 /linux/ghostty/config,/.config/ghostty/os/,config
+/zsh/linux-alias.zsh,/.config/zsh/,linux-alias
