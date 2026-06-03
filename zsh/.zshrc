@@ -110,7 +110,7 @@ elif [[ $OSTYPE == linux* ]]; then
         fi
 
         if [[ $TTY = "/dev/tty1" ]]; then
-            Hyprland
+            start-hyprland
         fi
         # if [[ $XDG_CURRENT_DESKTOP = "Hyprland" ]]; then
         #     figlet "hyprland"
