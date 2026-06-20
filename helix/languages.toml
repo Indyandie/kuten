@@ -189,15 +189,6 @@ formatter = { command = 'dprint', args = [
   "--config-discovery=global",
 ] }
 
-# tailwindcss formatter config
-
-# npm install -D prettier-plugin-tailwindcss
-# 
-# .prettierrc.yaml
-#
-# plugins:
-#   - "prettier-plugin-tailwindcss" # must be last
-
 # SCSS
 
 [[language]]
@@ -210,36 +201,6 @@ formatter = { command = 'dprint', args = [
   "scss",
   "--config-discovery=global",
 ] }
-
-# Svelte
-
-[[language]]
-name = "svelte"
-language-servers = ["svelteserver", "tailwindcss-ls", "scls"]
-auto-format = false
-formatter = { command = 'zsh', args = [
-  "-c",
-  "dprint fmt --stdin svelte --config-discovery=global | sd '<(br|hr) />' '<$1>'",
-] }
-
-# formatter = { command = 'prettier', args = [
-#   "--parser",
-#   "svelte",
-#   "--no-semi",
-#   "--single-quote",
-#   "--bracket-same-line",
-# ] }
-
-# formatter requires the following
-
-# install the prettier plugin locally in the project - https://github.com/sveltejs/prettier-plugin-svelte
-
-# npm i --save-dev prettier-plugin-svelte
-#
-# .prettierrc.yaml - formatter config
-#
-# plugins:
-#   - "prettier-plugin-svelte"
 
 # JS
 
@@ -319,50 +280,6 @@ formatter = { command = 'dprint', args = [
   "tsx",
   "--config-discovery=global",
 ] }
-
-# Astro
-
-[language-server.astro-ls]
-command = "astro-ls"
-args = ["--stdio"]
-# to get the tsdk if typescript is installed globally run
-# npm list -g | head -1
-config = { typescript = { tsdk = "##TSDK##" }, environment = "node" }
-
-
-[[language]]
-name = "astro"
-language-servers = ["astro-ls", "tailwindcss-ls", "scls"]
-auto-format = false
-formatter = { command = 'zsh', args = [
-  "-c",
-  "dprint fmt --stdin astro --config-discovery=global | sd '<(br|hr) />' '<$1>'",
-] }
-
-# formatter = { command = 'prettier', args = [
-#   "--parser",
-#   "astro",
-#   "--print-width",
-#   "100000000000000000000",
-#   "--no-semi",
-#   "--single-quote",
-#   "--bracket-same-line",
-# ] }
-
-# formatter requires the following
-
-# install prettier locally on the project - https://github.com/withastro/prettier-plugin-astro
-# npm i --save-dev prettier-plugin-astro
-
-# .prettierrc.yaml - formatter config 
-#
-# plugins:
-#   - "prettier-plugin-astro"
-# overrides:
-#   - files: "*.astro"
-#     options:
-#       parser: "astro"
-
 
 # Markdown
 
@@ -499,19 +416,6 @@ formatter = { command = 'typstfmt' }
 name = "git-commit"
 language-servers = ["scls"]
 
-# vento
-
-[[grammar]]
-name = "vento"
-source = { git = "https://github.com/ventojs/tree-sitter-vento", rev = "main" }
-
-[[language]]
-name = "vento"
-grammar = "vento"
-scope = "source.vento"
-injection-regex = "vento"
-file-types = ["vto"]
-language-servers = ["vscode-html", "emmet-ls", "tailwindcss-ls", "scls"]
 
 # QT (Quickshell)
 
