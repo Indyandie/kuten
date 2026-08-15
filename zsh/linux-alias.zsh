@@ -1,31 +1,33 @@
+ALIAS_PREFIX=":"
+
 if [[ $OSTYPE == linux* ]]; then
 
     # date
-    alias @today="date -I"
+    alias "${ALIAS_PREFIX}today"="date -I"
 
     # Hibernate
-    alias @sleep="systemctl suspend"
+    alias "${ALIAS_PREFIX}sleep"="systemctl suspend"
 
     # Hyprland
     if [[ $XDG_CURRENT_DESKTOP = Hyprland ]]; then
         # stuff to do
-        alias @reload-dunst="killall dunst && nohup dunst >& /dev/null &"
+        alias "${ALIAS_PREFIX}reload-dunst"="killall dunst && nohup dunst >& /dev/null &"
     fi
 
     # flatpak
     if [[ ${commands[flatpak]} ]]; then
-        alias @fp="flatpak"
-        alias @fp:i="flatpak install"
-        alias @fp:un="flatpak uhinstall"
-        alias @fp:s="flatpak search"
-        alias @fp:l="flatpak list"
-        alias @fp:up="flatpak upgrade"
+        alias "${ALIAS_PREFIX}fp"="flatpak"
+        alias "${ALIAS_PREFIX}fp:i"="flatpak install"
+        alias "${ALIAS_PREFIX}fp:un"="flatpak uhinstall"
+        alias "${ALIAS_PREFIX}fp:s"="flatpak search"
+        alias "${ALIAS_PREFIX}fp:l"="flatpak list"
+        alias "${ALIAS_PREFIX}fp:up"="flatpak upgrade"
     fi
 
     alias open="xdg-open"
 
     # thunar
     if [[ ${commands[thunar]} ]]; then
-        alias @tuna="nohup thunar >> ~/.thunar-logs &"
+        alias "${ALIAS_PREFIX}tuna"="nohup thunar >> ~/.thunar-logs &"
     fi
 fi
