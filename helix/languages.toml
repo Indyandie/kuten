@@ -427,12 +427,14 @@ command = "qmlls"
 
 [language-server.clangd]
 args = [
-  "--background-index=false",    # Disable heavy background indexing
-  "--clang-tidy=false",          # Disable clang-tidy (biggest resource saver)
+  # "--clang-tidy=false",
   "--completion-style=detailed",
   "--header-insertion=never",
   "--pch-storage=memory",
   "--log=error",
+  "--query-driver=/nix/store/*/bin/clang,/nix/store/*/bin/gcc",
+  "--compile-commands-dir=.",
+  "--background-index=false",
 ]
 
 [[language]]
