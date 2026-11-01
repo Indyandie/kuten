@@ -429,6 +429,7 @@ command = "qmlls"
 args = [
   # "--clang-tidy=false",
   "--completion-style=detailed",
+  "--function-arg-placeholders=false",
   "--header-insertion=never",
   "--pch-storage=memory",
   "--log=error",
