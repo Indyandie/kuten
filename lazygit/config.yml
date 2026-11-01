@@ -1,8 +1,5 @@
 # Config relating to the Lazygit UI
 gui:
-  # The number of lines you scroll by when scrolling the main window
-  authorColors: {}
-  branchColors: {}
   scrollHeight: 2
   # If true, allow scrolling past the bottom of the content in the main window
   scrollPastBottom: true
@@ -93,6 +90,9 @@ gui:
     # Default text color
     defaultFgColor:
       - default
+    # The number of lines you scroll by when scrolling the main window
+    authorColors: {}
+    branchColorPatterns: {}
   # Config relating to the commit length indicator
   commitLength:
     # If true, show an indicator of commit message length
