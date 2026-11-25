@@ -305,7 +305,7 @@ file-types = [
 ]
 language-servers = [
   "marksman",
-  "ltex-ls",
+  "ltex-ls-plus",
   "markdown-oxide",
   "vscode-html-language-server",
   "scls",
