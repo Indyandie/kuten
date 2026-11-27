@@ -67,7 +67,6 @@ jump-label-alphabet = "asdfjkl;ghruvn1234567890"
 '{' = '}'
 '[' = ']'
 '"' = '"'
-'<' = '>'
 
 [editor.statusline]
 separator = "▕ "
