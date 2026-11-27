@@ -1,6 +1,6 @@
 {
   "includes": [
-    "**/*.{js,jsx,ts,tsx,json,md,mdx,css,scss,yaml,yml,html,svelte,astro,vto}"
+    "**/*.{js,jsx,ts,tsx,json,md,mdx,css,yaml,yml,html}"
   ],
   "excludes": [
     "**/node_modules",
@@ -10,19 +10,25 @@
     "**/.git"
   ],
   "plugins": [
-    "https://plugins.dprint.dev/typescript-0.95.15.wasm",
-    "https://plugins.dprint.dev/json-0.21.3.wasm",
-    "https://plugins.dprint.dev/markdown-0.21.1.wasm",
-    "https://plugins.dprint.dev/g-plane/malva-v0.15.3.wasm",
-    "https://plugins.dprint.dev/g-plane/markup_fmt-v0.27.0.wasm",
-    "https://plugins.dprint.dev/g-plane/pretty_yaml-v0.6.0.wasm"
+    "npm:@dprint/typescript@0.101.0",
+    "npm:@dprint/json@0.26.0",
+    "npm:@dprint/markdown@0.29.0",
+    "npm:dprint-plugin-malva@0.16.1",
+    "npm:dprint-plugin-markup@0.28.0",
+    "npm:dprint-plugin-yaml@0.6.0",
+    "npm:@dprint/nix@0.2.0",
+    "npm:@dprint/shuck@0.2.7",
+    "npm:@dprint/toml@0.10.0",
+    "npm:@dprint/sql@0.5.0",
+    "npm:@dprint/kdl@0.5.0",
+    "npm:@dprint/clang-format@0.3.2"
   ],
   "typescript": {
-    "semiColons": "asi",
     "quoteStyle": "alwaysSingle",
     "lineWidth": 999999,
     "indentWidth": 2,
-    "useTabs": false
+    "useTabs": false,
+    "semicolons": "asi"
   },
   "json": {
     "lineWidth": 999999,
@@ -35,12 +41,16 @@
     "newLineKind": "lf",
     "emphasisKind": "underscores",
     "strongKind": "asterisks",
-    "unorderedListKind": "dashes",
-    "headingKind": "atx",
+    "heading.kind": "atx",
+    "list.unorderedMarker": "dashes",
     "ignoreDirective": "formatter-ignore",
     "ignoreFileDirective": "formatter-ignore-file",
     "ignoreStartDirective": "formatter-ignore-start",
-    "ignoreEndDirective": "formatter-ignore-end"
+    "ignoreEndDirective": "formatter-ignore-end",
+    "html.skipFormat": false,
+    "html.preferSingleLine": false,
+    "html.indentWidth": 3,
+    "html.useTabs": true
   },
   "pretty_yaml": {},
   "malva": {},
