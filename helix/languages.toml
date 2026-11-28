@@ -289,7 +289,7 @@ ltex.dictionary = { "en-US" = ["builtin"], "en-GB" = ["builtin"] }
 
 [[language]]
 name = "markdown"
-indent = { tab-width = 3, unit = "\t" }
+indent = { tab-width = 3, unit = " " }
 file-types = [
   "md",
   "mdx",
@@ -442,12 +442,17 @@ args = [
 [[language]]
 name = "c"
 language-servers = ["clangd"]
-formatter = { command = "clang-format" }
+# formatter = { command = "clang-format" }
+formatter = { command = 'dprint', args = [
+  "fmt",
+  "--stdin",
+  "file.c",
+] }
 auto-format = false
 
 
 # Use Tabs for indentation
-indent = { tab-width = 4, unit = "\t" }
+indent = { tab-width = 3, unit = "\t" }
 
 [[language]]
 name = "cpp"
