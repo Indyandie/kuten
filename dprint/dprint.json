@@ -53,9 +53,45 @@
     "html.useTabs": true
   },
   "pretty_yaml": {},
-  "malva": {},
+  "clangFormat": {
+    "BasedOnStyle": "Mozilla",
+    "IndentWidth": 3,
+    "ColumnLimit": 999999,
+    "PointerAlignment": "Left",
+    "AllowShortFunctionsOnASingleLine": "Empty",
+    "BreakBeforeBraces": "Attach",
+
+    "TabWidth": 3,
+    "ContinuationIndentWidth": 3,
+    "UseTab": "Always",
+
+    "AlignAfterOpenBracket": "AlwaysBreak",
+    "AlignOperands": "DontAlign",
+    "AlignConsecutiveAssignments": "None",
+    "AlignConsecutiveDeclarations": "None",
+    "AlignEscapedNewlines": "DontAlign",
+    "BinPackArguments": false,
+    "BinPackParameters": false,
+
+    "MaxEmptyLinesToKeep": 1,
+    "AllowAllArgumentsOnNextLine": true,
+    "AllowShortBlocksOnASingleLine": "Never",
+    "AllowShortFunctionsOnASingleLine": "None",
+    "AllowShortIfStatementsOnASingleLine": "Never",
+    "AllowShortLoopsOnASingleLine": false,
+    "BreakBeforeBraces": "Attach",
+    "ColumnLimit": 0,
+    "IndentCaseLabels": true,
+    "SpaceAfterLogicalNot": false,
+    "SpaceBeforeAssignmentOperators": true,
+    "SpaceBeforeParens": "ControlStatements",
+    "SpacesInParentheses": false,
+    "SortIncludes": {
+      "Enabled": false
+    },
+  },
   "markup_fmt": {
     "print_width": 999999,
-    "indent_width": 2
+    "indent_width": 3
   }
 }
